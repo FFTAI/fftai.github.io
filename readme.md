@@ -12,13 +12,13 @@
 ---
 
 ## 后端 API
-[后端api 文档](docs/doc-svr/index.html)  
+[后端api 文档](docs/server_api/readme.md)  
 
 ## 前端 SDK
 
-[javascript版文档](docs/js_docs/modules.md)  [代码](https://github.com/FFTAI/gros_client_js) 
+[javascript版文档](docs/sdk_js/readme.md)  [代码](https://github.com/FFTAI/gros_client_js) 
 
-[python版文档](docs/python_docs/index.md)  [代码](https://github.com/FFTAI/gros_client_py)
+[python版文档](docs/sdk_py/readme.md)  [代码](https://github.com/FFTAI/gros_client_py)
 
 ## 控制 App
 [代码](https://github.com/FFTAI/gros_app)  
