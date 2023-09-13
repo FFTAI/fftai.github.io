@@ -1,6 +1,4 @@
-gros-client / [Exports](modules.md)
-
-# General Robotics OS - Client Library (Javascript)
+# 欢迎来到 GROS 客户端 SDK javascript 文档
 
 ## 安装依赖
 ## npm install gros-client
