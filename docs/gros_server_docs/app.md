@@ -77,64 +77,64 @@ Returns:
 Args:
 
 > - None
+
 Returns:
-: result(Dict):
-  <br/>
-  > - code (int): 返回码，0-表示成功，-1-表示失败
-  > - msg (str): 返回消息，ok表示正常，失败返回错误信息
-  > - data (dict): 数据对象，包含具体数据
-  >   > - data (list): 关节限制列表，每个元素是一个字典
-  >   >   > - name (str): 关节名称
-  >   >   > - qdotaMax (float): 关节最大速度，单位：rad/s
-  >   >   > - qaMax (float): 关节最大弧度，单位：rad
-  >   >   > - qaMin (float): 关节最小角度，单位：rad
-  >   >   > - tauaMax (float): 最大扭矩，单位：n\*m
-  >   > - function (str): 函数名称
-  <br/>
-  Example:
-  <br/>
-  ```json
-  {
-      "code": 0,
-      "msg": "ok",
-      "data": {
-          "data": {
-              "jointlimit": [
-                  {
-                      "name": "left_hip_roll",
-                      "qaMax": 0.523598775598299,
-                      "qaMin": -0.087266462599716,
-                      "qdotaMax": 12.56637061435917,
-                      "tauaMax": 82.5
-                  },
-                  {
-                      "name": "left_hip_yaw",
-                      "qaMax": 0.392699081698724,
-                      "qaMin": -0.392699081698724,
-                      "qdotaMax": 12.56637061435917,
-                      "tauaMax": 82.5
-                  },
-                  {
-                      "name": "left_hip_pitch",
-                      "qaMax": 0.698131700797732,
-                      "qaMin": -1.221730476396031,
-                      "qdotaMax": 22.441443522143093,
-                      "tauaMax": 200
-                  },
-                  {
-                      "name": "left_knee_pitch",
-                      "qaMax": 2.094395102393195,
-                      "qaMin": -0.087266462599716,
-                      "qdotaMax": 22.441443522143093,
-                      "tauaMax": 200
-                  }
-  <br/>
-              ]
-          },
-          "function": "SonnieGetStatesLimit"
-      }
-  }
-  ```
+
+> - result(Dict):
+>   > - code (int): 返回码，0-表示成功，-1-表示失败
+>   > - msg (str): 返回消息，ok表示正常，失败返回错误信息
+>   > - data (dict): 数据对象，包含具体数据
+>   >   > - data (list): 关节限制列表，每个元素是一个字典
+>   >   >   > - name (str): 关节名称
+>   >   >   > - qdotaMax (float): 关节最大速度，单位：rad/s
+>   >   >   > - qaMax (float): 关节最大弧度，单位：rad
+>   >   >   > - qaMin (float): 关节最小角度，单位：rad
+>   >   >   > - tauaMax (float): 最大扭矩，单位：n\*m
+>   >   > - function (str): 函数名称
+
+Example:
+
+> ```json
+> {
+>     "code": 0,
+>     "msg": "ok",
+>     "data": {
+>         "data": {
+>             "jointlimit": [
+>                 {
+>                     "name": "left_hip_roll",
+>                     "qaMax": 0.523598775598299,
+>                     "qaMin": -0.087266462599716,
+>                     "qdotaMax": 12.56637061435917,
+>                     "tauaMax": 82.5
+>                 },
+>                 {
+>                     "name": "left_hip_yaw",
+>                     "qaMax": 0.392699081698724,
+>                     "qaMin": -0.392699081698724,
+>                     "qdotaMax": 12.56637061435917,
+>                     "tauaMax": 82.5
+>                 },
+>                 {
+>                     "name": "left_hip_pitch",
+>                     "qaMax": 0.698131700797732,
+>                     "qaMin": -1.221730476396031,
+>                     "qdotaMax": 22.441443522143093,
+>                     "tauaMax": 200
+>                 },
+>                 {
+>                     "name": "left_knee_pitch",
+>                     "qaMax": 2.094395102393195,
+>                     "qaMin": -0.087266462599716,
+>                     "qdotaMax": 22.441443522143093,
+>                     "tauaMax": 200
+>                 }
+>             ]
+>         },
+>         "function": "SonnieGetStatesLimit"
+>     }
+> }
+> ```
 
 ### *async* app.api.human_system_states()
 
