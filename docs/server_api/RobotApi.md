@@ -128,83 +128,7 @@ POST /robot/stand
 |» msg|string|true|none||返回异常信息|
 |» data|object|true|none||返回数据|
 
-## POST human行走指令
 
-POST /robot/walk
-
-行走指令，可以控制机器人的行走与转身
-
-> Body 请求参数
-
-```json
-{
-  "velCmd": {
-    "va": 1,
-    "vb": 0,
-    "vc": 0,
-    "vx": 0.2,
-    "vy": 0,
-    "vz": 0
-  }
-}
-```
-
-### 请求参数
-
-|名称|位置|类型|必选|说明|
-|---|---|---|---|---|
-|body|body|object| 否 |none|
-|» velCmd|body|object| 是 |控制指令|
-|»» va|body|number(double)¦null| 是 |not use，不传入或者给0|
-|»» vb|body|number(double)¦null| 是 |not use，不传入或者给0|
-|»» vc|body|number(double)¦null| 是 |转向（范围:+-0.6）|
-|»» vx|body|number(double)¦null| 是 |前进速度（范围:+-0.8）|
-|»» vy|body|number(double)¦null| 是 |not use 左右速度，目前为零|
-|»» vz|body|number(double)¦null| 是 |not use上下速度|
-
-> 返回示例
-
-> 成功
-
-```json
-{
-  "code": 0,
-  "msg": "ok",
-  "data": {}
-}
-```
-
-```json
-{
-  "code": -1,
-  "msg": {
-    "velCmd": [
-      {
-        "va": [
-          "unallowed value 0.5"
-        ]
-      }
-    ]
-  },
-  "data": {}
-}
-```
-
-### 返回结果
-
-|状态码|状态码含义|说明|数据模型|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
-
-### 返回数据结构
-
-状态码 **200**
-
-|名称|类型|必选|约束|中文名|说明|
-|---|---|---|---|---|---|
-|» code|integer|true|none||响应码0-正常、-1-异常|
-|» msg|string|true|none||响应信息或者错误提示信息|
-|» data|object|true|none||响应数据|
 
 ## GET 获取关节启动时状态
 
@@ -476,7 +400,8 @@ GET /control/camera
 
 ## websocket move指令
 
-ws /127.0.0.1:8001/ws
+URL:
+>ws://127.0.0.1:8001/ws
 
 websocket长连接发送move指令
 
@@ -527,7 +452,8 @@ websocket长连接发送move指令
 
 ## websocket head指令
 
-ws /127.0.0.1:8001/ws
+URL:
+>ws /127.0.0.1:8001/ws
 
 websocket长连接发送头部指令
 
@@ -580,7 +506,8 @@ websocket长连接发送头部指令
 
 ## websocket 获取实时状态
 
-ws /127.0.0.1:8001/ws
+URL:
+>ws://127.0.0.1:8001/ws
 
 websocket长连接监听获取实时状态
 
