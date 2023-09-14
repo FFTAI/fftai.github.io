@@ -1,13 +1,45 @@
 # 欢迎来到 GROS 客户端 SDK javascript 文档
 
-## 安装依赖
-## npm install gros-client
 
-## 引入依赖
-import {Human} from 'gros-client'
+# gros-client
 
-## 实例化human对象
-let human = new Human({host: '192.168.9.17'});
+## Table of contents
 
-## 调用启动方法
-human.start()
+### Enumerations
+
+- [CarMod](enums/CarMod.md)
+
+### Classes
+
+- [Camera](classes/Camera.md)
+- [Car](classes/Car.md)
+- [Human](classes/Human.md)
+- [System](classes/System.md)
+
+### Functions
+
+- [get\_robot\_type](modules.md#get_robot_type)
+
+## Functions
+
+### get\_robot\_type
+
+▸ **get_robot_type**(`option?`): `Promise`<`AxiosResponse`<`any`, `any`\>\>
+
+获取Robot类型
+
+当你使用群集或者多设备的时候 你可以遍历调用该接口依次从设备上读取类型，以便于您做出准确的控制
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `option?` | `ConnectOption` | 连接对象，默认连接127.0.0.1:8001 请根据需要修改{host: str, port: number} |
+
+#### Returns
+
+`Promise`<`AxiosResponse`<`any`, `any`\>\>
+
+#### Defined in
+
+[index.ts:16](https://github.com/FFTAI/gros_client_js/blob/6341ea8/index.ts#L16)
