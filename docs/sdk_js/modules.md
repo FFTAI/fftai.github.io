@@ -1,4 +1,3 @@
-[gros-client](../../../gros_client_js/README.md) / Exports
 
 # gros-client
 

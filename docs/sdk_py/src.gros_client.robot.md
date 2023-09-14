@@ -14,13 +14,13 @@ Car对象
 
 Args:
 
-> - ssl(bool):  是否开启ssl认证。默认 False
-> - host(str):  car的网络IP
-> - port(int):  car的控制服务的PORT
-> - on_connected(Callable):  该监听将会在car连接成功时触发
-> - on_message(Callable): 该监听将会在car发送系统状态时候触发，你可能需要监听该回掉处理你的逻辑
-> - on_close(Callable): 该监听将会在car连接关闭时触发
-> - on_error(Callable): 该监听将会在car发生错误时触发
+ - ssl(bool):  是否开启ssl认证。默认 False
+ - host(str):  car的网络IP
+ - port(int):  car的控制服务的PORT
+ - on_connected(Callable):  该监听将会在car连接成功时触发
+ - on_message(Callable): 该监听将会在car发送系统状态时候触发，你可能需要监听该回掉处理你的逻辑
+ - on_close(Callable): 该监听将会在car连接关闭时触发
+ - on_error(Callable): 该监听将会在car发生错误时触发
 
 #### \_\_init_\_(ssl: bool = False, host: str = '127.0.0.1', port: int = 8001, on_connected: Callable = None, on_message: Callable = None, on_close: Callable = None, on_error: Callable = None)
 
@@ -32,8 +32,8 @@ Args:
 
 Args:
 
-> - angle(float): 角度 控制方向，取值范围为正负45度。向左为正，向右为负！(浮点数8位)
-> - speed(float): 速度 控制前后，取值范围为正负500。向前为正，向后为负！(浮点数8位)
+ - angle(float): 角度 控制方向，取值范围为正负45度。向左为正，向右为负！(浮点数8位)
+ - speed(float): 速度 控制前后，取值范围为正负500。向前为正，向后为负！(浮点数8位)
 
 #### set_mode(mod: [Mod](#src.gros_client.robot.car.Mod))
 
@@ -43,7 +43,7 @@ Args:
 
 Args:
 
-> - mod(Mod): 模式对象定义
+ - mod(Mod): 模式对象定义
 
 ### *class* src.gros_client.robot.car.Mod(value, names=None, \*, module=None, qualname=None, type=None, start=1, boundary=None)
 
@@ -69,13 +69,13 @@ GR-1人形机器人对象
 
 Args:
 
-> - ssl(bool):  是否开启ssl认证。默认 False
-> - host(str):  GR-01人形设备的网络IP
-> - port(int):  GR-01人形设备的控制服务的PORT
-> - on_connected(Callable):  该监听将会在GR-01人形设备连接成功时触发
-> - on_message(Callable): 该监听将会在GR-01人形设备发送系统状态时候触发，你可能需要监听该回掉处理你的逻辑
-> - on_close(Callable): 该监听将会在GR-01人形设备连接关闭时触发
-> - on_error(Callable): 该监听将会在GR-01人形设备发生错误时触发
+ - ssl(bool):  是否开启ssl认证。默认 False
+ - host(str):  GR-01人形设备的网络IP
+ - port(int):  GR-01人形设备的控制服务的PORT
+ - on_connected(Callable):  该监听将会在GR-01人形设备连接成功时触发
+ - on_message(Callable): 该监听将会在GR-01人形设备发送系统状态时候触发，你可能需要监听该回掉处理你的逻辑
+ - on_close(Callable): 该监听将会在GR-01人形设备连接关闭时触发
+ - on_error(Callable): 该监听将会在GR-01人形设备发生错误时触发
 
 #### \_\_init_\_(ssl: bool = False, host: str = '127.0.0.1', port: int = 8001, on_connected: Callable = None, on_message: Callable = None, on_close: Callable = None, on_error: Callable = None)
 
@@ -91,58 +91,58 @@ Args:
 
 Args:
 
-> frequence(int): 频率
+ frequence(int): 频率
 
 Returns:
 
-> data (dict): 响应数据
+ data (dict): 响应数据
 
-> > - log (dict): 日志信息
-> >   > - logBuffer (list): 日志缓冲区
-> >   >   > - log (str): 日志内容
-> > - states (dict): 关节状态数据
-> >   > - basestate (dict): 机器人状态数据
-> >   >   > - a (float): hip roll
-> >   >   > - b (float): hip Pitch
-> >   >   > - c (float): hip Yaw
-> >   >   > - va (float): not use
-> >   >   > - vb (float): not use
-> >   >   > - vc (float): not use
-> >   >   > - vx (float): 前进方向速度，单位m/s
-> >   >   > - vy (float): 左右方向速度，单位m/s
-> >   >   > - vz (float): not use
-> >   >   > - x (float): base  X，站立时X位置
-> >   >   > - y (float): base  Y，站立时Y位置
-> >   >   > - z (float): base  Z，站立时Z位置
-> >   > - fsmstatename (dict): 有关状态机状态的数据
-> >   >   > - currentstatus (str): 当前状态 Unknown、Start、Zero、Stand、Walk、Stop
-> >   > - jointStates (list): 关节状态列表
-> >   >   > - name (str): 关节名称
-> >   >   > - qa (float): 真实的关节角度，单位：rad（弧度）
-> >   >   > - qdota (float): 真实的关节速度，单位：rad/s（弧度/秒）
-> >   >   > - taua (float): 真实的扭矩，单位:n\*m
-> >   >   > - qc (float): 期望的关节速度，单位：rad
-> >   >   > - qdotc (float): 期望的关节速度，单位：rad/s（弧度/秒）
-> >   >   > - tauc (float): 期望的关节扭矩，单位：unit:n\*m
-> >   > - stanceindex (dict): 姿态索引 not use
-> >   > - contactforce (dict): 接触力数据 not use
-> >   >   > - fxL (float): 左脚接触力
-> >   >   > - fyL (float): 左脚接触力
-> >   >   > - fzL (float): 左脚接触力
-> >   >   > - mxL (float): 左脚接触力
-> >   >   > - myL (float): 左脚接触力
-> >   >   > - mzL (float): 左脚接触力
-> >   >   > - fxR (float): 右脚接触力
-> >   >   > - fyR (float): 右脚接触力
-> >   >   > - fzR (float): 右脚接触力
-> >   >   > - mxR (float): 右脚接触力
-> >   >   > - myR (float): 右脚接触力
-> >   >   > - mzR (float): 右脚接触力
-> > - timestamp (dict): 时间戳
-> >   > - nanos (int):
-> >   > - seconds (str):
+  - log (dict): 日志信息
+     - logBuffer (list): 日志缓冲区
+        - log (str): 日志内容
+  - states (dict): 关节状态数据
+     - basestate (dict): 机器人状态数据
+        - a (float): hip roll
+        - b (float): hip Pitch
+        - c (float): hip Yaw
+        - va (float): not use
+        - vb (float): not use
+        - vc (float): not use
+        - vx (float): 前进方向速度，单位m/s
+        - vy (float): 左右方向速度，单位m/s
+        - vz (float): not use
+        - x (float): base  X，站立时X位置
+        - y (float): base  Y，站立时Y位置
+        - z (float): base  Z，站立时Z位置
+     - fsmstatename (dict): 有关状态机状态的数据
+        - currentstatus (str): 当前状态 Unknown、Start、Zero、Stand、Walk、Stop
+     - jointStates (list): 关节状态列表
+        - name (str): 关节名称
+        - qa (float): 真实的关节角度，单位：rad（弧度）
+        - qdota (float): 真实的关节速度，单位：rad/s（弧度/秒）
+        - taua (float): 真实的扭矩，单位:n\*m
+        - qc (float): 期望的关节速度，单位：rad
+        - qdotc (float): 期望的关节速度，单位：rad/s（弧度/秒）
+        - tauc (float): 期望的关节扭矩，单位：unit:n\*m
+     - stanceindex (dict): 姿态索引 not use
+     - contactforce (dict): 接触力数据 not use
+        - fxL (float): 左脚接触力
+        - fyL (float): 左脚接触力
+        - fzL (float): 左脚接触力
+        - mxL (float): 左脚接触力
+        - myL (float): 左脚接触力
+        - mzL (float): 左脚接触力
+        - fxR (float): 右脚接触力
+        - fyR (float): 右脚接触力
+        - fzR (float): 右脚接触力
+        - mxR (float): 右脚接触力
+        - myR (float): 右脚接触力
+        - mzR (float): 右脚接触力
+  - timestamp (dict): 时间戳
+     - nanos (int):
+     - seconds (str):
 
-> function (str): 接口名
+ function (str): 接口名
 
 Example:
 
@@ -361,22 +361,22 @@ Example:
 获取关节限位
 Args:
 
-> None
+ None
 
 Returns:
 
-> result(Dict):
+ result(Dict):
 
-> > - code (int): 返回码，0-表示成功，-1-表示失败
-> > - msg (str): 返回消息，ok表示正常，失败返回错误信息
-> > - data (dict): 数据对象，包含具体数据
-> >   > - data (list): 关节限制列表，每个元素是一个字典
-> >   >   > - name (str): 关节名称
-> >   >   > - qdotaMax (float): 关节最大速度，单位：rad/s
-> >   >   > - qaMax (float): 关节最大弧度，单位：rad
-> >   >   > - qaMin (float): 关节最小角度，单位：rad
-> >   >   > - tauaMax (float): 最大扭矩，单位：n\*m
-> >   > - function (str): 函数名称
+  - code (int): 返回码，0-表示成功，-1-表示失败
+  - msg (str): 返回消息，ok表示正常，失败返回错误信息
+  - data (dict): 数据对象，包含具体数据
+     - data (list): 关节限制列表，每个元素是一个字典
+        - name (str): 关节名称
+        - qdotaMax (float): 关节最大速度，单位：rad/s
+        - qaMax (float): 关节最大弧度，单位：rad
+        - qaMin (float): 关节最小角度，单位：rad
+        - tauaMax (float): 最大扭矩，单位：n\*m
+     - function (str): 函数名称
 
 Example:
 
@@ -429,22 +429,22 @@ Example:
 
 Returns:
 
-> Dict: 返回数据包含以下字段:
+ Dict: 返回数据包含以下字段:
 
-> - code (int): 状态码，0 表示正常，-1 表示异常
-> - msg (str): 状态信息，”ok” 表示正常
-> - data (dict): 响应数据，包含以下字段：
->   > - data (dict): 状态数据，包含以下字段：
->   >   > - bodyandlegstate (dict): 身体和腿部状态，包含以下字段：
->   >   >   > - currentstatus (str): 当前状态，”StartComplete” 表示启动完成
->   >   >   > - log (dict): 日志信息，包含以下字段：
->   >   >   >   > - logBuffer (list): 日志缓冲区，包含以下字段：
->   >   >   >   >   > - log (str): 日志内容，”GRPC system state response init complete” 表示 GRPC 系统状态响应初始化完成
->   >   > - leftarmstate (dict): 左侧手臂状态，包含以下字段：
->   >   >   > - armstatus (str): 手臂状态，”Swing” 表示摆臂模式
->   >   > - rightarmstate (dict): 右侧手臂状态，包含以下字段：
->   >   >   > - armstatus (str): 手臂状态，”Swing” 表示摆臂模式
->   > - function (str): 调用该接口的函数名，”SonnieGetSystemStates” 表示获取系统状态接口
+ - code (int): 状态码，0 表示正常，-1 表示异常
+ - msg (str): 状态信息，”ok” 表示正常
+ - data (dict): 响应数据，包含以下字段：
+    - data (dict): 状态数据，包含以下字段：
+       - bodyandlegstate (dict): 身体和腿部状态，包含以下字段：
+          - currentstatus (str): 当前状态，”StartComplete” 表示启动完成
+          - log (dict): 日志信息，包含以下字段：
+             - logBuffer (list): 日志缓冲区，包含以下字段：
+                - log (str): 日志内容，”GRPC system state response init complete” 表示 GRPC 系统状态响应初始化完成
+       - leftarmstate (dict): 左侧手臂状态，包含以下字段：
+          - armstatus (str): 手臂状态，”Swing” 表示摆臂模式
+       - rightarmstate (dict): 右侧手臂状态，包含以下字段：
+          - armstatus (str): 手臂状态，”Swing” 表示摆臂模式
+    - function (str): 调用该接口的函数名，”SonnieGetSystemStates” 表示获取系统状态接口
 
 Example:
 
@@ -484,9 +484,9 @@ Example:
 
 Args:
 
-> - roll(float): roll（翻滚角）：描述围绕x轴旋转的角度，左转头为负，向右转为正，范围（-17.1887-17.1887）
-> - pitch(float): pitch（俯仰角）：描述围绕y轴旋转的角度。前点头为正，后点头为负，范围（-17.1887-17.1887）
-> - yaw(float): yaw（偏航角）：描述围绕z轴旋转的角度。左扭头为负，右扭头为正，范围（-17.1887-17.1887）
+ - roll(float): roll（翻滚角）：描述围绕x轴旋转的角度，左转头为负，向右转为正，范围（-17.1887-17.1887）
+ - pitch(float): pitch（俯仰角）：描述围绕y轴旋转的角度。前点头为正，后点头为负，范围（-17.1887-17.1887）
+ - yaw(float): yaw（偏航角）：描述围绕z轴旋转的角度。左扭头为负，右扭头为正，范围（-17.1887-17.1887）
 
 #### stand()
 
@@ -496,7 +496,7 @@ GR-01人形设备将会原地站立
 
 Returns:
 
-> result(Dict): return一个结果集 {code: 0, msg: ‘ok’}  or  {code: -1, msg: $ERR_MSG}
+ result(Dict): return一个结果集 {code: 0, msg: ‘ok’}  or  {code: -1, msg: $ERR_MSG}
 
 #### walk(angle: float, speed: float)
 
@@ -506,8 +506,8 @@ Returns:
 
 Args:
 
-> - angle(float): 角度 控制方向，取值范围为正负45度。向左为正，向右为负！(浮点数8位)
-> - speed(float): 速度 控制前后，取值范围为正负0.8。向前为正，向后为负！(浮点数8位)
+ - angle(float): 角度 控制方向，取值范围为正负45度。向左为正，向右为负！(浮点数8位)
+ - speed(float): 速度 控制前后，取值范围为正负0.8。向前为正，向后为负！(浮点数8位)
 
 ## src.gros_client.robot.robot_base module
 
