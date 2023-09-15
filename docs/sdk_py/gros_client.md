@@ -1,21 +1,18 @@
-# 欢迎来到 GROS SDK API 文档
+# gros_client package
 
-# Contents:
+## Subpackages
 
-* [gros_client package](gros_client.md)
-  * [Subpackages](gros_client.md#subpackages)
-    * [gros_client.common package](gros_client.common.md)
-      * [Submodules](gros_client.common.md#submodules)
-      * [gros_client.common.camera module](gros_client.common.md#module-gros_client.common.camera)
-      * [gros_client.common.system module](gros_client.common.md#module-gros_client.common.system)
-      * [Module contents](gros_client.common.md#module-gros_client.common)
-    * [gros_client.robot package](gros_client.robot.md)
-      * [Submodules](gros_client.robot.md#submodules)
-      * [gros_client.robot.car module](gros_client.robot.md#module-gros_client.robot.car)
-      * [gros_client.robot.human module](gros_client.robot.md#module-gros_client.robot.human)
-      * [gros_client.robot.robot_base module](gros_client.robot.md#module-gros_client.robot.robot_base)
-      * [Module contents](gros_client.robot.md#module-gros_client.robot)
-  * [Module contents](gros_client.md#module-gros_client)
+* [gros_client.common package](gros_client.common.md)
+  * [Submodules](gros_client.common.md#submodules)
+  * [gros_client.common.camera module](gros_client.common.md#module-gros_client.common.camera)
+    * [`Camera`](gros_client.common.md#gros_client.common.camera.Camera)
+      * [`Camera.video_stream_status`](gros_client.common.md#gros_client.common.camera.Camera.video_stream_status)
+      * [`Camera.video_stream_url`](gros_client.common.md#gros_client.common.camera.Camera.video_stream_url)
+  * [gros_client.common.system module](gros_client.common.md#module-gros_client.common.system)
+    * [`System`](gros_client.common.md#gros_client.common.system.System)
+      * [`System.reboot()`](gros_client.common.md#gros_client.common.system.System.reboot)
+      * [`System.shutdown()`](gros_client.common.md#gros_client.common.system.System.shutdown)
+  * [Module contents](gros_client.common.md#module-gros_client.common)
 * [gros_client.robot package](gros_client.robot.md)
   * [Submodules](gros_client.robot.md#submodules)
   * [gros_client.robot.car module](gros_client.robot.md#module-gros_client.robot.car)
@@ -41,14 +38,5 @@
       * [`RobotBase.start()`](gros_client.robot.md#gros_client.robot.robot_base.RobotBase.start)
       * [`RobotBase.stop()`](gros_client.robot.md#gros_client.robot.robot_base.RobotBase.stop)
   * [Module contents](gros_client.robot.md#module-gros_client.robot)
-* [gros_client.common package](gros_client.common.md)
-  * [Submodules](gros_client.common.md#submodules)
-  * [gros_client.common.camera module](gros_client.common.md#module-gros_client.common.camera)
-    * [`Camera`](gros_client.common.md#gros_client.common.camera.Camera)
-      * [`Camera.video_stream_status`](gros_client.common.md#gros_client.common.camera.Camera.video_stream_status)
-      * [`Camera.video_stream_url`](gros_client.common.md#gros_client.common.camera.Camera.video_stream_url)
-  * [gros_client.common.system module](gros_client.common.md#module-gros_client.common.system)
-    * [`System`](gros_client.common.md#gros_client.common.system.System)
-      * [`System.reboot()`](gros_client.common.md#gros_client.common.system.System.reboot)
-      * [`System.shutdown()`](gros_client.common.md#gros_client.common.system.System.shutdown)
-  * [Module contents](gros_client.common.md#module-gros_client.common)
+
+## Module contents
