@@ -784,4 +784,3 @@ websocket长连接监听获取实时状态
 |» function|string|true|none||SonnieGetStates|
 
 # 数据模型
-
