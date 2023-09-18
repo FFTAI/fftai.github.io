@@ -7,7 +7,7 @@
 ## 快速上手
 
   * [源码](https://github.com/FFTAI/gros_client_py.git)
-  * [文档](index.md) 
+  * [文档](src.md) 
 
 ## 历程
     
