@@ -1,6 +1,7 @@
 gros-client / [Exports](modules.md)
 
 # 傅利叶通用机器人系统-客户端SDK（Javascript/Typescript）
+![](pics/banner.jpeg)
 
 * [源码](https://github.com/FFTAI/gros_client_js.git)
 * [文档](modules.md)
