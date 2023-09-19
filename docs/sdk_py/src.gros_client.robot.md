@@ -1,7 +1,5 @@
 # src.gros_client.robot package
 
-## Submodules
-
 ## src.gros_client.robot.car module
 
 ### *class* src.gros_client.robot.car.Car(ssl: bool = False, host: str = '127.0.0.1', port: int = 8001, on_connected: Callable | None = None, on_message: Callable | None = None, on_close: Callable | None = None, on_error: Callable | None = None)
@@ -525,5 +523,3 @@ Robot 基类
 停止
 
 `该命令优先于其他命令! 会掉电停止。请在紧急情况下触发`
-
-## Module contents

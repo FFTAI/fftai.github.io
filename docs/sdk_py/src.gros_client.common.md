@@ -1,7 +1,5 @@
 # src.gros_client.common package
 
-## Submodules
-
 ## src.gros_client.common.camera module
 
 ### *class* src.gros_client.common.camera.Camera(baseurl: str)
@@ -29,5 +27,3 @@
 #### *static* reboot()
 
 #### *static* shutdown()
-
-## Module contents

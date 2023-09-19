@@ -38,5 +38,3 @@
       * [`RobotBase.start()`](src.gros_client.robot.md#src.gros_client.robot.robot_base.RobotBase.start)
       * [`RobotBase.stop()`](src.gros_client.robot.md#src.gros_client.robot.robot_base.RobotBase.stop)
   * [Module contents](src.gros_client.robot.md#module-src.gros_client.robot)
-
-## Module contents

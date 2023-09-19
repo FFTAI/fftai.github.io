@@ -8,6 +8,12 @@
 
   * [源码](https://github.com/FFTAI/gros_client_py.git)
   * [文档](src.md) 
+    * [common模块](src.gros_client.common.md)
+      * [camera](src.gros_client.common.md#module-src.gros_client.common.camera)
+      * [system](src.gros_client.common.md#module-src.gros_client.common.system)
+    * [robot模块](src.gros_client.robot.md)
+      * [car](src.gros_client.robot.md#module-src.gros_client.robot.car)
+      * [human](src.gros_client.robot.md#module-src.gros_client.robot.human)
 
 ## 历程
     
