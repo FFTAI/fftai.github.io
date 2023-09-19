@@ -1,3 +1,4 @@
+[gros-client](README.md) / Exports
 
 # gros-client
 
@@ -40,4 +41,4 @@
 
 #### Defined in
 
-[index.ts:16](https://github.com/FFTAI/gros_client_js/blob/6341ea8/index.ts#L16)
+[index.ts:16](https://github.com/FFTAI/gros_client_js/blob/bc9e358/index.ts#L16)

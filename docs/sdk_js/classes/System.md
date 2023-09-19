@@ -1,4 +1,4 @@
-[gros-client](../README.md) / [Exports](../modules.md) / System
+[gros-client](../readme.md) / [Exports](../modules.md) / System
 
 # Class: System
 
@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[lib/common/system.ts:11](https://github.com/FFTAI/gros_client_js/blob/6341ea8/lib/common/system.ts#L11)
+[lib/common/system.ts:11](https://github.com/FFTAI/gros_client_js/blob/bc9e358/lib/common/system.ts#L11)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[lib/common/system.ts:15](https://github.com/FFTAI/gros_client_js/blob/6341ea8/lib/common/system.ts#L15)
+[lib/common/system.ts:15](https://github.com/FFTAI/gros_client_js/blob/bc9e358/lib/common/system.ts#L15)

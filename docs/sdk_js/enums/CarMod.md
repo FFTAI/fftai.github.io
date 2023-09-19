@@ -1,4 +1,4 @@
-[gros-client](../README.md) / [Exports](../modules.md) / CarMod
+[gros-client](../readme.md) / [Exports](../modules.md) / CarMod
 
 # Enumeration: CarMod
 
@@ -25,7 +25,7 @@ car 模式
 
 #### Defined in
 
-[lib/robot/car.ts:16](https://github.com/FFTAI/gros_client_js/blob/6341ea8/lib/robot/car.ts#L16)
+[lib/robot/car.ts:16](https://github.com/FFTAI/gros_client_js/blob/bc9e358/lib/robot/car.ts#L16)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[lib/robot/car.ts:15](https://github.com/FFTAI/gros_client_js/blob/6341ea8/lib/robot/car.ts#L15)
+[lib/robot/car.ts:15](https://github.com/FFTAI/gros_client_js/blob/bc9e358/lib/robot/car.ts#L15)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[lib/robot/car.ts:14](https://github.com/FFTAI/gros_client_js/blob/6341ea8/lib/robot/car.ts#L14)
+[lib/robot/car.ts:14](https://github.com/FFTAI/gros_client_js/blob/bc9e358/lib/robot/car.ts#L14)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[lib/robot/car.ts:10](https://github.com/FFTAI/gros_client_js/blob/6341ea8/lib/robot/car.ts#L10)
+[lib/robot/car.ts:10](https://github.com/FFTAI/gros_client_js/blob/bc9e358/lib/robot/car.ts#L10)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[lib/robot/car.ts:12](https://github.com/FFTAI/gros_client_js/blob/6341ea8/lib/robot/car.ts#L12)
+[lib/robot/car.ts:12](https://github.com/FFTAI/gros_client_js/blob/bc9e358/lib/robot/car.ts#L12)
 
 ___
 
@@ -75,4 +75,4 @@ ___
 
 #### Defined in
 
-[lib/robot/car.ts:11](https://github.com/FFTAI/gros_client_js/blob/6341ea8/lib/robot/car.ts#L11)
+[lib/robot/car.ts:11](https://github.com/FFTAI/gros_client_js/blob/bc9e358/lib/robot/car.ts#L11)
