@@ -1,54 +1,79 @@
-# 欢迎来到 GROS SDK API 文档
+# 傅利叶通用机器人系统-客户端SDK（python）
+![](pics/banner.jpeg)
 
-# Contents:
+## 概述
+    本例(GROS Client SDK)适用于您已经拥有傅利叶（Fourier）所提供的机器人设备，通过本例可实现对机器人的控制。它提供了一组简单的API，让你可以轻松地与机器人进行交互。
 
-* [gros_client package](gros_client.md)
-  * [Subpackages](gros_client.md#subpackages)
-    * [gros_client.common package](gros_client.common.md)
-      * [Submodules](gros_client.common.md#submodules)
-      * [gros_client.common.camera module](gros_client.common.md#module-gros_client.common.camera)
-      * [gros_client.common.system module](gros_client.common.md#module-gros_client.common.system)
-      * [Module contents](gros_client.common.md#module-gros_client.common)
-    * [gros_client.robot package](gros_client.robot.md)
-      * [Submodules](gros_client.robot.md#submodules)
-      * [gros_client.robot.car module](gros_client.robot.md#module-gros_client.robot.car)
-      * [gros_client.robot.human module](gros_client.robot.md#module-gros_client.robot.human)
-      * [gros_client.robot.robot_base module](gros_client.robot.md#module-gros_client.robot.robot_base)
-      * [Module contents](gros_client.robot.md#module-gros_client.robot)
-  * [Module contents](gros_client.md#module-gros_client)
-* [gros_client.robot package](gros_client.robot.md)
-  * [Submodules](gros_client.robot.md#submodules)
-  * [gros_client.robot.car module](gros_client.robot.md#module-gros_client.robot.car)
-    * [`Car`](gros_client.robot.md#gros_client.robot.car.Car)
-      * [`Car.move()`](gros_client.robot.md#gros_client.robot.car.Car.move)
-      * [`Car.set_mode()`](gros_client.robot.md#gros_client.robot.car.Car.set_mode)
-    * [`Mod`](gros_client.robot.md#gros_client.robot.car.Mod)
-      * [`Mod.MOD_2_WHEEL`](gros_client.robot.md#gros_client.robot.car.Mod.MOD_2_WHEEL)
-      * [`Mod.MOD_3_WHEEL`](gros_client.robot.md#gros_client.robot.car.Mod.MOD_3_WHEEL)
-      * [`Mod.MOD_4_WHEEL`](gros_client.robot.md#gros_client.robot.car.Mod.MOD_4_WHEEL)
-  * [gros_client.robot.human module](gros_client.robot.md#module-gros_client.robot.human)
-    * [`Human`](gros_client.robot.md#gros_client.robot.human.Human)
-      * [`Human.disable_debug_state()`](gros_client.robot.md#gros_client.robot.human.Human.disable_debug_state)
-      * [`Human.enable_debug_state()`](gros_client.robot.md#gros_client.robot.human.Human.enable_debug_state)
-      * [`Human.get_joint_limit()`](gros_client.robot.md#gros_client.robot.human.Human.get_joint_limit)
-      * [`Human.get_joint_states()`](gros_client.robot.md#gros_client.robot.human.Human.get_joint_states)
-      * [`Human.head()`](gros_client.robot.md#gros_client.robot.human.Human.head)
-      * [`Human.stand()`](gros_client.robot.md#gros_client.robot.human.Human.stand)
-      * [`Human.walk()`](gros_client.robot.md#gros_client.robot.human.Human.walk)
-  * [gros_client.robot.robot_base module](gros_client.robot.md#module-gros_client.robot.robot_base)
-    * [`RobotBase`](gros_client.robot.md#gros_client.robot.robot_base.RobotBase)
-      * [`RobotBase.exit()`](gros_client.robot.md#gros_client.robot.robot_base.RobotBase.exit)
-      * [`RobotBase.start()`](gros_client.robot.md#gros_client.robot.robot_base.RobotBase.start)
-      * [`RobotBase.stop()`](gros_client.robot.md#gros_client.robot.robot_base.RobotBase.stop)
-  * [Module contents](gros_client.robot.md#module-gros_client.robot)
-* [gros_client.common package](gros_client.common.md)
-  * [Submodules](gros_client.common.md#submodules)
-  * [gros_client.common.camera module](gros_client.common.md#module-gros_client.common.camera)
-    * [`Camera`](gros_client.common.md#gros_client.common.camera.Camera)
-      * [`Camera.video_stream_status`](gros_client.common.md#gros_client.common.camera.Camera.video_stream_status)
-      * [`Camera.video_stream_url`](gros_client.common.md#gros_client.common.camera.Camera.video_stream_url)
-  * [gros_client.common.system module](gros_client.common.md#module-gros_client.common.system)
-    * [`System`](gros_client.common.md#gros_client.common.system.System)
-      * [`System.reboot()`](gros_client.common.md#gros_client.common.system.System.reboot)
-      * [`System.shutdown()`](gros_client.common.md#gros_client.common.system.System.shutdown)
-  * [Module contents](gros_client.common.md#module-gros_client.common)
+## 快速上手
+
+  * [源码](https://github.com/FFTAI/gros_client_py.git)
+  * [文档](src.md) 
+    * [common模块](src.gros_client.common.md)
+      * [camera](src.gros_client.common.md#module-src.gros_client.common.camera)
+      * [system](src.gros_client.common.md#module-src.gros_client.common.system)
+    * [robot模块](src.gros_client.robot.md)
+      * [car](src.gros_client.robot.md#module-src.gros_client.robot.car)
+      * [human](src.gros_client.robot.md#module-src.gros_client.robot.human)
+
+## 历程
+    
+| 版本号 | 作者     | 日期     | 描述                           | 快速预览                                       |
+|-----|--------|--------|------------------------------|--------------------------------------------|
+| 0.1 | 傅利叶软件部 | 2023.8 | 1. 立项<br/>2. 确认基础架构          | [0.1说明](https://fftai.github.io/v0.1.html) |
+| 0.2 | 傅利叶软件部    | 2023.9 | 1. 控制模块、系统模块<br/>2. 具体coding | [0.2说明](https://fftai.github.io/v0.2.html) |
+
+
+## 安装
+    
+```shell
+pip install gros_client 
+
+# 如遇网络延迟，可选择清华源安装 
+# pip install -i https://pypi.tuna.tsinghua.edu.cn/simple gros_client
+```
+
+## 使用方法
+### 导入sdk
+首先你需要在你的Python代码中导入这个SDK
+
+```python
+import gros_client   # 导入root
+```
+### 创建机器人对象
+然后，你需要创建一个机器人对象，以便使用这个SDK
+
+```python
+from gros_client import Human  # 按需导入Human、同理还有Car、Dog等
+
+human = Human(host='192.168.12.1')
+```
+
+### 控制机器人
+你可以使用以下方法来控制机器人：
+
+- start(): 回零/开启控制
+- stop(): 急停（会掉电停止）
+- exit(): 退出机器人控制
+- stand(): 原地站立
+- walk(angle, speed): 控制机器人移动、走路
+    - angle(float): 角度 控制方向，取值范围为正负45度。向左为正，向右为负！(浮点数8位)
+    - speed(float): 速度 控制前后，取值范围为正负0.8。向前为正，向后为负！(浮点数8位)
+- head(roll, pitch, yaw): 控制GR-01人形头部运动
+    - roll(float): roll（翻滚角）：描述围绕x轴旋转的角度，左转头为负，向右转为正，范围（-17.1887-17.1887）
+    - pitch(float): pitch（俯仰角）：描述围绕y轴旋转的角度。前点头为正，后点头为负，范围（-17.1887-17.1887）
+    - yaw(float): yaw（偏航角）：描述围绕z轴旋转的角度。左扭头为负，右扭头为正，范围（-17.1887-17.1887）
+
+### 示例代码
+下面是一个完整的示例代码，演示如何使用这个SDK来控制机器人：
+
+```python
+import time
+from gros_client import Human
+
+human = Human(host='192.168.9.17') # 请将host替换为您所拥有设备的ip
+human.start() # 启动远程控制
+time.sleep(10) # 控制系统内置状态机。为了保证机器人的校准和启动正常，在start()指令之后建议10s再执行后续指令
+
+human.stand() # 站立
+human.walk(0, 0.1) # 以0.1的速度向正前方移动
+```

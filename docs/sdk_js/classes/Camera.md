@@ -1,4 +1,4 @@
-[gros-client](../README.md) / [Exports](../modules.md) / Camera
+[gros-client](../readme.md) / [Exports](../modules.md) / Camera
 
 # Class: Camera
 
@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[lib/common/camera.ts:19](https://github.com/FFTAI/gros_client_js/blob/6341ea8/lib/common/camera.ts#L19)
+[lib/common/camera.ts:19](https://github.com/FFTAI/gros_client_js/blob/bc9e358/lib/common/camera.ts#L19)
 
 ## Properties
 
@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[lib/common/camera.ts:17](https://github.com/FFTAI/gros_client_js/blob/6341ea8/lib/common/camera.ts#L17)
+[lib/common/camera.ts:17](https://github.com/FFTAI/gros_client_js/blob/bc9e358/lib/common/camera.ts#L17)
 
 ___
 
@@ -55,4 +55,4 @@ ___
 
 #### Defined in
 
-[lib/common/camera.ts:13](https://github.com/FFTAI/gros_client_js/blob/6341ea8/lib/common/camera.ts#L13)
+[lib/common/camera.ts:13](https://github.com/FFTAI/gros_client_js/blob/bc9e358/lib/common/camera.ts#L13)

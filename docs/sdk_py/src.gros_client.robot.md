@@ -1,25 +1,23 @@
-# gros_client.robot package
+# src.gros_client.robot package
 
-## Submodules
+## src.gros_client.robot.car module
 
-## gros_client.robot.car module
+### *class* src.gros_client.robot.car.Car(ssl: bool = False, host: str = '127.0.0.1', port: int = 8001, on_connected: Callable | None = None, on_message: Callable | None = None, on_close: Callable | None = None, on_error: Callable | None = None)
 
-### *class* gros_client.robot.car.Car(ssl: bool = False, host: str = '127.0.0.1', port: int = 8001, on_connected: Callable | None = None, on_message: Callable | None = None, on_close: Callable | None = None, on_error: Callable | None = None)
-
-基类：[`RobotBase`](#gros_client.robot.robot_base.RobotBase)
+基类：[`RobotBase`](#src.gros_client.robot.robot_base.RobotBase)
 
 Car对象
 
 在你需要连接Car的时候，你可以创建一个Car()对象！ 这将会在后台连接到控制系统，并提供对应的控制函数和状态监听！
 
 * **参数:**
-  * **ssl** (*-*) – 是否开启ssl认证。默认 False
-  * **host** (*-*) – car的网络IP
-  * **port** (*-*) – car的控制服务的PORT
-  * **on_connected** (*-*) – 该监听将会在car连接成功时触发
-  * **on_message** (*-*) – 该监听将会在car发送系统状态时候触发，你可能需要监听该回掉处理你的逻辑
-  * **on_close** (*-*) – 该监听将会在car连接关闭时触发
-  * **on_error** (*-*) – 该监听将会在car发生错误时触发
+  * **ssl** (*bool*) – 是否开启ssl认证。默认 False
+  * **host** (*str*) – car的网络IP
+  * **port** (*int*) – car的控制服务的PORT
+  * **on_connected** (*Callable*) – 该监听将会在car连接成功时触发
+  * **on_message** (*Callable*) – 该监听将会在car发送系统状态时候触发，你可能需要监听该回掉处理你的逻辑
+  * **on_close** (*Callable*) – 该监听将会在car连接关闭时触发
+  * **on_error** (*Callable*) – 该监听将会在car发生错误时触发
 
 #### move(angle: float, speed: float)
 
@@ -28,19 +26,25 @@ Car对象
 `该请求维持了长链接的方式进行发送`
 
 * **参数:**
-  * **angle** (*-*) – 角度 控制方向，取值范围为正负45度。向左为正，向右为负！(浮点数8位)
-  * **speed** (*-*) – 速度 控制前后，取值范围为正负500。向前为正，向后为负！(浮点数8位)
+  * **angle** (*float*) – 角度 控制方向，取值范围为正负45度。向左为正，向右为负！(浮点数8位)
+  * **speed** (*float*) – 速度 控制前后，取值范围为正负500。向前为正，向后为负！(浮点数8位)
 
-#### set_mode(mod: [Mod](#gros_client.robot.car.Mod))
+#### set_mode(mod: [Mod](#src.gros_client.robot.car.Mod))
 
 设置小车的模式
 
 完成后小车将在对应模式下运动，包括 4轮 3轮 2轮
 
 * **参数:**
-  **mod** (*-*) – 模式对象定义
+  **mod** ([*Mod*](#src.gros_client.robot.car.Mod)) – 模式对象定义
+* **返回:**
+  返回数据包含以下字段:
+  - code (int): 状态码，0 表示正常，-1 表示异常
+  - msg (str): 状态信息，”ok” 表示正常
+* **返回类型:**
+  Dict
 
-### *class* gros_client.robot.car.Mod(value)
+### *class* src.gros_client.robot.car.Mod(value)
 
 基类：`Enum`
 
@@ -52,24 +56,24 @@ Car对象
 
 #### MOD_4_WHEEL *= 'WHEEL_4'*
 
-## gros_client.robot.human module
+## src.gros_client.robot.human module
 
-### *class* gros_client.robot.human.Human(ssl: bool = False, host: str = '127.0.0.1', port: int = 8001, on_connected: Callable | None = None, on_message: Callable | None = None, on_close: Callable | None = None, on_error: Callable | None = None)
+### *class* src.gros_client.robot.human.Human(ssl: bool = False, host: str = '127.0.0.1', port: int = 8001, on_connected: Callable | None = None, on_message: Callable | None = None, on_close: Callable | None = None, on_error: Callable | None = None)
 
-基类：[`RobotBase`](#gros_client.robot.robot_base.RobotBase)
+基类：[`RobotBase`](#src.gros_client.robot.robot_base.RobotBase)
 
 GR-1人形机器人对象
 
 在你需要连接GR-1人形机器人的时候，你可以创建一个Human()对象！ 这将会在后台连接到人形的控制系统，并提供对应的控制函数和状态监听！
 
 * **参数:**
-  * **ssl** (*-*) – 是否开启ssl认证。默认 False
-  * **host** (*-*) – GR-01人形设备的网络IP
-  * **port** (*-*) – GR-01人形设备的控制服务的PORT
-  * **on_connected** (*-*) – 该监听将会在GR-01人形设备连接成功时触发
-  * **on_message** (*-*) – 该监听将会在GR-01人形设备发送系统状态时候触发，你可能需要监听该回调处理你的逻辑
-  * **on_close** (*-*) – 该监听将会在GR-01人形设备连接关闭时触发
-  * **on_error** (*-*) – 该监听将会在GR-01人形设备发生错误时触发
+  * **ssl** (*bool*) – 是否开启ssl认证。默认 False
+  * **host** (*str*) – GR-01人形设备的网络IP
+  * **port** (*int*) – GR-01人形设备的控制服务的PORT
+  * **on_connected** (*Callable*) – 该监听将会在GR-01人形设备连接成功时触发
+  * **on_message** (*Callable*) – 该监听将会在GR-01人形设备发送系统状态时候触发，你可能需要监听该回调处理你的逻辑
+  * **on_close** (*Callable*) – 该监听将会在GR-01人形设备连接关闭时触发
+  * **on_error** (*Callable*) – 该监听将会在GR-01人形设备发生错误时触发
 
 #### disable_debug_state()
 
@@ -469,9 +473,9 @@ Example:
 `该请求维持了长链接的方式进行发送`
 
 * **参数:**
-  * **roll** (*-*) – roll（翻滚角）：描述围绕x轴旋转的角度，左转头为负，向右转为正，范围（-17.1887-17.1887）
-  * **pitch** (*-*) – pitch（俯仰角）：描述围绕y轴旋转的角度。前点头为正，后点头为负，范围（-17.1887-17.1887）
-  * **yaw** (*-*) – yaw（偏航角）：描述围绕z轴旋转的角度。左扭头为负，右扭头为正，范围（-17.1887-17.1887）
+  * **roll** (*float*) – roll（翻滚角）：描述围绕x轴旋转的角度，左转头为负，向右转为正，范围（-17.1887-17.1887）
+  * **pitch** (*float*) – pitch（俯仰角）：描述围绕y轴旋转的角度。前点头为正，后点头为负，范围（-17.1887-17.1887）
+  * **yaw** (*float*) – yaw（偏航角）：描述围绕z轴旋转的角度。左扭头为负，右扭头为正，范围（-17.1887-17.1887）
 
 #### stand()
 
@@ -491,12 +495,12 @@ GR-01人形设备将会原地站立
 `该请求维持了长链接的方式进行发送`
 
 * **参数:**
-  * **angle** (*-*) – 角度 控制方向，取值范围为正负45度。向左为正，向右为负！(浮点数8位)
-  * **speed** (*-*) – 速度 控制前后，取值范围为正负0.8。向前为正，向后为负！(浮点数8位)
+  * **angle** (*float*) – 角度 控制方向，取值范围为正负45度。向左为正，向右为负！(浮点数8位)
+  * **speed** (*float*) – 速度 控制前后，取值范围为正负0.8。向前为正，向后为负！(浮点数8位)
 
-## gros_client.robot.robot_base module
+## src.gros_client.robot.robot_base module
 
-### *class* gros_client.robot.robot_base.RobotBase(ssl: bool = False, host: str = '127.0.0.1', port: int = 8001, on_connected: Callable | None = None, on_message: Callable | None = None, on_close: Callable | None = None, on_error: Callable | None = None)
+### *class* src.gros_client.robot.robot_base.RobotBase(ssl: bool = False, host: str = '127.0.0.1', port: int = 8001, on_connected: Callable | None = None, on_message: Callable | None = None, on_close: Callable | None = None, on_error: Callable | None = None)
 
 基类：`object`
 
@@ -519,5 +523,3 @@ Robot 基类
 停止
 
 `该命令优先于其他命令! 会掉电停止。请在紧急情况下触发`
-
-## Module contents
