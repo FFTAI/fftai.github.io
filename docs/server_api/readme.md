@@ -11,9 +11,7 @@
 ## 硬件准备
 
 * 傅利叶GR-1机器人
-
 * 发送控制指令的PC电脑
-
 * 用于提供同一局域网的路由器
 
 ## 软件准备
@@ -39,6 +37,7 @@
 * 打开PostMan
 * URL输入框输入http://[机器人IP]:8001/robot/type
 * 点击 Send 按钮，可以收到后端API返回Json格式的响应数据
+* 如果调用控制指令接口如/robot/start、/robot/stand等，可以看到真机或者仿真机器人做出响应的动作
 ![postMan.jpg](pics/down_postman.png)
 ![postMan.jpg](pics/api_send.png)
 
@@ -57,6 +56,7 @@
     ![apifox_example](pics/fill_api_info.png)
     * 发送请求，查看响应数据
     ![apifox_example](pics/send_request.png)
+    * 如果调用控制指令接口如/robot/start、/robot/stand等，可以看到真机或者仿真机器人做出响应的动作
 * webocket接口操作
     * 添加Websocket接口
     ![apifox_example](pics/create_websocket.png)
@@ -67,3 +67,4 @@
     ![apifox_example](pics/connect_websocket.png)
     * 发送请求报文数据
     ![apifox_example](pics/send_websocket.png)
+    * 如果调用控制指令接口如/robot/start、/robot/stand等，可以看到真机或者仿真机器人做出响应的动作

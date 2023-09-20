@@ -15,7 +15,7 @@ Base URLs:
 
 POST /robot/start
 
-机器人回零接口，入参为{}一个没有任何参数的json对象
+控制指令：机器人回零接口，入参为{}一个没有任何参数的json对象
 
 > Body 请求参数
 
@@ -61,7 +61,7 @@ POST /robot/start
 
 POST /robot/stand
 
-站立接口，站立时可以选择输入head和身体body参数，默认入参为{}一个没有任何参数的json对象即可
+控制指令：站立接口，站立时可以选择输入head和身体body参数，默认入参为{}一个没有任何参数的json对象即可
 
 > Body 请求参数
 
@@ -212,7 +212,7 @@ GET /robot/joint_limit
 
 POST /robot/stop
 
-命令优先于其他命令! 会掉电停止。请在紧急情况下触发
+控制指令：命令优先于其他命令! 会掉电停止。请在紧急情况下触发
 
 > 返回示例
 
@@ -405,7 +405,7 @@ GET /control/camera
 URL:
 >ws://127.0.0.1:8001/ws
 
-websocket长连接发送move指令
+控制指令：websocket长连接发送move指令
 
 > Body 请求参数
 
@@ -457,7 +457,7 @@ websocket长连接发送move指令
 URL:
 >ws /127.0.0.1:8001/ws
 
-websocket长连接发送头部指令
+控制指令：websocket长连接发送头部指令
 
 > Body 请求参数
 
