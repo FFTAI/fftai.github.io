@@ -1,10 +1,12 @@
-# src.gros_client.robot package
+# gros_client.robot package
 
-## src.gros_client.robot.car module
+## Submodules
 
-### *class* src.gros_client.robot.car.Car(ssl: bool = False, host: str = '127.0.0.1', port: int = 8001, on_connected: Callable | None = None, on_message: Callable | None = None, on_close: Callable | None = None, on_error: Callable | None = None)
+## gros_client.robot.car module
 
-基类：[`RobotBase`](#src.gros_client.robot.robot_base.RobotBase)
+### *class* gros_client.robot.car.Car(ssl: bool = False, host: str = '127.0.0.1', port: int = 8001, on_connected: Callable | None = None, on_message: Callable | None = None, on_close: Callable | None = None, on_error: Callable | None = None)
+
+基类：[`RobotBase`](#gros_client.robot.robot_base.RobotBase)
 
 Car对象
 
@@ -29,14 +31,14 @@ Car对象
   * **angle** (*float*) – 角度 控制方向，取值范围为正负45度。向左为正，向右为负！(浮点数8位)
   * **speed** (*float*) – 速度 控制前后，取值范围为正负500。向前为正，向后为负！(浮点数8位)
 
-#### set_mode(mod: [Mod](#src.gros_client.robot.car.Mod))
+#### set_mode(mod: [Mod](#gros_client.robot.car.Mod))
 
 设置小车的模式
 
 完成后小车将在对应模式下运动，包括 4轮 3轮 2轮
 
 * **参数:**
-  **mod** ([*Mod*](#src.gros_client.robot.car.Mod)) – 模式对象定义
+  **mod** ([*Mod*](#gros_client.robot.car.Mod)) – 模式对象定义
 * **返回:**
   返回数据包含以下字段:
   - code (int): 状态码，0 表示正常，-1 表示异常
@@ -44,7 +46,7 @@ Car对象
 * **返回类型:**
   Dict
 
-### *class* src.gros_client.robot.car.Mod(value)
+### *class* gros_client.robot.car.Mod(value)
 
 基类：`Enum`
 
@@ -56,11 +58,11 @@ Car对象
 
 #### MOD_4_WHEEL *= 'WHEEL_4'*
 
-## src.gros_client.robot.human module
+## gros_client.robot.human module
 
-### *class* src.gros_client.robot.human.Human(ssl: bool = False, host: str = '127.0.0.1', port: int = 8001, on_connected: Callable | None = None, on_message: Callable | None = None, on_close: Callable | None = None, on_error: Callable | None = None)
+### *class* gros_client.robot.human.Human(ssl: bool = False, host: str = '127.0.0.1', port: int = 8001, on_connected: Callable | None = None, on_message: Callable | None = None, on_close: Callable | None = None, on_error: Callable | None = None)
 
-基类：[`RobotBase`](#src.gros_client.robot.robot_base.RobotBase)
+基类：[`RobotBase`](#gros_client.robot.robot_base.RobotBase)
 
 GR-1人形机器人对象
 
@@ -498,9 +500,9 @@ GR-01人形设备将会原地站立
   * **angle** (*float*) – 角度 控制方向，取值范围为正负45度。向左为正，向右为负！(浮点数8位)
   * **speed** (*float*) – 速度 控制前后，取值范围为正负0.8。向前为正，向后为负！(浮点数8位)
 
-## src.gros_client.robot.robot_base module
+## gros_client.robot.robot_base module
 
-### *class* src.gros_client.robot.robot_base.RobotBase(ssl: bool = False, host: str = '127.0.0.1', port: int = 8001, on_connected: Callable | None = None, on_message: Callable | None = None, on_close: Callable | None = None, on_error: Callable | None = None)
+### *class* gros_client.robot.robot_base.RobotBase(ssl: bool = False, host: str = '127.0.0.1', port: int = 8001, on_connected: Callable | None = None, on_message: Callable | None = None, on_close: Callable | None = None, on_error: Callable | None = None)
 
 基类：`object`
 
@@ -523,3 +525,5 @@ Robot 基类
 停止
 
 `该命令优先于其他命令! 会掉电停止。请在紧急情况下触发`
+
+## Module contents

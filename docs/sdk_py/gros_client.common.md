@@ -1,8 +1,10 @@
-# src.gros_client.common package
+# gros_client.common package
 
-## src.gros_client.common.camera module
+## Submodules
 
-### *class* src.gros_client.common.camera.Camera(baseurl: str)
+## gros_client.common.camera module
+
+### *class* gros_client.common.camera.Camera(baseurl: str)
 
 基类：`object`
 
@@ -14,9 +16,9 @@
 
 #### video_stream_url*: str* *= None*
 
-## src.gros_client.common.system module
+## gros_client.common.system module
 
-### *class* src.gros_client.common.system.System
+### *class* gros_client.common.system.System
 
 基类：`object`
 
@@ -27,3 +29,5 @@
 #### *static* reboot()
 
 #### *static* shutdown()
+
+## Module contents
