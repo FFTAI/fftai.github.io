@@ -76,7 +76,7 @@
 [python版文档](docs/sdk_py/readme.md)  [代码](https://github.com/FFTAI/gros_client_py)
 
 ## 控制 App
-[文档](https://docs/app/readme.md)  [代码](https://github.com/FFTAI/gros_app)  
+[文档](docs/app/readme.md)  [代码](https://github.com/FFTAI/gros_app)  
 
 
 ## 历史版本
