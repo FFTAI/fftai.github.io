@@ -1,94 +1,94 @@
-# 欢迎来到 GROS 控制端 App 使用说明
+# Welcome to the RoCS Remote Control App User Guide
 
-## 控制图解
+### 1. Start Screen
 
-### 1.开始界面
+![](pics/01-starting.png)
 
-![图片](assets/IMG_1.png)
+### 2. Login Screen (Not Connected)
 
-### 2.登陆界面--未连接
+![](pics/02-exp_uncon.png)
+1. Enter the connection page.
+2. Start exploring 
+   * at this point it is still in the unconnected state, also enter the connection page.
 
-![图片](assets/IMG_2.png)
+### 3. Device Connection
 
-1. 进入连接页。
-2. 开始探索--此时还是未连接状态，同样进入连接页。
+![](pics/03-wifi1.png)
+![](pics/03-wifi2.png)
 
-### 3.设备连接
+1. The robot's WiFi information can usually be obtained from the label on the back. If not, you can find the WiFi name with the corresponding prefix according to the prompt of the initial account, and the initial password is generally the unified password when it comes out of the factory.
+2. Go to connect
+3. pop-up box prompts to connect by yourself in the phone WiFi settings.
 
-![图片](assets/IMG_3.png)
-![图片](assets/IMG_4.png)
+### 4. Login Screen (Connected)
 
-1. 机器人的 WiFi 信息通常可以在背后的标签处获得。若没有，可根据初始账号的提示找到对应前缀的 WiFi 名，初始密码一般为默认出厂时的统一密码。
-2. 去连接-->弹出框提示默认在手机 WiFi 设置中自行连接。
+![](pics/02-exp_con.png)
 
-### 4.登陆界面--已连接
+1. When the humanoid robot and app are connected at this time, it displays the current robot's battery level and shows the connection status.
+2. Start exploring
+   * directly enter the control page.
 
-![图片](assets/IMG_5.png)
+### 5. Loading Screen
 
-1. 当人形机器人和 app 此时已连接状态时，显示当前机器人的电量，并且显示连接状态。
-2. 开始探索--直接进入控制页。
+![](pics/04-loading.png)
+Wait a few seconds for loading time, and then enter the subsequent control page.
 
-### 5.加载界面
+### 6. Control Screen (Remote Control Mode)
 
-![图片](assets/IMG_6.png)
-稍等几秒等待加载时间，进入后续操控页面。
+![](pics/05-control.png)
+1. Return to the previous level.
+2. Switch current mode, you can enter developer mode from here.
+ ![](pics/06-modes.png)
+3. Image transmission switch, whether to turn on or off real-time images.
 
-### 6.控制界面(遥控模式)
+ ![](pics/07-cam_on.png) ![](pics/08-cam_off.png)
 
-![图片](assets/IMG_7.png)
+4. Enter the settings screen.
+5. Calibration
+   * send a zero (Zero) command to the robot.
+6. Emergency stop
+   * send an emergency stop (Stop) command to the robot.
+7. Switch speed gears, currently can switch between 1 and 5 gears.
+8. Send action commands to the robot, divided into gait movement, standing and stationary movement.
+![](pics/09-act_lib.png)
 
-1. 返回上级。
-2. 切换当前模式，可由此进入开发者模式。
+9. Virtual touch joystick, left side controls robot's forward and backward walking and left and right turning, right side controls head's up and down and left and right movement.
 
-- ![图片](assets/IMG_8.png)
+### 7. Developer Mode
 
-3. 图传开关，是否开启或关闭实时图像。
+![](pics/10-dev_3d.png)
+![](pics/10-dev_log.png)
 
-- ![图片](assets/IMG_9.png)
-- ![图片](assets/IMG_10.png)
+1. Switch Log logs and dynamic display.
+2. Real-time data line charts on both sides, updated once every second, specific display line chart data according to ③ and ④ for switching display.
+3. From top to bottom correspond to the following table
 
-4. 进入设置界面。
-5. 校准-->向机器人发送归零(Zero)指令。
-6. 急停-->向机器人发送急停(Stop)指令。
-7. 切换速度档位，当前一共可切换 1 至 5 档。
-8. 向机器人发送动作指令，分为步态运动，站立及原地运动。
+   |Attribute|Name|Unit|
+   |---|---|---|   
+   |qa|Angle|Degree|
+   |qdota|Speed|Degree/Second|
+   |taua|Torque|Newton Meter(N.m)|
 
-- ![图片](assets/IMG_11.png)
-- ![图片](assets/IMG_12.png)
+4. Real-time joint data table on both sides
 
-9. 虚拟触控摇杆，左侧控制机器人前后行走及左右转向，右侧控制头部上下及左右移动。
-
-### 7.开发者模式
-
-![图片](assets/IMG_17.png)
-![图片](assets/IMG_18.png)
-
-1. 切换 Log 日志和动态展示。
-2. 左右两侧实时数据折线图，每一秒更新一次，具体展示折线图的数据根据 ③ 和 ④ 进行切换显示。
-3. 由上至下分别对应下表
-   |属性|名称|单位|
-   |---|---|---|
-   |qa|角度|度|
-   |qdota|速度|度/秒|
-   |taua|扭矩|牛.米(N.m)|
-4. 左右两侧实时关节数据表
-   |属性|名称|
+   |Attribute|Name|
    |---|---|
-   |Hip Pitch| 臀部俯仰角|
-   |Hip Yaw| 臀部偏航角|
-   |Hip Roll| 臀部翻滚角|
-   |Knee| 膝盖俯仰角 |
-   |Ankle Pitch| 踝关节俯仰角 |
-   |Ankle Roll| 踝关节翻滚角 |
-5. X 轴与 Y 轴速度实时数据折线图
+   |Hip Pitch| Hip Pitch Angle|
+   |Hip Yaw| Hip Yaw Angle|
+   |Hip Roll| Hip Roll Angle|
+   |Knee| Knee Pitch Angle |
+   |Ankle Pitch| Ankle Pitch Angle |
+   |Ankle Roll| Ankle Roll Angle |
 
-### 8.系统设置
+5. X-axis and Y-axis speed real-time data line chart
 
-1. 连接(未连接)
-   ![图片](assets/IMG_13.png)
-2. 连接(已连接)
-   ![图片](assets/IMG_14.png)
-3. 系统状态
-   ![图片](assets/IMG_15.png)
-   在 APP 语言中，显示当前系统语言，并可从中切换至其他系统语言。
-   ![图片](assets/IMG_16.png)
+### 8. System Settings
+
+1. Connection (Not Connected)
+   ![](pics/11-setting-uncon.png)
+2. Connection (Connected)
+   ![](pics/11-setting_con.png)
+3. System Status
+   ![](pics/11-setting_sys.png)
+   In APP language, display current system language, and can switch to other system languages from here.
+   ![](pics/11-setting_lang.png)

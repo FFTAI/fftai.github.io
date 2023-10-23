@@ -1,37 +1,41 @@
-# 机器人控制系统 RoCS
+# Robot Control System (RoCS)
 
-总体来讲，软件系统分为两大部分：上位机 和 下位机。  
-* 下位机相当于人类的小脑，主要负责运动控制相关。如电机驱动，运动算法，硬件驱动等。  
-* 上位机则重点负责数据传输和少量逻辑应用。比如声音的接受播放，视频流传输，发送指令，接受状态等等。
+In general, our softwares are divided into two parts: the upper computer and the lower computer.
+* The lower computer is like the cerebellum in humans, mainly responsible for motion control related tasks such as motor driving, motion algorithms, hardware drivers, etc.
+* The upper computer mainly focuses on data transmission and a small amount of logic applications. For example, receiving and playing sound, video stream transmission, sending instructions, receiving status, etc.
 
-**机器人控制系统**负责机器人的整体监视遥控功能。分为三个层：
-**控制App**（用户图形应用），**前端SDK**（客户端接口），**后端API**（服务器接口）。
-* **后端API** 运行在机器人上，是一个很薄的数据转发层，他通过`http`加`websocket`协议，将外界指令转达给下位机，将机器人的各种数据，转发到外部。虽然运行在机器人里，但本层也属于上位机的一部分，它是下位机和外界的接口。因为本次只是一个转发层，且考虑到效率和其他用户的安全性，所以没有开源。
-* **前端SDK** 外界可以使用任何工具（只要支持`http`加`websocket`协议）访问**后端API**。但是为了开发者方便，我们提供了**前端SDK**，它是对**后端API**的封装，提供了更加友好的接口，开发者可以直接使用相应语言的**前端SDK**来开发自己的应用。本层是开源的。
-* **控制App** 运行在机器人本体以外的终端上（电脑或手机），是用户图形应用。**控制App** 的目的并不是为了提供一个完整的面向消费者的应用，而是将所有功能，做成一个全面的实例，为开发者提供参考。开发者可以参考**控制App**的代码，来开发自己的应用。本层也是开源的。
+The **Robot Control System** is responsible for the overall monitoring and remote control functions of the robot. It is divided into three layers:
+**Control App** (user graphic application), **Client SDK** (client interface), **Server API** (server interface).
 
-所有上位机软件在一起，这个整体叫`RoCS`，意思是：
-![](pics/logo.jpg)
-Robot Control System
+* **Server API** runs on the robot and is a thin data forwarding layer. It uses `http` and `websocket` protocols to forward external commands to the lower computer and various data from the robot to the outside. Although it runs inside the robot, this layer is also part of the upper computer. It is the interface between the lower computer and the outside world. Because this time it is just a forwarding layer, and considering efficiency and other users' security, it has not been open-sourced.
+* **Client SDK** can use any tool (as long as it supports `http` and `websocket` protocols) to access the **Server API**. But for developers' convenience, we provide the **Client SDK**, which encapsulates the **Server API**, providing a more friendly interface. Developers can directly use the corresponding language's **Client SDK** to develop their own applications. This layer is open-source.
+* **Control App** runs on terminals outside of the robot body (computers or mobile phones) and is a user graphic application. The purpose of the **Control App** is not to provide a complete consumer-oriented application, but to make all functions into a comprehensive example for developers' reference. Developers can refer to the code of the **Control App** to develop their own applications. This layer is also open-source.
+
+All upper computer software together is called `RoCS`, which stands for:
+**Ro**bot **C**ontrol **S**ystem
+
+![](pics/logo.jpg)  
 
 ---
 ![](rocs_com.png)
 
 ## Contents
-[About GR-1]()  
-[Networking]()  
-[Software Architecture]()  
-[Simulation Environment Setup]()  
-[Remote Application]()  
-[Autonomous Control]()  
-[Embody]()  
-[Motion Library]()  
+[About GR-1](contents/about_gr_1.md)  
+[Quick Start](contents/quick_start.md)  
+[Software Architecture](contents/soft_arc.md)  
+[Remote Application](contents/app/readme.md)  
+[Autonomous Control](contents/auto_ctrl.md)  
+[Embody](contents/embody.md)  
+[Motion Library](contents/motion_lib.md)  
+
 ## SDKs
-[javascript SDK](sdks/sdk_js/readme.md)   
-[python SDK](sdks/sdk_py/readme.md)  
+[Javascript SDK](https://github.com/FFTAI/rocs_client_js/blob/main/README.md)   
+[Python SDK](https://github.com/FFTAI/rocs_client_py/blob/main/README.md)  
+
 ## Server
-[Server API](docs/server_api/readme.md)
+[Server API](server/readme.md)  
+
 ## Release Notes
-[v0.1 notes](release/v0.1.md)
-[v0.2 notes](release/v0.2.md)
-![v1.0 notes](release/v1.1.md)
+[v1.1 notes](release/v1.1.md)  
+[v0.2 notes](release/v0.2.md)  
+[v0.1 notes](release/v0.1.md)  
