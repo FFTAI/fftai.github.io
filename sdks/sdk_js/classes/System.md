@@ -1,4 +1,4 @@
-[gros-client](../readme.md) / [Exports](../modules.md) / System
+[gros-client](sdks/sdk_js/readme.md) / [Exports](sdks/sdk_js/modules.md) / System
 
 # Class: System
 

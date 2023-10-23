@@ -1,4 +1,4 @@
-[gros-client](../readme.md) / [Exports](../modules.md) / Human
+[gros-client](sdks/sdk_js/readme.md) / [Exports](sdks/sdk_js/modules.md) / Human
 
 # Class: Human
 

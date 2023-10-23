@@ -1,4 +1,4 @@
-# 欢迎来到 GROS 服务器 API 文档
+# Welcome to RoCS Server API documentation
 
 
 # Robot
@@ -7,31 +7,31 @@
 
 Base URLs:
 
-* <a href="http://127.0.0.1:8001">开发环境: http://127.0.0.1:8001</a>
+* <a href="http://127.0.0.1:8001">Development environment: http://127.0.0.1:8001</a>
 
 # Robot
 
-## POST human回零
+## POST human 
 
 POST /robot/start
 
-控制指令：机器人回零接口，入参为{}一个没有任何参数的json对象
+Control instruction: The robot returns to the zero interface, entered as {} a json object without any parameters
 
-> Body 请求参数
+> Body request parameters
 
 ```json
 {}
 ```
 
-### 请求参数
+###  Request Parameters
 
-|名称|位置|类型|必选|说明|
+|Name|Position|Type|Mandatory|Description|
 |---|---|---|---|---|
-|body|body|object| 否 |none|
+|body|body|object| No |none|
 
-> 返回示例
+> Description
 
-> 成功
+> Success
 
 ```json
 {
@@ -41,54 +41,54 @@ POST /robot/start
 }
 ```
 
-### 返回结果
+### Return the result
 
-|状态码|状态码含义|说明|数据模型|
+|Status Code|Status Code Meaning|Description|Data Model|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|success|Inline|
 
-### 返回数据结构
+### Return the data structure
 
-状态码 **200**
+Status Code **200**
 
-|名称|类型|必选|约束|中文名|说明|
+|Name|Type|Mandatory|Constraints|Name|Description|
 |---|---|---|---|---|---|
-|» code|integer|true|none||返回状态码|
-|» msg|string|true|none||返回信息|
-|» data|object|true|none||返回数据|
+|» code|integer|true|none||Return Status code|
+|» msg|string|true|none||Return information|
+|» data|object|true|none||Return data|
 
-## POST human站立
+## POST human stand
 
 POST /robot/stand
 
-控制指令：站立接口，站立时可以选择输入head和身体body参数，默认入参为{}一个没有任何参数的json对象即可
+Control instruction: Standing interface, you can choose to input head and body parameters when standing, the default entry is {} a json object without any parameters can be
 
-> Body 请求参数
+> Body Request parameter
 
 ```json
 {}
 ```
 
-### 请求参数
+### Request parameters
 
-|名称|位置|类型|必选|说明|
+| Name | Location | Type | Mandatory | Description |
 |---|---|---|---|---|
-|body|body|object| 否 |none|
-|» body|body|object¦null| 是 |body参数|
-|»» x|body|integer| 是 |重心x轴（范围:+-0.03）|
-|»» y|body|integer| 是 |重心y轴（范围:+-0.03）|
-|»» z|body|integer| 是 |重心z轴（范围:+-0.03）|
-|»» a|body|integer| 是 |腰部x轴偏向（范围:+-0.04）|
-|»» b|body|integer| 是 |腰部y轴偏向（范围:+-0.04）|
-|»» c|body|integer| 是 |腰部z轴偏向（范围:+-0.03）|
-|» head|body|object¦null| 是 |head参数|
-|»» a|body|integer| 是 |头部x轴、左右倾斜（范围:+-0.03）|
-|»» b|body|integer| 是 |头部y轴、前后倾斜（范围:+-0.03）|
-|»» c|body|integer| 是 |头部z轴、直立旋转（范围:+-0.03）|
+|body|body|object| No |none|
+|» body|body|object¦null| Yes |body parameters|
+|»» x|body|integer| Yes | Center of gravity X-axis (range:+-0.03)|
+|»» y|body|integer| Yes | Center of gravity Y-axis (range:+-0.03)|
+|»» z|body|integer| Yes | Center of gravity Z-axis (range:+-0.03)|
+|»» a|body|integer| Yes |Lumbar X-axis deviation (range:+-0.04)|
+|»» b|body|integer| Yes |Lumbar Y-axis deviation (range:+-0.04)|
+|»» c|body|integer| Yes |Lumbar Z-axis deviation (range:+-0.03)|
+|» head|body|object¦null| Yes |head parameter|
+|»» a|body|integer| Yes |Head X axis, left and right tilt (range:+-0.03)|
+|»» b|body|integer| Yes |Head Y axis, left and right tilt (range:+-0.03)|
+|»» c|body|integer| Yes |Head Z axis, left and right tilt (range:+-0.03)|
 
-> 返回示例
+> Return example
 
-> 成功
+> Success
 
 ```json
 {
@@ -114,45 +114,45 @@ POST /robot/stand
 }
 ```
 
-### 返回结果
+### Return the result
 
-|状态码|状态码含义|说明|数据模型|
+|Status Code|Status Code Meaning| Description |Data Model|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success|Inline|
 
-### 返回数据结构
+### Return data structure
 
-状态码 **200**
+Status Code **200**
 
-|名称|类型|必选|约束|中文名|说明|
+|Name|Type|Mandatory|Restriction|Description|
 |---|---|---|---|---|---|
-|» code|integer|true|none||返回状态码0-正常、1-异常|
-|» msg|string|true|none||返回异常信息|
-|» data|object|true|none||返回数据|
+|» code|integer|true|none||Return status code 0-Success、1-error|
+|» msg|string|true|none||Return exception message|
+|» data|object|true|none||Return data|
 
 
 
-## GET 获取关节启动时状态
+## Get the state of the joint when it starts
 
 GET /robot/joint_states
 
-获取机器人启动关节状态
+Obtain the status of the robot starting joint
 
-> Body 请求参数
+> Body parameter
 
 ```json
 {}
 ```
 
-### 请求参数
+### Request parameters
 
-|名称|位置|类型|必选|说明|
+|Name|Location|Type|Mandatory|Description|
 |---|---|---|---|---|
-|body|body|object| 否 |none|
+|body|body|object| No |none|
 
-> 返回示例
+> Return examples
 
-> 成功
+> Successs
 
 ```json
 null
@@ -166,31 +166,31 @@ null
 }
 ```
 
-### 返回结果
+### Return the result
 
-|状态码|状态码含义|说明|数据模型|
+|Status Code|Status Code Meaning|Description|Data Model|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success|Inline|
 
-### 返回数据结构
+### Return data structure
 
-状态码 **200**
+Status Code **200**
 
-|名称|类型|必选|约束|中文名|说明|
+|Name|Type|Mandatory|Constraints|
 |---|---|---|---|---|---|
-|» code|integer|true|none||响应码0-成功，-1-失败|
-|» msg|string|true|none||响应信息|
-|» data|string|true|none||响应数据|
+|» code|integer|true|none||response code，0-success，-1-error|
+|» msg|string|true|none||response imformation|
+|» data|string|true|none||response data|
 
-## GET 获取机器人关节可活动范围
+## GET the range of motion of the robot joint
 
 GET /robot/joint_limit
 
-机器人关节活动范围查询
+Robot joint range of motion query
 
-> 返回示例
+> Return examples
 
-> 成功
+> Success
 
 ```json
 {
@@ -200,23 +200,23 @@ GET /robot/joint_limit
 }
 ```
 
-### 返回结果
+### Return the result
 
-|状态码|状态码含义|说明|数据模型|
+|Status Code|Status Code Meaning|Description|Data Model|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success|Inline|
 
-### 返回数据结构
+### Return data structure
 
-## POST 机器人断电接口
+## POST Robot power-off interface
 
 POST /robot/stop
 
-控制指令：命令优先于其他命令! 会掉电停止。请在紧急情况下触发
+Control commands: Commands take precedence over other commands! The power will stop. Please trigger in case of emergency
 
-> 返回示例
+> Return example
 
-> 成功
+> Success
 
 ```json
 {
@@ -226,29 +226,29 @@ POST /robot/stop
 }
 ```
 
-### 返回结果
+### Return the result
 
-|状态码|状态码含义|说明|数据模型|
+|Status Code|Status Code Meaning|Description|Data Model|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success|Inline|
 
-### 返回数据结构
+### Return data structure
 
-状态码 **200**
+ Status Code **200**
 
-|名称|类型|必选|约束|中文名|说明|
+|ame|Type|Mandatory|Restriction|Description|
 |---|---|---|---|---|---|
-|» code|integer|true|none||响应码，0-正常，-1-异常|
-|» msg|string|true|none||响应信息|
-|» data|string|false|none||响应信息|
+|» code|integer|true|none||response code，0-success，-1-error|
+|» msg|string|true|none||response information|
+|» data|string|false|none||response information|
 
-## GET 获取机器人类别
+## GET Get the robot category
 
 GET /robot/type
 
-> 返回示例
+> Return to example
 
-> 成功
+> Success
 
 ```json
 {
@@ -258,37 +258,37 @@ GET /robot/type
 }
 ```
 
-### 返回结果
+### Return the result
 
-|状态码|状态码含义|说明|数据模型|
+|Status Code|Status Code Meaning|Description|Data Model|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Success|Inline|
 
-### 返回数据结构
+### Return data structure
 
-状态码 **200**
+Status Code **200**
 
-|名称|类型|必选|约束|中文名|说明|
+|Name|Type|Mandatory|Restriction|Description|
 |---|---|---|---|---|---|
-|» code|integer|true|none||响应码，0-正常，-1-异常|
-|» msg|string|true|none||响应信息|
-|» data|string|false|none||响应信息|
+|» code|integer|true|none||response code，0-success，-1-error|
+|» msg|string|true|none||response code|
+|» data|string|false|none||response code|
 
-## GET 开启监听机器人实时状态
+## GET Enables real-time monitoring of the robot
 
 GET /robot/enable_states_listen
 
-开启机器人状态监听
+Turn on robot status monitoring
 
-### 请求参数
+### Request parameters
 
-|名称|位置|类型|必选|说明|
+|Name|Location|Type|Mandatory|Description|
 |---|---|---|---|---|
-|frequence|query|integer| 否 |监听频率，frequence对应一秒接收状态更新次数|
+|frequence|query|integer| No |Listening frequency frequence indicates the number of status updates received per second|
 
-> 返回示例
+> Return examples
 
-> 成功
+> Successs
 
 ```json
 {
@@ -298,29 +298,29 @@ GET /robot/enable_states_listen
 }
 ```
 
-### 返回结果
+### Return the result
 
-|状态码|状态码含义|说明|数据模型|
+|Status Code|Status Code Meaning|Description|Data Model|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|success|Inline|
 
-### 返回数据结构
+### Return data structure
 
-状态码 **200**
+Status Code **200**
 
-|名称|类型|必选|约束|中文名|说明|
+|Name|Type|Mandatory|Restriction|Description|
 |---|---|---|---|---|---|
-|» code|integer|true|none||响应码，0-正常，-1-异常|
-|» msg|string|true|none||响应信息|
-|» data|string|false|none||响应信息|
+|» code|integer|true|none||response code，0-success，-1-error|
+|» msg|string|true|none||response imformation|
+|» data|string|false|none||response imformation|
 
-## GET 关闭监听机器人实时状态
+## GET Turn off the monitoring robot real-time status
 
 GET /robot/disable_states_listen
 
-> 返回示例
+> Return examples
 
-> 成功
+> Successs
 
 ```json
 {
@@ -330,29 +330,29 @@ GET /robot/disable_states_listen
 }
 ```
 
-### 返回结果
+### Return the result
 
-|状态码|状态码含义|说明|数据模型|
+|Status Code|Status Code Meaning|Description|Data Model|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|success|Inline|
 
-### 返回数据结构
+### Return data structure
 
-状态码 **200**
+Status Code **200**
 
-|名称|类型|必选|约束|中文名|说明|
+|Name|Type|Mandatory|Restriction|Description|
 |---|---|---|---|---|---|
-|» code|integer|true|none||响应码，0-正常，-1-异常|
-|» msg|string|true|none||响应信息|
-|» data|string|false|none||响应信息|
+|» code|integer|true|none||response code，0-success，-1-error|
+|» msg|string|true|none||response imformation|
+|» data|string|false|none||response imformation|
 
-## GET 摄像头是否可以打开
+## GET Whether the camera can be turned on
 
 GET /control/camera_status
 
-> 返回示例
+> Return examples
 
-> 成功
+> Successs
 
 ```json
 {
@@ -362,29 +362,29 @@ GET /control/camera_status
 }
 ```
 
-### 返回结果
+### Return the result
 
-|状态码|状态码含义|说明|数据模型|
+|Status Code|Status Code Meaning|Description|Data Model|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|success|Inline|
 
-### 返回数据结构
+### Return data structure
 
-状态码 **200**
+Status Code **200**
 
-|名称|类型|必选|约束|中文名|说明|
+|Name|Type|Mandatory|Restriction|Description|
 |---|---|---|---|---|---|
-|» code|integer|true|none||响应码，0-正常，-1-异常|
-|» msg|string|true|none||响应信息|
-|» data|boolean|true|none||true-可以打开摄像头，false-不可以打开|
+|» code|integer|true|none||response code，0-success，-1-error|
+|» msg|string|true|none||response imformation|
+|» data|boolean|true|none||true- The camera can be turned on. false- The camera cannot be turned on|
 
-## GET 获取摄像头数据
+## GET Get camera data
 
 GET /control/camera
 
-获取摄像头数据，响应格式为流式数据，前端用``<img src="http://127.0.0.1:8001/control/camera" width="50%">``接收展示
+Obtain camera data, response format for streaming data, front end with``<img src="http://127.0.0.1:8001/control/camera" width="50%">``receiving display
 
-> 返回示例
+> Return examples
 
 > 200 Response
 
@@ -392,22 +392,23 @@ GET /control/camera
 {}
 ```
 
-### 返回结果
+### Return the result
 
-|状态码|状态码含义|说明|数据模型|
+|Status Code|Status Code Meaning|Description|Data Model|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|success|Inline|
 
-### 返回数据结构
+### Return data structure
 
-## websocket move指令
+## websocket move order
 
 URL:
 >ws://127.0.0.1:8001/ws
 
-控制指令：websocket长连接发送move指令
+Control instruction: The websocket long connection sends the move instruction
 
-> Body 请求参数
+> Body request parameters
+
 
 ```json
 {
@@ -419,24 +420,24 @@ URL:
 }
 ```
 
-### 请求参数
+### Request parameters
 
-|名称|位置|类型|必选|说明|
+|Name|Location|Type|Mandatory|Description|
 |---|---|---|---|---|
-|body|body|object| 否 |none|
-|» command|body|string| 是 |1、head-头运动、2-move行走指令|
-|» data|body|object| 是 |none|
-|»» speed|body|number| 是 |速度 控制前后，取值范围为正负0.8。向前为正，向后为负！(浮点数8位)|
-|»» angle|body|number| 是 |角度 控制方向，取值范围为正负45度。向左为正，向右为负！(浮点数8位)|
+|body|body|object| No |none|
+|» command|body|string| Yes |1 head motion 2 move|
+|» data|body|object| Yes |none|
+|»» speed|body|number| Yes |Before and after the speed control, the value ranges from plus to minus 0.8. Forward is positive, backward is negative! (floating point number 8 bits)|
+|»» angle|body|number| Yes |Angle Control direction. The value ranges from plus to minus 45 degrees. Left is positive, right is negative! (floating point number 8 bits)|
 
-#### 枚举值
+#### enumerated value
 
-|属性|值|
+|Stats|Value|
 |---|---|
 |» command|head|
 |» command|move|
 
-> 返回示例
+> Return examples
 
 > 200 Response
 
@@ -444,22 +445,22 @@ URL:
 {}
 ```
 
-### 返回结果
+### Return the result
 
-|状态码|状态码含义|说明|数据模型|
+|Status Code|Status Code Meaning|Description|Data Model|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|success|Inline|
 
-### 返回数据结构
+### Return data structure
 
-## websocket head指令
+## websocket head command
 
 URL:
 >ws /127.0.0.1:8001/ws
 
-控制指令：websocket长连接发送头部指令
+Control instruction: websocket long connection sends header instruction
 
-> Body 请求参数
+> Body Request parameters
 
 ```json
 {
@@ -472,25 +473,25 @@ URL:
 }
 ```
 
-### 请求参数
+### Request parameters
 
-|名称|位置|类型|必选|说明|
+|Name|Location|Type|Mandatory|Description|
 |---|---|---|---|---|
-|body|body|object| 否 |none|
-|» command|body|string| 是 |head|
-|» data|body|object| 是 |none|
-|»» roll|body|number| 是 |roll（翻滚角）：描述围绕x轴旋转的角度，左转头为负，向右转为正，范围（-17.1887-17.1887）|
-|»» pitch|body|number| 是 |pitch（俯仰角）：描述围绕y轴旋转的角度。前点头为正，后点头为负，范围（-17.1887-17.1887）|
-|»» yaw|body|number| 是 |yaw（偏航角）：描述围绕z轴旋转的角度。左扭头为负，右扭头为正，范围（-17.1887-17.1887）|
+|body|body|object| No |none|
+|» command|body|string| Yes |head|
+|» data|body|object| Yes |none|
+|»» roll|body|number| Yes |roll: Describes the Angle of rotation around the X-axis, negative for left heads, positive for right, range (-17.1887-17.1887)|
+|»» pitch|body|number| Yes |pitch: Describes the Angle of rotation around the Y-axis. The front nod is positive, the back nod is negative, the range is (-17.1887-17.1887)|
+|»» yaw|body|number| Yes |yaw: Describes the Angle of rotation around the z axis. The left torsion head is negative, the right torsion head is positive, and the range is (-17.1887-17.1887)|
 
-#### 枚举值
+#### enumerated value
 
-|属性|值|
+|Stats|Value|
 |---|---|
 |» command|head|
 |» command|move|
 
-> 返回示例
+> Return examples
 
 > 200 Response
 
@@ -498,24 +499,24 @@ URL:
 {}
 ```
 
-### 返回结果
+### Return the result
 
-|状态码|状态码含义|说明|数据模型|
+|Status Code|Status Code Meaning|Description|Data Model|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|success|Inline|
 
-### 返回数据结构
+### Return data structure
 
-## websocket 获取实时状态
+## websocket gets real-time status
 
 URL:
 >ws://127.0.0.1:8001/ws
 
-websocket长连接监听获取实时状态
+websocket long connection listening to obtain real-time status
 
-> 返回示例
+> Return examples
 
-> 成功
+> Successs
 
 ```json
 {
@@ -727,61 +728,61 @@ websocket长连接监听获取实时状态
 }
 ```
 
-### 返回结果
+### Return the result
 
-|状态码|状态码含义|说明|数据模型|
+|Status Code|Status Code Meaning|Description|Data Model|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|成功|Inline|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|success|Inline|
 
-### 返回数据结构
+### Return data structure
 
-状态码 **200**
+Status Code **200**
 
-|名称|类型|必选|约束|中文名|说明|
-|---|---|---|---|---|---|
+|Name|Location|Type|Mandatory|Description|
+|---|---|---|---|---|
 |» data|object|true|none||none|
 |»» states|object|true|none||none|
-|»»» basestate|object|true|none||机器人状态数据|
+|»»» basestate|object|true|none||Robot state data|
 |»»»» a|number|true|none||hip roll|
 |»»»» b|number|true|none||hip Pitch|
 |»»»» c|number|true|none||hip Yaw|
 |»»»» va|number|true|none||not use|
 |»»»» vb|number|true|none||not use|
 |»»»» vc|number|true|none||not use|
-|»»»» vx|number|true|none||前进方向速度，单位m/s|
-|»»»» vy|number|true|none||左右方向速度，单位m/s|
+|»»»» vx|number|true|none||Speed in the forward direction, in m/s|
+|»»»» vy|number|true|none||Velocity in the left and right directions, in m/s|
 |»»»» vz|number|true|none||not use|
-|»»»» x|number|true|none||base  X，站立时X位置|
-|»»»» y|number|true|none||base  Y，站立时Y位置|
-|»»»» z|number|true|none||base  Z，站立时Z位置|
-|»»» contactforce|object|true|none||接触力数据 not use|
-|»»»» fxL|number|true|none||左脚接触力|
-|»»»» fxR|number|true|none||左脚接触力|
-|»»»» fyL|number|true|none||左脚接触力|
-|»»»» fyR|number|true|none||左脚接触力|
-|»»»» fzL|number|true|none||左脚接触力|
-|»»»» fzR|number|true|none||左脚接触力|
-|»»»» mxL|number|true|none||左脚接触力|
-|»»»» mxR|number|true|none||左脚接触力|
-|»»»» myL|number|true|none||左脚接触力|
-|»»»» myR|number|true|none||左脚接触力|
-|»»»» mzL|number|true|none||左脚接触力|
-|»»»» mzR|number|true|none||左脚接触力|
-|»»» fsmstatename|object|true|none||有关状态机状态的数据|
-|»»»» currentstatus|string|true|none||当前状态 Unknown、Start、Zero、Stand、Walk、Stop|
-|»»» jointStates|[object]|true|none||关节状态列表|
-|»»»» name|string|true|none||关节名称|
-|»»»» qa|number|true|none||真实的关节角度，单位：rad（弧度）|
-|»»»» qc|number|true|none||期望的关节速度，单位：rad|
-|»»»» qdota|number|true|none||真实的关节速度，单位：rad/s（弧度/秒）|
-|»»»» qdotc|number|true|none||期望的关节速度，单位：rad/s（弧度/秒）|
-|»»»» taua|number|true|none||真实的扭矩，单位:n\*m|
-|»»»» tauc|number|true|none||期望的关节扭矩，单位：unit:n\*m|
-|»»» stanceindex|object|true|none||姿态索引 not use|
+|»»»» x|number|true|none||base  X，X position when standing|
+|»»»» y|number|true|none||base  Y，Y position when standing|
+|»»»» z|number|true|none||base  Z，Z position when standing|
+|»»» contactforce|object|true|none||contact force data not use|
+|»»»» fxL|number|true|none||Left foot contact force|
+|»»»» fxR|number|true|none||Left foot contact force|
+|»»»» fyL|number|true|none||Left foot contact force|
+|»»»» fyR|number|true|none||Left foot contact force|
+|»»»» fzL|number|true|none||Left foot contact force|
+|»»»» fzR|number|true|none||Left foot contact force|
+|»»»» mxL|number|true|none||Left foot contact force|
+|»»»» mxR|number|true|none||Left foot contact force|
+|»»»» myL|number|true|none||Left foot contact force|
+|»»»» myR|number|true|none||Left foot contact force|
+|»»»» mzL|number|true|none||Left foot contact force|
+|»»»» mzR|number|true|none||Left foot contact force|
+|»»» fsmstatename|object|true|none||Data about the state of the state machine|
+|»»»» currentstatus|string|true|none||Current state Unknown、Start、Zero、Stand、Walk、Stop|
+|»»» jointStates|[object]|true|none||Joint status list|
+|»»»» name|string|true|none||Joint name|
+|»»»» qa|number|true|none||Actual joint Angle, unit: rad|
+|»»»» qc|number|true|none||Desired joint velocity in rad|
+|»»»» qdota|number|true|none||Real joint velocity in rad/s (radians per second)|
+|»»»» qdotc|number|true|none||Desired joint velocity in rad/s (radians per second)|
+|»»»» taua|number|true|none||Real torque, unit :n\*m|
+|»»»» tauc|number|true|none||Desired joint torque, unit:n\*m|
+|»»» stanceindex|object|true|none||Attitude index not use|
 |»» timestamp|object|true|none||none|
 |»»» nanos|integer|true|none||none|
 |»»» seconds|string|true|none||none|
 |» function|string|true|none||SonnieGetStates|
 
-# 数据模型
+# Data model
 

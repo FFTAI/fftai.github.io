@@ -6,18 +6,18 @@
 
 ### Enumerations
 
-- [CarMod](enums/CarMod.md)
+- [CarMod](CarMod.md)
 
 ### Classes
 
-- [Camera](classes/Camera.md)
-- [Car](classes/Car.md)
-- [Human](classes/Human.md)
-- [System](classes/System.md)
+- [Camera](Camera.md)
+- [Car](Car.md)
+- [Human](Human.md)
+- [System](System.md)
 
 ### Functions
 
-- [get\_robot\_type](modules.md#get_robot_type)
+- [get\_robot\_type](sdks/sdk_js/modules.md#get_robot_type)
 
 ## Functions
 

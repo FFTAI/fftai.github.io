@@ -1,5 +1,5 @@
 # 傅利叶通用机器人系统-客户端SDK（python）
-![](pics/banner.jpeg)
+![](sdks/sdk_py/pics/banner.jpeg)
 
 ## 概述
     本例(GROS Client SDK)适用于您已经拥有傅利叶（Fourier）所提供的机器人设备，通过本例可实现对机器人的控制。它提供了一组简单的API，让你可以轻松地与机器人进行交互。
@@ -7,7 +7,7 @@
 ## 快速上手
 
   * [源码](https://github.com/FFTAI/gros_client_py.git)
-  * [文档](modules.md) 
+  * [文档](sdks/sdk_py/modules.md) 
     * [robot module](gros_client.robot.md)
       * [car module](gros_client.robot.md#module-gros_client.robot.car)
       * [human module](gros_client.robot.md#module-gros_client.robot.human)

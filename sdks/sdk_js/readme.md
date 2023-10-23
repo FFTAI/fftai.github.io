@@ -1,10 +1,10 @@
-gros-client / [Exports](modules.md)
+gros-client / [Exports](sdks/sdk_js/modules.md)
 
 # Fourier Universal Robot System - Client SDK (Javascript/Typescript)
-![](pics/banner.jpeg)
+![](sdks/sdk_js/pics/banner.jpeg)
 
 * [Source Code](https://github.com/FFTAI/gros_client_js.git)
-* [Document](modules.md)
+* [Document](sdks/sdk_js/modules.md)
 
 ## Overview
 This example (RoCS Client SDK) applies to the robot equipment that you already have provided by Fourier, through which you can control the robot. It provides a set of simple apis that allow you to easily interact with robots.

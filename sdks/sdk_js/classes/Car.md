@@ -1,4 +1,4 @@
-[gros-client](../readme.md) / [Exports](../modules.md) / Car
+[gros-client](sdks/sdk_js/readme.md) / [Exports](sdks/sdk_js/modules.md) / Car
 
 # Class: Car
 
@@ -227,7 +227,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `mod` | [`CarMod`](../enums/CarMod.md) | 模式对象定义 |
+| `mod` | [`CarMod`](CarMod.md) | 模式对象定义 |
 
 #### Returns
 
