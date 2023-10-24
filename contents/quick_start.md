@@ -5,5 +5,5 @@ First, install the virtual environment. For RoCS, using Ubuntu + Webots is the m
 
 1. [Setup RoCS Server](https://github.com/FFTAI/rocs_server/blob/main/README.md)
 2. [Initial Connection of App](app/readme.md)
-3. [Initial Connection of Python SDK](sdks/sdk_py/readme.md)
+3. [Initial Connection of Python SDK](https://github.com/FFTAI/rocs_client_py/blob/main/README.md)
 4. [Power On/Off Sequence of Physical Robot GR-1](gr1_loop.md)
