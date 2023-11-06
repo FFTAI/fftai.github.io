@@ -88,7 +88,6 @@ The Fourier GR-1's scalability lends itself to the validation of various AI mode
 | Memory              | 16 G                                                                  |
 | SSD                 | 512 G                                                                 |
 
-
 # Operation Instruction
 
 ## Before power-on

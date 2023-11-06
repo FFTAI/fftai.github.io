@@ -1,6 +1,6 @@
 ![logo](_media/icon.svg)
 
-# Robot Control System <small>1.1 </small>
+# Robot Control System <small>1.1</small>
 
 > Where Precision Fuses with Robotic Mastery.
 
@@ -8,8 +8,8 @@
 - Layered Architecture
 - User-Friendly Graphical Interface
 - Open Source
-- Efficient Data Transmission
+- Efficient Data Transmissions
 - Integration
 
-[GitHub](https://hokashun.github.io/docsify)
+[GitHub](https://fftai.github.io/#/)
 [Getting Started](#docsify)

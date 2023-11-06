@@ -6,30 +6,26 @@
   - [Software Architecture](softwarearchitecture.md)
   - [Faults](faults.md)
 - Quick Start
+
   - [Quick Start](quickstart.md)
 - Client SDK
+
   - [Understanding GR-1 Programming](python\understanding_gr-1_programming.md)
   - [RoCS Server](rocsserver.md)
   - [Python SDK](python\README.md)
-    - [Quckstart](python\quickstart.md)
     - [Python SDK](rocsclientsdk-python.md)
   - [Javascript/Typescript SDK](rocsclientsdk-ts&js.md)
-
 - Remote Control App
 
   - [Remote Control App](rocsappoperation.md)
 - Autonomy
 
   - [Autonomy](autonomy.md)
-  
 - Embody
 
   - [Embody](embody.md)
-
 - Motion Library
-
 - [Motion Library](motionlibrary.md)
-  
 - Server API
 
   - [Server API](rocsserverapi.md)
