@@ -12,4 +12,4 @@
 - Integration
 
 [GitHub](https://fftai.github.io/#/)
-[Getting Started](#docsify)
+[Getting Started](aboutgr-1.md)
