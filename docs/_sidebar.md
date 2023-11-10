@@ -1,17 +1,18 @@
 - Concepts
 
   - [About GR-1](aboutgr-1.md)
+  - [Operation Instruction to GR-1](operationinstruction.md)
   - [About RoCS](aboutrocs.md)
   - [Networking](networking.md)
   - [Software Architecture](softwarearchitecture.md)
   - [Faults](faults.md)
 - Quick Start
-
   - [Quick Start](quickstart.md)
+- [RoCS Server](rocsserver.md)
 - Client SDK
 
   - [Understanding GR-1 Programming](python\understanding_gr-1_programming.md)
-  - [RoCS Server](rocsserver.md)
+  
   - [Python SDK](python\README.md)
     - [Python SDK](rocsclientsdk-python.md)
   - [Javascript/Typescript SDK](rocsclientsdk-ts&js.md)

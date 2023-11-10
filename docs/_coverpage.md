@@ -11,5 +11,9 @@
 - Efficient Data Transmissions
 - Integration
 
-[GitHub](https://fftai.github.io/#/)
+[GitHub](https://github.com/FFTAI/fftai.github.io)
 [Getting Started](aboutgr-1.md)
+
+<!-- background color -->
+
+![color](#bfe8f9)
