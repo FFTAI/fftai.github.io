@@ -7,13 +7,23 @@
   - [Software Architecture](softwarearchitecture.md)
   - [Faults](faults.md)
 - Quick Start
+
   - [Quick Start](quickstart.md)
-- [RoCS Server](rocsserver.md)
-- Client SDK
+- [RoCS Server](rocsserveroverview.md)
+
+  - [RoCS Server Installlation](rocsserverinstall.md)
+  - [Verification After Installation](checkServiceStatus.md)
+  - [RoCS Service](rocs_svr.md)
+  - [RoCS Model](rocs_model.md)
+  - [RoCS Enable WIFI](rocsenablewifi.md)
+  - [Connect to Cluster](clustermode.md)
+  -
+-
+- [Client SDK](sdkoverview.md)
 
   - [Understanding GR-1 Programming](python\understanding_gr-1_programming.md)
-  
   - [Python SDK](python\README.md)
+
     - [Python SDK](rocsclientsdk-python.md)
   - [Javascript/Typescript SDK](rocsclientsdk-ts&js.md)
 - Remote Control App
@@ -25,8 +35,16 @@
 - Embody
 
   - [Embody](embody.md)
-- Motion Library
 - [Motion Library](motionlibrary.md)
+
+  - [Start](start.md)
+  - [Stop](stop.md)
+  - [Stand](stand.md)
+  - [Walk](walk.md)
+  - [Move Head](movehead.md)
+  - [Move Joints](movejoint.md)
+  - [Move Arms and Hands](movearmsandhands.md)
+  - [Tremble Fingers](tremblefingers.md)
 - Server API
 
   - [Server API](rocsserverapi.md)

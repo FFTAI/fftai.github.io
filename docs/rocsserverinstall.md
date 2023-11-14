@@ -1,4 +1,4 @@
-# RoCS Server Reference Guide
+# RoCS Server Installation Guide
 
 ## **System Requirements**
 
@@ -41,7 +41,11 @@ This command uses `wget` to download and execute the installation script for the
 * **|:** Pipe operator. It takes the output (script content fetched by `wget`) and passes it as input to the next command.
 * **bash:** Command that executes the content received from `wget` as a Bash script. It essentially runs the installation script.
 
+!> The installation directory `.rocs_server1.3.0` is hidden. If you are in a terminal, you can use the `ls -a` command to display it. If you are in the file manager, you can use the **Ctrl+H**  keyboard shortcut to display it. or use the file manager GUI to display the hidden folders by go to the **top-right hamburger menu → Show hidden files**.
+
 ### Introduction to the Installation Script `install.sh`
+
+!> This section is provided for your reference. The entire installation process has already been completed by the bash script downloaded via curl or wget in the preceding steps.
 
 ```
 
@@ -77,50 +81,18 @@ The `set -e` at the beginning ensures that the script exits immediately if any c
 
 ### Introduction to the `lib` folder
 
+!> This section is provided for your reference. The entire installation process has already been completed by the bash script downloaded via curl or wget in the preceding steps.
+
 The lib folder includes three libraries which are installed via the auto bash script `install.sh` under the lib folder.
 
-This script automates the process of updating system packages, installing necessary development tools and libraries, setting up a working path, building, and installing specific libraries (eigen, qpOASES, rbdl), and configuring the system to recognize the newly installed libraries:
+This script sets up the system for software development by installing necessary tools and libraries and then builds and installs specific libraries required for linear algebra, quadratic programming, and rigid body dynamics computations:
 
-```
-sudo apt update -y
-sudo apt upgrade -y
-sudo apt --fix-broken install -y
-sudo apt install cmake -y
-sudo apt install libeigen3-dev -y
-sudo apt install build-essential -y
-sudo apt install cmake-curses-gui -y
-sudo apt install libunittest++-dev -y
-sudo apt install qtbase5-dev -y
-
-WORK_PATH=$(pwd)
-echo "current_file: $WORK_PATH/$FILE_NAME"
-echo "   WORK_PATH: $WORK_PATH"
-
-sudo rm -rf $WORK_PATH/eigen/build
-mkdir -p $WORK_PATH/eigen/build
-cd $WORK_PATH/eigen/build
-cmake ..
-make
-sudo make install
-sudo rm -rf $WORK_PATH/eigen/build
-
-sudo rm -rf $WORK_PATH/qpOASES/build
-mkdir -p $WORK_PATH/qpOASES/build
-cd $WORK_PATH/qpOASES/build
-cmake ..
-make
-sudo make install
-sudo rm -rf $WORK_PATH/qpOASES/build
-
-sudo rm -rf $WORK_PATH/rbdl/build
-sudo rm -rf /usr/bin/librbdl.*
-sudo rm -rf /usr/local/include/rbdl
-mkdir -p $WORK_PATH/rbdl/build
-cd $WORK_PATH/rbdl/build
-cmake ..
-make
-sudo make install
-sudo cp -f librbdl.* /usr/bin/
-
-sudo ldconfig
-```
+1. **Update Package Lists**: `sudo apt update -y` updates the list of available software packages.
+2. **Upgrade Installed Packages**: `sudo apt upgrade -y` upgrades the installed software packages to their latest versions.
+3. **Fix Broken Packages**: `sudo apt --fix-broken install -y` attempts to fix any broken dependencies among installed packages.
+4. **Install Essential Tools and Libraries**: Various commands (`sudo apt install ... -y`) install essential tools and libraries needed for software development, including CMake, Eigen3 (a linear algebra library), build-essential, cmake-curses-gui, libunittest++-dev, and qtbase5-dev.
+5. **Build and Install Eigen**: The script then builds and installs the Eigen library, a C++ template library for linear algebra.
+6. **Build and Install qpOASES**: Next, it builds and installs qpOASES, a software library designed for solving quadratic programming (QP) problems.
+7. **Build and Install RBDL (Rigid Body Dynamics Library)**: The script builds and installs RBDL, a library for rigid body dynamics computations.
+8. **Cleanup**: The script removes temporary build directories for Eigen, qpOASES, and RBDL to free up space.
+9. **Library Configuration**: `sudo ldconfig` updates the shared library cache to include the newly installed libraries, making them accessible to other programs.

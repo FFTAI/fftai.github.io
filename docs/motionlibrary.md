@@ -1,4 +1,4 @@
-## Motion Library
+## Motion Library Overview
 
 The motion library of the RoCS serves as a repository of predefined motor skills and motions that a robot can perform, offering several key features:
 
@@ -13,3 +13,5 @@ The motion library of the RoCS serves as a repository of predefined motor skills
 9. **High-Level Control:** By referencing desired motions from the library, high-level control of the robot becomes more straightforward and efficient.
 
 The motion library serves as a valuable resource that offers a collection of reusable motor functions as building blocks for a wide range of robotic tasks. This approach eliminates the need for repetitive, low-level reprogramming of each behavior and streamlines the development of robotic applications.
+
+!> As of the current implementation, the Motion Library provides a set of predefined motions. Please be aware that the available motions are limited in scope. However, we are actively working on expanding the library to incorporate a broader range of motions and functionalities in future updates. Stay tuned for enhanced motion capabilities and increased flexibility in upcoming releases. Your understanding and patience are greatly appreciated as we continue to improve and enrich the Motion Library.
