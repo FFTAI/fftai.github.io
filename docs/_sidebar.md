@@ -17,8 +17,6 @@
   - [RoCS Model](rocs_model.md)
   - [RoCS Enable WIFI](rocsenablewifi.md)
   - [Connect to Cluster](clustermode.md)
-  -
--
 - [Client SDK](sdkoverview.md)
 
   - [Understanding GR-1 Programming](python\understanding_gr-1_programming.md)
@@ -28,7 +26,11 @@
   - [Javascript/Typescript SDK](rocsclientsdk-ts&js.md)
 - Remote Control App
 
+  - [Startup](startUp.md)
+  - [Login](login.md)
   - [Remote Control App](rocsappoperation.md)
+  - 
+  - [Remote Control Interface](remoteControlInterface.md)
 - Autonomy
 
   - [Autonomy](autonomy.md)

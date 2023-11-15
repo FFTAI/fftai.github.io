@@ -1,4 +1,3 @@
-
 # Operation Instruction
 
 ## Before power-on
@@ -11,21 +10,21 @@ Do the following steps before powering on the robot:
 2. Ensure that the batteries of robot and the support stand are fully chareged.
 3. Ensure that the robot components moves smoothly.
 
-   ![1698657344119](image/README/1698657344119.png ':size=80%')
+   ![1698657344119](image/README/1698657344119.png ":size=80%")
 
 ### Inspecting environment
 
 1. Ensure that there is a 4-meter clearance around the robot.
 2. Ensure that the ground is level and dry.
 
-   ![1698656074242](image/README/1698656074242.png ':size=80%')
+   ![1698656074242](image/README/1698656074242.png ":size=80%")
 
 ### Connecting robot to monitor
 
 1. Power on the router.
 2. Connect monitor to Type-C interface through the extension dock.
 
-   ![1698657743472](image/README/1698657743472.png ':size=80%')
+   ![1698657743472](image/README/1698657743472.png ":size=80%")
 
 ### Preparing arms for calibration
 
@@ -34,7 +33,7 @@ Do the following steps before powering on the robot:
 3. Ensure a 10 cm interval between palms and hips.
 4. Ensure that the robot stands upright.
 
-   ![1698658681237](image/README/1698658681237.png ':size=80%')
+   ![1698658681237](image/README/1698658681237.png ":size=80%")
 
 ## Powering on Robot
 
@@ -42,7 +41,7 @@ Do the following steps before powering on the robot:
 2. Press robot host power-on button.
 3. Release e-stop switch.
 
-   ![1698659185945](image/README/1698659185945.png ':size=80%')
+   ![1698659185945](image/README/1698659185945.png ":size=80%")
 4. Initialize robot arms and legs through desktop terminal.
 
    Enter the following command to calibrate arms.
@@ -63,15 +62,14 @@ Do the following steps before powering on the robot:
 
 !>The robot has started successfullly if the indicator lights of actuators and robot host flash regularly.
 
-   ![1698661268810](image/README/1698661268810.png ':size=60%')
+   ![1698661268810](image/README/1698661268810.png ":size=60%")
 
 ## Connecting Remote Controller to Robot
 
 1. Switch on the remote controller and open the **System Settings** interface.
 2. Input the Wi-Fi account and password specified on the back of the robot.
 
-   ![1698736555432](image/README/1698736555432.png ':size=80%')
-
+   ![1698736555432](image/README/1698736555432.png ":size=80%")
 3. Click **Connect** .
 
 !> A success prompt will be given when the connection succeeds.
@@ -81,11 +79,11 @@ Do the following steps before powering on the robot:
 1. Ensure that the robot is fastened to the support stand.
 2. Click **Initial** to make the robot to initial state.
 
-   ![1698744141867](image/README/1698744141867.png ':size=80%')
+   ![1698744141867](image/README/1698744141867.png ":size=80%")
 3. Lower the robot with the lift of the support stand and ensure the robot's feet stably contact with the ground.
 4. Click **Stand** in the remote controller.
 
-   ![1698744210172](image/README/1698744210172.png ':size=80%')
+   ![1698744210172](image/README/1698744210172.png ":size=80%")
 
 ## Controlling Robot
 
@@ -96,11 +94,11 @@ Do the following steps before powering on the robot:
 
    Use right handler to control the vision field.
 
-   ![1698744913325](image/README/1698744913325.png ':size=80%')
+   ![1698744913325](image/README/1698744913325.png ":size=80%")
 
-## Pausing Robot Motion
+## Halting Robot Motion
 
-Following two approaches are used to pause the motion of the robot:
+Following two approaches are used to halt the motion of the robot:
 
 * Press the **Stand** button on the remote controller.
 * Press down the E-stop button in case of danger or any emergency situation.

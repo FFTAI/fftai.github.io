@@ -8,11 +8,11 @@ The SDK can be executed in either a virtual environment or on a physical robot:
 
  To set up a virtual development environment, you need to:
 
-- Install the RoCS server dependencies and server binaries.
-- Install the webots software.
-- Start the RoCS server service.
-- Lauch the webots and load GR-1 model file.
-- Lauch the client SDK to control the GR-1.
+* [Installing Server Environment Dependencies and RoCS Server Binary](http://localhost:3000/#/quickstart?id=installing-server-environment-dependencies-and-rocs-server-binary)
+* [Installing Webots](http://localhost:3000/#/quickstart?id=installing-webots)
+* [Starting the RoCS Server](http://localhost:3000/#/quickstart?id=starting-the-rocs-server)
+* [Loading Webots Model](http://localhost:3000/#/quickstart?id=loading-webots-model)
+* [Lauching Client SDK](http://localhost:3000/#/quickstart?id=lauching-client-sdk)
 
 ## Installing Server Environment Dependencies and RoCS Server Binary
 
@@ -64,6 +64,8 @@ After running these commands, the server service will be active, allowing the cl
 2. Navigate to `File` -> `Open World`.
 3. Select the world file located at `.rocs_server/bin/webots/webotsim/worlds/SonnyV4.wbt`.
 
+!> If the model cannot be shown, attempt to restore the layout by navigating to Tools -> Restore Layout.
+
 ## Lauching Client SDK
 
 You can choose either Python Client SDK or JavaScript/TypeScript Client SDK to control the robot.
@@ -91,32 +93,34 @@ import rocs_client   # Import RoCS Client module
 human = Human(host='192.168.9.17') 
 ```
 
-!> RoCS supports three types of robots: dog, car, human. The above statement creates an instance of the `Human` class and assigns it to the variable `human`. The host parameter is set to the IP address '192.168.12.1', which you should change to the actual IP of your robot.  The `Human` class includes functionalities related to communication and interaction with the GR-1 robot at the specified IP address.
+!> RoCS supports three types of robots: dog, car, human. The above statement creates an instance of the `Human` class and assigns it to the variable `human`.  The `Human` class includes functionalities related to communication and interaction with the GR-1 robot at the specified IP address.
+
+!> The host parameter is set to the IP address '192.168.12.1', which you should change to the actual IP of PC that your virtual robot runs on. For details, see **GR-1 as a WiFi client** in [Network Choice](http://localhost:3000/#/networking?id=network-choice) section.
 
 4. Control the Robot.
 
    You can use the following methods of the `human` class to control the robot:
 
-   - `start()`: initiates or resets control.
-   - `stop()`: triggers an emergency stop (halts with power off).
-   - `exit()`: ends robot control session.
-   - `stand()`: commands the robot to stand in place.
-   - `walk(angle, speed)`: guides the robot in movement.
+   * `start()`: initiates or resets control.
+   * `stop()`: triggers an emergency stop (halts with power off).
+   * `exit()`: ends robot control session.
+   * `stand()`: commands the robot to stand in place.
+   * `walk(angle, speed)`: guides the robot in movement.
 
-     - `angle(float)`: controls direction with a range of plus or minus 45 degrees. Positive for left, negative for right. The value is an 8-digit floating-point number.
-     - `speed(float)`: manages forward and backward movement with a range of plus or minus 0.8. Positive for forward, negative for backward. The value is an 8-digit floating-point number.
-   - `head(roll, pitch, yaw)`:  directs the GR-1 robot's head movements.
+     * `angle(float)`: controls direction with a range of plus or minus 45 degrees. Positive for left, negative for right. The value is an 8-digit floating-point number.
+     * `speed(float)`: manages forward and backward movement with a range of plus or minus 0.8. Positive for forward, negative for backward. The value is an 8-digit floating-point number.
+   * `head(roll, pitch, yaw)`:  directs the GR-1 robot's head movements.
 
-     - `roll(float)`: controls the roll angle (rotation around the x-axis). Negative for left, positive for right, within the range of (-17.1887-17.1887).
-     - `pitch(float)`: adjusts the pitch angle (rotation around the y-axis). Positive for nodding forward, negative for nodding backward, within the range of (-17.1887-17.1887).
-     - `yaw(float)`: manages the yaw angle (rotation around the z-axis). Negative for turning left, positive for turning right, within the range of (-17.1887-17.1887).
-   - `move_joint(*motor)`: moves joints (variable length parameter, capable of controlling multiple joints simultaneously, estimated delay 2ms).
+     * `roll(float)`: controls the roll angle (rotation around the x-axis). Negative for left, positive for right, within the range of (-17.1887-17.1887).
+     * `pitch(float)`: adjusts the pitch angle (rotation around the y-axis). Positive for nodding forward, negative for nodding backward, within the range of (-17.1887-17.1887).
+     * `yaw(float)`: manages the yaw angle (rotation around the z-axis). Negative for turning left, positive for turning right, within the range of (-17.1887-17.1887).
+   * `move_joint(*motor)`: moves joints (variable length parameter, capable of controlling multiple joints simultaneously, estimated delay 2ms).
 
-     - `motor(Motor)`: joint object, provides joint mapping relationships and parameter numbers through `human.motor_limits`.
-   - `upper_body(arm_action, hand_action)`: executes preset commands for the upper limbs.
+     * `motor(Motor)`: joint object, provides joint mapping relationships and parameter numbers through `human.motor_limits`.
+   * `upper_body(arm_action, hand_action)`: executes preset commands for the upper limbs.
 
-     - `arm_action(ArmAction)`: enumeration for arm preset commands.
-     - `hand_action(HandAction)`: enumeration for hand preset commands.
+     * `arm_action(ArmAction)`: enumeration for arm preset commands.
+     * `hand_action(HandAction)`: enumeration for hand preset commands.
 
 #### Example Code
 
@@ -151,7 +155,7 @@ human.upper_body(arm=ArmAction.LEFT_ARM_WAVE)
 human.upper_body(arm=ArmAction.TWO_ARMS_WAVE)   
 
 # Gesture: Tremble the fingers
-human.upper_body(hand=HandAction.TREMBLE)       
+human.upper_body(hand=HandAction.TREMBLE)   
 
 # Move motor no.1 left and right by 10 degrees each
 human.move_joint(Motor(no='1', angle=10, orientation='left'), 
@@ -184,26 +188,26 @@ let human = new Human({host: '192.168.9.17'}); //create an instance of the Human
 
    You can use the following methods of the `human` class to control the robot:
 
-   - `start()`: initiates or resets control.
-   - `stop()`: triggers an emergency stop (halts with power off).
-   - `exit()`: ends robot control session.
-   - `stand()`: commands the robot to stand in place.
-   - `walk(angle, speed)`: guides the robot in movement.
+   * `start()`: initiates or resets control.
+   * `stop()`: triggers an emergency stop (halts with power off).
+   * `exit()`: ends robot control session.
+   * `stand()`: commands the robot to stand in place.
+   * `walk(angle, speed)`: guides the robot in movement.
 
-     - `angle(float)`: controls direction with a range of plus or minus 45 degrees. Positive for left, negative for right. The value is an 8-digit floating-point number.
-     - `speed(float)`: manages forward and backward movement with a range of plus or minus 0.8. Positive for forward, negative for backward. The value is an 8-digit floating-point number.
-   - `head(roll, pitch, yaw)`: directs the GR-1 robot's head movements.
+     * `angle(float)`: controls direction with a range of plus or minus 45 degrees. Positive for left, negative for right. The value is an 8-digit floating-point number.
+     * `speed(float)`: manages forward and backward movement with a range of plus or minus 0.8. Positive for forward, negative for backward. The value is an 8-digit floating-point number.
+   * `head(roll, pitch, yaw)`: directs the GR-1 robot's head movements.
 
-     - `roll(float)`: controls the roll angle (rotation around the x-axis). Negative for left, positive for right, within the range of (-17.1887-17.1887).
-     - `pitch(float)`: adjusts the pitch angle (rotation around the y-axis). Positive for nodding forward, negative for nodding backward, within the range of (-17.1887-17.1887).
-     - `yaw(float)`: manages the yaw angle (rotation around the z-axis). Negative for turning left, positive for turning right, within the range of (-17.1887-17.1887).
-   - `move_joint(*motor)`: moves joints (variable length parameter, capable of controlling multiple joints simultaneously, estimated delay 2ms).
+     * `roll(float)`: controls the roll angle (rotation around the x-axis). Negative for left, positive for right, within the range of (-17.1887-17.1887).
+     * `pitch(float)`: adjusts the pitch angle (rotation around the y-axis). Positive for nodding forward, negative for nodding backward, within the range of (-17.1887-17.1887).
+     * `yaw(float)`: manages the yaw angle (rotation around the z-axis). Negative for turning left, positive for turning right, within the range of (-17.1887-17.1887).
+   * `move_joint(*motor)`: moves joints (variable length parameter, capable of controlling multiple joints simultaneously, estimated delay 2ms).
 
-     - `motor(Motor)`: joint object, provides joint mapping relationships and parameter numbers through `human.motor_limits`.
-   - `upper_body(arm_action, hand_action)`: executes preset commands for the upper limbs.
+     * `motor(Motor)`: joint object, provides joint mapping relationships and parameter numbers through `human.motor_limits`.
+   * `upper_body(arm_action, hand_action)`: executes preset commands for the upper limbs.
 
-     - `arm_action(ArmAction)`: enumeration for arm preset commands.
-     - `hand_action(HandAction)`: enumeration for hand preset commands.
+     * `arm_action(ArmAction)`: enumeration for arm preset commands.
+     * `hand_action(HandAction)`: enumeration for hand preset commands.
 
 #### Example code
 
@@ -230,7 +234,7 @@ setTimeout(() => {
     // Wave both hands
     human.upper_body(arm=ArmAction.TWO_ARMS_WAVE)   
     // Tremble the fingers
-    human.upper_body(hand=HandAction.TREMBLE)       
+    human.upper_body(hand=HandAction.TREMBLE)   
   
     //Move motor no.1 left and right by 10 degrees each
     human.move_joint(Motor(no='1', angle=10, orientation='left'),
@@ -266,7 +270,6 @@ To develop with a physical robot, you need to:
    ```shell
    wget -qO- <https://raw.githubusercontent.com/FFTAI/rocs_server/v1.3.0/install.sh> | bash
    ```
-
 3. Modify configuration information under the `sbin` folder.
 
 ```
@@ -293,3 +296,5 @@ bash install.sh
    After completing the above actions, congratulations, you have successfully installed!
 
    Now, you can begin your robot experience using our provided SDK or Android APK to control Fourier GR1.
+
+!> For the use of the Client SDKs, see [Lauching Client SDK](http://localhost:3000/#/quickstart?id=lauching-client-sdk) for details. For the use of Control APP, see [Remote Control App User Guide](http://localhost:3000/#/rocsappoperation?id=remote-control-app-user-guide) for reference.
