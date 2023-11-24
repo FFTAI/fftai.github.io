@@ -6,10 +6,19 @@ The SDK is versatile, supporting execution in both virtual environments and on p
 
 # Extended Development Through Virtual Environment Webots
 
- To set up a virtual development environment, you need to:
+To establish a virtual development environment, follow these steps:
+
+## Initial Setup (First-time Users)
+
+If this is your first time running the development environment, complete the following steps before proceeding with the setup:
 
 * [Installing Server Environment Dependencies and RoCS Server Binary](http://localhost:3000/#/quickstart?id=installing-server-environment-dependencies-and-rocs-server-binary)
 * [Installing Webots](http://localhost:3000/#/quickstart?id=installing-webots)
+
+## Setting Up the Virtual Environment
+
+Once the initial setup is complete, proceed with the following steps:
+
 * [Starting the RoCS Server](http://localhost:3000/#/quickstart?id=starting-the-rocs-server)
 * [Loading Webots Model](http://localhost:3000/#/quickstart?id=loading-webots-model)
 * [Lauching Client SDK](http://localhost:3000/#/quickstart?id=lauching-client-sdk)
@@ -251,10 +260,12 @@ setTimeout(() => {
 
 # Extended Development Through Physical GR-1 Robot
 
-To develop with a physical robot, you need to:
+## Initial Setup (First-time Users)
 
-1. Get familiar with the robot operation, see [Operation Instruction](operationinstruction.md) for details.
-2. Installing Server Environment Dependencies and RoCS Server Binary.
+If this is your first time running the development environment, complete the following steps before proceeding with the setup:
+
+1. Familiarize yourself with the robot's operation. Refer to [Operation Instruction](operationinstruction.md) for details.
+2. Install Server Environment Dependencies and RoCS Server Binary.
 
    Use either of the following commands in your terminal to install the server dependencies and RoCS Server binaries:
 
@@ -270,7 +281,6 @@ To develop with a physical robot, you need to:
    ```shell
    wget -qO- <https://raw.githubusercontent.com/FFTAI/rocs_server/v1.3.0/install.sh> | bash
    ```
-
 3. Modify configuration information under the `sbin` folder.
 
 ```
@@ -292,10 +302,8 @@ bash install.sh
 
 !> Upon completion of these steps, your host machine will integrate three system services: `rocs_svr`, `rocs_model`, and `rocs_enable_wifi`, which are configured to automatic startup during system boot.
 
-5. Power on GR-1 and explore.
+## Start Development
 
-   After completing the above actions, congratulations, you have successfully installed!
-
-   Now, you can begin your robot experience using our provided SDK or Android APK to control Fourier GR1.
+Once the initial setup is complete, simply power on the GR-1 and start your Client SDK or Control APP; you're ready to go because the three system services: `rocs_svr`, `rocs_model`, and `rocs_enable_wifi`, are already configured to automatically start during system boot, as mentioned above.
 
 !> For the use of the Client SDKs, see [Lauching Client SDK](http://localhost:3000/#/quickstart?id=lauching-client-sdk) for details. For the use of Control APP, see [Remote Control App User Guide](http://localhost:3000/#/rocsappoperation?id=remote-control-app-user-guide) for reference.
