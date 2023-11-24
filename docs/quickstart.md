@@ -1,8 +1,8 @@
 # Overview
 
-The SDK library serves as a crucial component for applications aiming to exercise command over the GR-1, retrieve sensor data, and set up payload services. This quickstart guide offers a step-by-step walkthrough to assist you in installing the necessary SDK libraries (both in Python and JavaScript/TypeScript) and running basic programs for GR-1 control.
+This section guides you through utilizing the client SDK for GR-1 robot development.
 
-The SDK can be executed in either a virtual environment or on a physical robot:
+The SDK is versatile, supporting execution in both virtual environments and on physical robots:
 
 # Extended Development Through Virtual Environment Webots
 
@@ -270,6 +270,7 @@ To develop with a physical robot, you need to:
    ```shell
    wget -qO- <https://raw.githubusercontent.com/FFTAI/rocs_server/v1.3.0/install.sh> | bash
    ```
+
 3. Modify configuration information under the `sbin` folder.
 
 ```
@@ -291,7 +292,7 @@ bash install.sh
 
 !> Upon completion of these steps, your host machine will integrate three system services: `rocs_svr`, `rocs_model`, and `rocs_enable_wifi`, which are configured to automatic startup during system boot.
 
-4. Power on GR-1 and explore.
+5. Power on GR-1 and explore.
 
    After completing the above actions, congratulations, you have successfully installed!
 
