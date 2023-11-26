@@ -14,7 +14,6 @@
   - [RoCS Service](rocs_svr.md)
   - [RoCS Model](rocs_model.md)
   - [RoCS Enable WIFI](rocsenablewifi.md)
-  - [Connect to Cluster](clustermode.md)
 - [**Client SDK**](sdkoverview.md)
   - [Understanding RoCS Programming](python\understanding_gr-1_programming.md)
 - [**Remote Control App**](remoteControlAPPOverview.md)
