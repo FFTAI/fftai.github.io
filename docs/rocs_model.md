@@ -1,10 +1,9 @@
 # rocs_model Introduction
 
+The `rocs_model` serves as a crucial component within the RoCS system, specializing in the external synchronization of 3D robot model information. Its primary function is to meticulously replicate the robot's coordinates and position, delivering a visually appealing user interface through the HTTP service.
 
-RoCS model, within the RoCS framework, serves as a crucial component responsible for delivering 3D model information of the robot. Specifically, it enables the upper-level system to retrieve visual details such as the appearance and structure of the robot through an HTTP interface.
+Within the `rocs_model`, real-time position coordinate data is continuously monitored via remote monitoring. This information is then utilized to render the model through a websocket, a high-performance real-time communication method. This dynamic interaction serves as a valuable resource for developers, offering an intuitive insight into the current state of the robot and significantly enhancing control and monitoring efficiency.
 
-In the development process, RoCS model plays a pivotal role. It empowers developers to achieve visual representation of the robot, encompassing its external features and structural aspects. This capability proves invaluable for monitoring and comprehending the robot's status, movements, and executed tasks.
+Throughout the development process, `rocs_model` assumes a pivotal role by facilitating the implementation of the robot's visual representation. This includes external features and structural aspects, providing developers with a comprehensive understanding of the robot's status, movement, and task execution.
 
-The workflow of RoCS model typically involves the user interface or other applications sending an HTTP request to obtain 3D model information of the robot. Upon receiving the request, RoCS model responds with the relevant information, allowing the upper-level system to dynamically access real-time visual details of the robot's appearance and structure. This interaction provides developers with an intuitive understanding of the robot's current state, enhancing control and monitoring efficiency.
-
-RoCS model serves as a potent tool for developers within a robot system, offering the capability to better comprehend and visualize the external appearance and structural details of the robot throughout the development process.
+The `RoCS_model` is a vital tool for developers in robotics, offering profound insights into the robot's appearance and structure. This enhances the development process by providing a valuable visual representation for monitoring and understanding the robot's behavior and functionality.
