@@ -4,7 +4,7 @@ The login interface is a Vue.js component with interactive elements, including a
 
 It communicates with a Vuex store to retrieve and manage data related to the connection status and robot information. Users can initiate exploration and interact with the application through the provided UI elements.
 
-!> For how the connection status is checked and stored, please refer to [RoCS App Logic Flow](http://localhost:3000/#/logicFlow?id=rocs-app-logic-flow) for details.
+!> For how the connection status is checked and stored, please refer to [RoCS App Logic Flow](https://fftai.github.io/#/logicFlow?id=rocs-app-logic-flow) for details.
 
 ### **Disconnected UI**
 

@@ -6,9 +6,9 @@ This guide will help you understand the programming principles that drive the ro
 
 ### Understanding the "IP"
 
-The IP address of the GR-1 robot is used to uniquely identify and locate the robot on a network. The IP address allows other devices or applications to send data, commands, or requests to the GR-1 robot and receive responses in return. It is a fundamental component for establishing network connectivity and enabling communication with the GR-1 robot. 
+The IP address of the GR-1 robot is used to uniquely identify and locate the robot on a network. The IP address allows other devices or applications to send data, commands, or requests to the GR-1 robot and receive responses in return. It is a fundamental component for establishing network connectivity and enabling communication with the GR-1 robot.
 
-For how to configure the IP and set up connection to the robot, refer to chapter [Network Communication](http://localhost:54600/#/networking?id=network-communication).
+For how to configure the IP and set up connection to the robot, refer to chapter [Network Communication](https://fftai.github.io/#/networking?id=network-communication).
 
 ## How to Setup and Command GR-1 to Move
 
