@@ -1,3 +1,23 @@
+<style>
+  /*Style for level 1 headings*/
+  
+  /*Style for sidebar items */
+  .sidebar-item {
+    padding: 5px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #000; /* Set the default text color*/
+  }
+
+  /*Style for active sidebar item */
+  .active {
+    background-color: #8fc8e8; /* Replace with your desired active background color */
+    color: #000; /* Set text color to white or any color that contrasts well with the background*/
+  }
+</style>
+
+</style>
+
 - [**Concepts**](concepts.md)
 
   - [About GR-1](aboutgr-1.md)
@@ -14,6 +34,7 @@
   - [RoCS Service](rocs_svr.md)
   - [RoCS Model](rocs_model.md)
   - [RoCS Enable WIFI](rocsenablewifi.md)
+  - [Connect to Cluster](clustermode.md)
 - [**Client SDK**](sdkoverview.md)
   - [Understanding RoCS Programming](python\understanding_gr-1_programming.md)
 - [**Remote Control App**](remoteControlAPPOverview.md)

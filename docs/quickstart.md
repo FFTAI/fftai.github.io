@@ -12,18 +12,18 @@ To establish a virtual development environment, follow these steps:
 
 If this is your first time running the development environment, complete the following steps before proceeding with the setup:
 
-* [Installing Server Environment Dependencies and RoCS Server Binary](http://localhost:3000/#/quickstart?id=installing-server-environment-dependencies-and-rocs-server-binary)
-* [Installing Webots](http://localhost:3000/#/quickstart?id=installing-webots)
+* [Installing Server Environment Dependencies and RoCS Server Binary](https://fftai.github.io/#/quickstart?id=installing-server-environment-dependencies-and-rocs-server-binary)
+* [Installing Webots](https://fftai.github.io/#/quickstart?id=installing-webots)
 
 ## Setting Up the Virtual Environment
 
 Once the initial setup is complete, proceed with the following steps:
 
-* [Starting the RoCS Server](http://localhost:3000/#/quickstart?id=starting-the-rocs-server)
-* [Loading Webots Model](http://localhost:3000/#/quickstart?id=loading-webots-model)
-* [Lauching Client SDK](http://localhost:3000/#/quickstart?id=lauching-client-sdk)
+* [Starting the RoCS Server](https://fftai.github.io/#/quickstart?id=starting-the-rocs-server)
+* [Loading Webots Model](https://fftai.github.io/#/quickstart?id=loading-webots-model)
+* [Lauching Client SDK](https://fftai.github.io/#/quickstart?id=lauching-client-sdk)
 
-## Installing Server Environment Dependencies and RoCS Server Binary
+### Installing Server Environment Dependencies and RoCS Server Binary
 
 Use either of the following commands in your terminal to install the server dependencies and RoCS Server binaries:
 
@@ -40,7 +40,7 @@ curl -o- https://raw.githubusercontent.com/FFTAI/rocs_server/v1.3.0/install.sh |
 wget -qO- <https://raw.githubusercontent.com/FFTAI/rocs_server/v1.3.0/install.sh> | bash
 ```
 
-## Installing Webots
+### Installing Webots
 
 Follow these steps to set up the virtual robot environment using Webots:
 
@@ -52,9 +52,9 @@ wget https://github.com/cyberbotics/webots/releases/download/R2023b/webots_2023b
 
 2. Run command ``sudo dpkg -i webots_2023b_amd64.deb`` to install the package.
 
-!> Webots is a robot simulation software developed by Cyberbotics，which is used for simulating and testing the behavior of robots in a virtual environment before deploying them in the physical world. Webots provides a library of pre-built robot models representing a wide variety of robots. It incorporates a powerful physics engine that simulates realistic interactions between robots and their environments. It supports programming interfaces in several languages (C, C++, Python, Java) for developing and controlling robot behaviors. For more information on Webots, you can refer to its official documentation: [Webots User Guide](https://www.cyberbotics.com/doc/guide/index).
+!> Webots is a robot simulation software developed by Cyberbotics，which is used for simulating and testing the behavior of robots in a virtual environment before deploying them in the physical world. Webots provides a library of pre-built robot models representing a wide variety of robots. It incorporates a powerful physics engine that simulates realistic interactions between robots and their environments. It supports programming interfaces in several languages (C, C++, Python, Java) for developing and controlling robot behaviors. For more information on Webots, you can refer to its official documentation: [Webots +User Guide](https://www.cyberbotics.com/doc/guide/index).
 
-## Starting the RoCS Server
+### Starting the RoCS Server
 
 Open a terminal, run the following command:
 
@@ -67,7 +67,7 @@ After running these commands, the server service will be active, allowing the cl
 
 !> Ensure that the server is successfully started before attempting to interact with the virtual robot using the client SDK.
 
-## Loading Webots Model
+### Loading Webots Model
 
 1. Open a terminal and run the `webots`command to start Webots GUI interface.
 2. Navigate to `File` -> `Open World`.
@@ -75,11 +75,11 @@ After running these commands, the server service will be active, allowing the cl
 
 !> If the model cannot be shown, attempt to restore the layout by navigating to Tools -> Restore Layout.
 
-## Lauching Client SDK
+### Lauching Client SDK
 
 You can choose either Python Client SDK or JavaScript/TypeScript Client SDK to control the robot.
 
-### Using Python Client SDK
+#### Using Python Client SDK
 
 1. Install the Python Client SDK package:
 
@@ -104,7 +104,7 @@ human = Human(host='192.168.9.17')
 
 !> RoCS supports three types of robots: dog, car, human. The above statement creates an instance of the `Human` class and assigns it to the variable `human`.  The `Human` class includes functionalities related to communication and interaction with the GR-1 robot at the specified IP address.
 
-!> The host parameter is set to the IP address '192.168.12.1', which you should change to the actual IP of PC that your virtual robot runs on. For details, see **GR-1 as a WiFi client** in [Network Choice](http://localhost:3000/#/networking?id=network-choice) section.
+!> The host parameter is set to the IP address '192.168.12.1', which you should change to the actual IP of PC that your virtual robot runs on. For details, see **GR-1 as a WiFi client** in [Network Choice](https://fftai.github.io/#/networking?id=network-choice) section.
 
 4. Control the Robot.
 
@@ -131,7 +131,7 @@ human = Human(host='192.168.9.17')
      * `arm_action(ArmAction)`: enumeration for arm preset commands.
      * `hand_action(HandAction)`: enumeration for hand preset commands.
 
-#### Example Code
+##### Example Code
 
 Here's an example code snippet showcasing the utilization of the Python Client SDK for robot control:
 
@@ -173,7 +173,7 @@ human.move_joint(Motor(no='1', angle=10, orientation='left'),
 
 ```
 
-### Using JavaScript/TypeScript Client SDK
+#### Using JavaScript/TypeScript Client SDK
 
 1. Install the JavaScript/TypeScript Client SDK using npm:
 
@@ -218,7 +218,7 @@ let human = new Human({host: '192.168.9.17'}); //create an instance of the Human
      * `arm_action(ArmAction)`: enumeration for arm preset commands.
      * `hand_action(HandAction)`: enumeration for hand preset commands.
 
-#### Example code
+##### Example code
 
 Here's an example code snippet showcasing the utilization of the JavaScript/TypeScript Client SDK for robot control:
 
@@ -306,4 +306,4 @@ bash install.sh
 
 Once the initial setup is complete, simply power on the GR-1 and start your Client SDK or Control APP; you're ready to go because the three system services: `rocs_svr`, `rocs_model`, and `rocs_enable_wifi`, are already configured to automatically start during system boot, as mentioned above.
 
-!> For the use of the Client SDKs, see [Lauching Client SDK](http://localhost:3000/#/quickstart?id=lauching-client-sdk) for details. For the use of Control APP, see [Remote Control App User Guide](http://localhost:3000/#/rocsappoperation?id=remote-control-app-user-guide) for reference.
+!> For the use of the Client SDKs, see [Lauching Client SDK](https://fftai.github.io/#/quickstart?id=lauching-client-sdk) for details. For the use of Control APP, see [Remote Control App User Guide](https://fftai.github.io/#/rocsappoperation?id=remote-control-app-user-guide) for reference.
