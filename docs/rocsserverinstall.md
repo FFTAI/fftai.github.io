@@ -60,3 +60,33 @@ This script sets up the system for software development by installing necessary 
 7. **Build and Install RBDL (Rigid Body Dynamics Library)**: The script builds and installs RBDL, a library for rigid body dynamics computations.
 8. **Cleanup**: The script removes temporary build directories for Eigen, qpOASES, and RBDL to free up space.
 9. **Library Configuration**: `sudo ldconfig` updates the shared library cache to include the newly installed libraries, making them accessible to other programs.
+
+## Running
+
+### simulation environment (Webots)
+
+#### I. Downloading Webots
+
+1. Execute script for quick installation 
+```shell
+wget https://github.com/cyberbotics/webots/releases/download/R2023b/webots_2023b_amd64.deb
+
+sudo dpkg -i webots_2023b_amd64.deb
+```
+
+2. Alternatively, you can visit [cyberbotics](https://www.cyberbotics.com) Download your preferred desktop distribution from the official website 
+
+
+#### II. Launch SDK control program 
+```shell
+cd ~/.rocs_server/sbin
+bash start_up_rocs_svr.sh
+```
+
+#### III. Load Webots model 
+1. Open Webots
+2. `file` -> `open world` -> `～/.rocs_server/bin/webots/worlds/SonnyV4.wbt`
+
+#### IV. Control model 
+1. Install Client SDK for corresponding language : [Python](https://pypi.org/project/rocs-client/)或[JavaScript/TypeScript]().
+2. You can see the corresponding sample code on the introduction page of SDK, and manipulate it through the SDK sample code 
