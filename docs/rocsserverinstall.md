@@ -21,23 +21,16 @@ curl -o- https://raw.githubusercontent.com/FFTAI/rocs_server/main/install.sh | b
 ## Running in a simulation environment (Webots)
 
 ### I. Downloading Webots
-
-1. Execute script for quick installation 
 ```shell
 wget https://github.com/cyberbotics/webots/releases/download/R2023b/webots_2023b_amd64.deb
-```
-```shell
 sudo dpkg -i webots_2023b_amd64.deb
 ```
 
-2. Alternatively, you can visit [cyberbotics](https://www.cyberbotics.com) Download your preferred desktop distribution from the official website 
-
+* Alternatively, you can visit [cyberbotics](https://www.cyberbotics.com) Download your preferred desktop distribution from the official website 
 
 ### II. Launch SDK control program 
 ```shell
 cd ~/.rocs_server/sbin
-```
-```shell
 bash start_up_rocs_svr.sh
 ```
 
