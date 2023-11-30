@@ -1,7 +1,6 @@
 # About GR-1
 
 The Fourier GR-1 represents a versatile humanoid robot, boasting a configuration of up to 40 FSA joints capable of delivering peak joint torque of 230 N.m. Its advanced whole-body control algorithm empowers the robot with an impressive 44 degrees of freedom.
-
 ![1699499072424](image/aboutgr-1/1699499072424.png ":size=40%")
 
 This robotic marvel exhibits remarkable human-like agility and motion kinematics, including the ability to perform tasks such as:
@@ -17,7 +16,8 @@ These capabilities position the Fourier GR-1 as a promising platform for the fut
 
 The Fourier GR-1's scalability lends itself to the validation of various AI models and algorithms, opening up exciting possibilities for applications in industries, rehabilitation, household, and research.
 
-# GR-1 Specifications
+
+<h1>GR-1 Specifications</h1>
 
 ## Mechanical
 
