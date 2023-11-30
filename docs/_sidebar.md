@@ -16,10 +16,7 @@
   }
 </style>
 
-</style>
-
 - [**Concepts**](concepts.md)
-
   - [About GR-1](aboutgr-1.md)
   - [Operation Instruction to GR-1](operationinstruction.md)
   - [About RoCS](aboutrocs.md)
@@ -32,10 +29,8 @@
   - [Verification After Installation](checkServiceStatus.md)
   - [About RoCS Server](about_rocs_server.md)
 - [**Client SDK**](sdkoverview.md)
-
   - [Understanding RoCS Programming](python\understanding_gr-1_programming.md)
 - [**Remote Control App**](remoteControlAPPOverview.md)
-
   - [Build Your Own Remote Control App](remotecontrolappprojectsetup.md)
   - [Logic Flow](logicFlow.md)
   - [Startup](startUp.md)
@@ -43,7 +38,6 @@
 - [**Autonomy**](autonomy.md)
 - [**Embody**](embody.md)
 - [**Motion Library**](motionlibrary.md)
-
   - [Start](start.md)
   - [Stop](stop.md)
   - [Stand](stand.md)
@@ -54,7 +48,6 @@
   - [Tremble Fingers](tremblefingers.md)
 - [**Server API**](rocsserverapi.md)
 - [**Release Notes**](releasenoteoverview.md)
-
   - [Release V0.1](v0.1.md)
   - [Release V0.2](v0.2.md)
   - [Release V1.1](v1.1.md)
