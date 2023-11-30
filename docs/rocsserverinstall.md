@@ -13,7 +13,7 @@ The RoCS server can be installed fully automatically via bash script. You can do
 ### Script for RoCS Server Installation using `curl`
 
 ```
-curl -o- <https://raw.githubusercontent.com/FFTAI/rocs_server/main/install.sh> | bash
+curl -o- https://raw.githubusercontent.com/FFTAI/rocs_server/main/install.sh | bash
 ```
 
 This script utilizes `curl` to download and execute the installation script for the `RoCS` from a specific GitHub repository.
