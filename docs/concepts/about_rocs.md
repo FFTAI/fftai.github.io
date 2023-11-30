@@ -2,7 +2,7 @@
 
 The Robot Control System, known as RoCS, is an advanced software framework designed for precise management and control of robotic systems. It consists of two primary components: the upper computer and the lower computer.
 
-See the [Quick start](../quick_start/quick_start.md) guide for more details.
+See the [Quick start](../quick_start/overview.md) guide for more details.
 
 # Features
 

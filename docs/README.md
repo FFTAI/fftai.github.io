@@ -10,7 +10,7 @@ The collective elements of the upper computer, encompassing the Control App, Cli
 
 This comprehensive framework, along with its robust architectural design, provides developers and operators with the tools necessary for efficient and precise monitoring and remote control of robotic systems, thereby ensuring their seamless and optimal operation.
 
-See the [Quick start](quick_start/quick_start.md) guide for more details.
+See the [Quick start](quick_start/overview.md) guide for more details.
 
 ## Features
 
