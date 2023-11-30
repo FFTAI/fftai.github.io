@@ -1,6 +1,6 @@
 <style>
   /*Style for level 1 headings*/
-  
+
   /*Style for sidebar items */
   .sidebar-item {
     padding: 5px;
@@ -28,12 +28,9 @@
   - [Faults](faults.md)
 - [**Quick Start**](quickstart.md)
 - [**RoCS Server**](rocsserveroverview.md)
-
   - [RoCS Server Installlation](rocsserverinstall.md)
   - [Verification After Installation](checkServiceStatus.md)
-  - [RoCS Service](rocs_svr.md)
-  - [RoCS Model](rocs_model.md)
-  - [RoCS Enable WIFI](rocsenablewifi.md)
+  - [About RoCS Server](about_rocs_server.md)
 - [**Client SDK**](sdkoverview.md)
 
   - [Understanding RoCS Programming](python\understanding_gr-1_programming.md)
