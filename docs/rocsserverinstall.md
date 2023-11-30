@@ -25,7 +25,6 @@ curl -o- https://raw.githubusercontent.com/FFTAI/rocs_server/main/install.sh | b
 1. Execute script for quick installation 
 ```shell
 wget https://github.com/cyberbotics/webots/releases/download/R2023b/webots_2023b_amd64.deb
-
 sudo dpkg -i webots_2023b_amd64.deb
 ```
 
