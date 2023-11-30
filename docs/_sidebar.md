@@ -8,8 +8,6 @@
     text-decoration: none;
     color: #000; /* Set the default text color*/
   }
-
-  /*Style for active sidebar item */
   .active {
     background-color: #8fc8e8; /* Replace with your desired active background color */
     color: #000; /* Set text color to white or any color that contrasts well with the background*/
