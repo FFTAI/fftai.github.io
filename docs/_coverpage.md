@@ -12,8 +12,7 @@
 - Integration
 
 [GitHub](https://github.com/FFTAI/fftai.github.io)
-[Getting Started](aboutgr-1.md)
+[Getting Started](concepts/about_gr1.md)
 
 <!-- background color -->
 
-![color](#bfe8f9)
