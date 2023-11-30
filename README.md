@@ -49,7 +49,7 @@ The RoCS is structured into three distinct layers, each serving a unique and piv
 
 The RoCS architecture is meticulously engineered to provide accurate control and management of robotic systems through a network-based communication system. It allows for seamless interaction with the robot and empowers operators to issue commands and receive real-time feedback. This is achieved by supporting Node.js and Python SDK clients, along with joystick terminals that run the Control App, enabling effective communication with the system.
 
-![](docs/concepts/static/about_rocs.png)
+![](concepts/static/about_rocs.png)
 
 * **Bottom Layer - Motion Library**
 
