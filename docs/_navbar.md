@@ -1,3 +1,3 @@
-- **✒️ CLIENT_SDK**
-  - [`🌟️ Python`](https://fftai.github.io/rocs_client_py/index.html)
-  - [`🌟️ NodeJs`](https://fftai.github.io/rocs_client_js/index.html)
+- Language
+  - [English](/)
+  - [简体中文](zh-cn\README-CN.md)
