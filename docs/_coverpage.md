@@ -1,18 +1,18 @@
 ![logo](_media/icon.svg)
 
-# Robot Control System <small>1.1</small>
+# **Robot Control System**<small>**1.1**</small>
 
-> Where Precision Fuses with Robotic Mastery.
+> **Where Precision Fuses with Robotic Mastery**.
 
-- High Precision Control
-- Layered Architecture
-- User-Friendly Graphical Interface
-- Open Source
-- Efficient Data Transmissions
-- Integration
+- `High Precision Control`
+- `Layered Architecture`
+- `User-Friendly Graphical Interface`
+- `Open Source`
+- `Efficient Data Transmissions`
+- `Integrati`
 
-[GitHub](https://github.com/FFTAI/fftai.github.io)
-[Getting Started](concepts/about_gr1.md)
+[**GitHub**](https://github.com/FFTAI/fftai.github.io)
+[**Getting Started**](concepts/about_gr1.md)
 
 <!-- background color -->
 
