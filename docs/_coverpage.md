@@ -11,7 +11,6 @@
 - `Efficient Data Transmissions`
 - `Integrati`
 
-[**GitHub**](https://github.com/FFTAI/fftai.github.io)
 [**Getting Started**](concepts/about_gr1.md)
 
 <!-- background color -->
