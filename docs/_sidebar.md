@@ -20,7 +20,7 @@
     - [Faults](concepts/faults.md)
 - [**Quick Start**](quick_start/overview.md)
 - [**RoCS Server**](rocs_server/overview.md)
-    - [RoCS Server Installlation](rocs_server/installer.md)
+    - [RoCS Server Installation](rocs_server/installer.md)
     - [Verification After Installation](rocs_server/check.md)
     - [About RoCS Server](rocs_server/about.md)
 - [**Client SDK**](client_sdk/overview.md)
