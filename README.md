@@ -4,7 +4,7 @@
     </a>
 </p>
 
-## RoCS Robot Control System
+# Robot Control System
 
 > Where precision fuses with robotic mastery.
 
