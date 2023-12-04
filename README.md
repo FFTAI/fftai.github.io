@@ -1,4 +1,10 @@
-## RoCS
+<p align="center">
+    <a href="https://fftai.github.io" target="_blank" rel="noopener noreferrer">
+        <img width="200" src="https://raw.githubusercontent.com/FFTAI/rocs_server/main/assets/ico.jpg" alt="logo">
+    </a>
+</p>
+
+## RoCS Robot Control System
 
 > Where precision fuses with robotic mastery.
 
