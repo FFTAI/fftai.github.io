@@ -1,5 +1,3 @@
-
-
 # Stand
 
 The `stand` method in the Motion Library is used to command the robot to stand up from a sitting or resting position. After calling `start` and waiting for stabilization, you can issue the `stand` command to initiate the standing motion. Following the `stand` call, you can proceed with additional control commands or motion instructions.

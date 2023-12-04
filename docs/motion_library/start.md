@@ -1,5 +1,3 @@
-
-
 # Start
 
 To activate the GR-1 robot and establish a connection, you can use the `start()` function from the `rocs_client` library.
