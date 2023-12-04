@@ -1,99 +1,161 @@
 <!DOCTYPE html>
-<html lang='en'>
-
+<html lang="en">
 <head>
-  <meta charset='UTF-8' />
-  <title>RoCS</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="icon" href="_media/favicon.ico"/>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css"/>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css"/>
+    <meta charset="UTF-8">
+    <title>RoCS</title>
+    <style type="text/css">
+        /* 清除内外边距 */
+        body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+        dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+        pre, /* text formatting elements 文本格式元素 */
+        fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+        th, td { /* table elements 表格元素 */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 设置默认字体 */
+        body,
+        button, input, select, textarea { /* for ie */
+            /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+            font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+        }
+
+        h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+        h2 { font-size: 16px; }
+        h3 { font-size: 14px; }
+        h4, h5, h6 { font-size: 100%; }
+
+        address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+        code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+        small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+        /* 重置列表元素 */
+        ul, ol { list-style: none; }
+
+        /* 重置文本格式元素 */
+        a { text-decoration: none; }
+        a:hover { text-decoration: none; }
+
+        abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+            border-bottom: 1px dotted;
+            cursor: help;
+        }
+        q:before, q:after { content: ''; }
+
+        /* 清除浮动 */
+        .clearfix:after{
+            content: "020"; 
+            display: block; 
+            height: 0; 
+            clear: both; 
+            visibility: hidden;  
+        }
+        .clearfix {
+            zoom: 1; 
+        }
+
+        html,body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+        }
+       
+    </style>
+    <style type="text/css">
+        .cover-main{
+            width:  calc(100% - 200px);
+            height: calc(100% - 100px);
+            background: #0c0c0c  url(./_media/bg.png) no-repeat right;
+            padding:100px 0 0 200px;
+        }
+        .main-control {
+            margin-top: 60px;
+        }
+        .anchor{
+            font-size: 40px;
+            color: #fff;
+            line-height: 46px;
+        }
+        blockquote{
+            font-size: 24px; 
+            color: #fff;
+        }
+
+        .main-list{
+            margin-top: 30px;
+            color:#fff;
+        }
+
+        .main-list li {
+            font-size: 16px; 
+            line-height: 30px;
+        }
+
+        .main-button a {
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 50px;
+            margin-top: 50px;
+            font-size: 16px;
+        }
+        .main-button a:first-child  {
+            border: 2px solid #0086d1;
+            color:#0086d1;
+            margin-right: 50px;
+        }
+
+        .main-button a:last-child  {
+            background-color: #0086d1;
+            color:#fff;
+        }
+        
+    </style>
+
 </head>
-
 <body>
-<div id='app'>Loading ...</div>
-
-<script>
-  const lang = location.hash.match(/#\/(de-de|es|ru-ru|zh-cn)\//);
-  if (lang) {
-    document.documentElement.setAttribute('lang', lang[1]);
-  }
-
-  window.$docsify = {
-    auto2top: true,
-    coverpage: true,
-    executeScript: true,
-    loadSidebar: true,
-    loadNavbar: true,
-    mergeNavbar: true,
-    maxLevel: 4,
-    subMaxLevel: 3,
-    sidebarDisplayLevel: 3, // set sidebar display level
-    ga: 'UA-106147152-1',
-    matomo: {
-      host: '//matomo.thunderwave.de',
-      id: 6
-    },
-    name: 'RoCS',
-    repo: 'https://github.com/FFTAI',
-    nameLink: {
-      '/es/': '#/es/',
-      '/de-de/': '#/de-de/',
-      '/ru-ru/': '#/ru-ru/',
-      '/zh-cn/': '#/zh-cn/',
-      '/': '#/'
-    },
-    search: {
-      noData: {
-        '/es/': '¡No hay resultados!',
-        '/de-de/': 'Keine Ergebnisse!',
-        '/ru-ru/': 'Никаких результатов!',
-        '/zh-cn/': '没有结果!',
-        '/': 'No results!'
-      },
-      paths: 'auto',
-      placeholder: {
-        '/es/': 'Buscar',
-        '/de-de/': 'Suche',
-        '/ru-ru/': 'Поиск',
-        '/zh-cn/': '搜索',
-        '/': 'Search'
-      },
-      pathNamespaces: ['/es', '/de-de', '/ru-ru', '/zh-cn']
-    },
-    plugins: [
-      function(hook, vm) {
-        hook.beforeEach(html => {
-          if (/githubusercontent\.com/.test(vm.route.file)) {
-            url = vm.route.file
-              .replace('raw.githubusercontent.com', 'github.com')
-              .replace(/\/master/, '/blob/master');
-          } else if (/jsdelivr\.net/.test(vm.route.file)) {
-            url = vm.route.file
-              .replace('cdn.jsdelivr.net/gh', 'github.com')
-              .replace('@master', '/blob/master');
-          } else {
-            url =
-              'https://github.com/FFTAI/fftai.github.io/blob/main/docs/' +
-              vm.route.file;
-          }
-          const editHtml = '[:memo: Edit Document](' + url + ')\n';
-          return (
-            // editHtml +
-            html +
-            '\n\n----\n\n' +
-            '<a href="https://robots.fourierintelligence.com/" target="_blank" style="color: #008fd5; font-weight: normal; text-decoration: none;">By Fourier Intelligence</a>'
-          );
-        });
-      }
-    ]
-  };
-</script>
-<script src='//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js'></script>
-<script src='//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js'></script>
-
+    <div class="cover-main">
+        <div class="main-logo">
+            <img src="./_media/icon.svg" data-origin="_media/icon.svg" alt="logo" width="160">
+        </div>
+        <h1 class="main-control">
+            <a href="#/?id=robot-control-system11" data-id="robot-control-system11" class="anchor">
+                <span>
+                    <strong>Robot Control System</strong>
+                    <small><strong>1.1</strong></small>
+                </span>
+            </a>
+        </h1>
+        <blockquote >
+            <p><strong>Where Precision Fuses with Robotic Mastery</strong>.</p>
+        </blockquote>
+        <ul class="main-list">
+            <li>
+                <code>High Precision Control</code>
+            </li>
+            <li>
+                <code>Layered Architecture</code>
+            </li>
+            <li>
+                <code>User-Friendly Graphical Interface</code>
+            </li>
+            <li>
+                <code>Open Source</code>
+            </li>
+            <li>
+                <code>Efficient Data Transmissions</code>
+            </li>
+            <li>
+                <code>Integrati</code>
+            </li>
+        </ul>
+        <div class="main-button">
+            <a href="https://github.com/FFTAI/fftai.github.io"><strong>github</strong></a>
+            <!-- <a href="#/concepts/about_gr1"><strong>Getting Started</strong></a> -->
+            <a href="./homePage.html"><strong>Getting Started</strong></a>
+        </div>
+    </div>
 </body>
+
 
 </html>
