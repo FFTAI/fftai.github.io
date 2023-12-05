@@ -30,7 +30,7 @@
   - [Move Head](motion_library/move_head.md)
   - [Move Arms and Hands](motion_library/move_arms_and_hands.md)
   - [Tremble Fingers](motion_library/tremble_fingers.md)
-- [**Server API**](server_api/serverapi.md)
+- [**Server API**](server_api/ServerAPI.md)
 - [**Release Notes**](release/overview.md)
 
   - [Release V0.1](release/v0.1.md)
