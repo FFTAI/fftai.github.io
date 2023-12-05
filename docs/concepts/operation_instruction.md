@@ -42,6 +42,7 @@ Do the following steps before powering on the robot:
 3. Release e-stop switch.
 
 ![](static/1698659185945.png ":size=80%")
+
 4. Initialize robot arms and legs through desktop terminal.
 
    Enter the following command to calibrate arms.
@@ -62,7 +63,7 @@ Do the following steps before powering on the robot:
 
 !>The robot has started successfullly if the indicator lights of actuators and robot host flash regularly.
 
-![](static/1698661268810.png ":size=60%")
+![](static/1698661268810.png ":size=80%")
 
 ## Connecting Remote Controller to Robot
 
@@ -70,6 +71,7 @@ Do the following steps before powering on the robot:
 2. Input the Wi-Fi account and password specified on the back of the robot.
 
 ![](static/1698736555432.png ":size=80%")
+
 3. Click **Connect** .
 
 !> A success prompt will be given when the connection succeeds.
@@ -80,7 +82,9 @@ Do the following steps before powering on the robot:
 2. Click **Initial** to make the robot to initial state.
 
 ![](static/1698744141867.png ":size=80%")
+
 3. Lower the robot with the lift of the support stand and ensure the robot's feet stably contact with the ground.
+
 4. Click **Stand** in the remote controller.
 
 ![](static/1698744210172.png ":size=80%")
