@@ -17,7 +17,8 @@
     - [Logic Flow](demo_app/logic_flow.md)
     - [Login](demo_app/login.md)
 - [**Autonomy**](autonomy/overview.md)
-- [**Embody**](embody/overview.md)
+
+[comment]: <> (- [**Embody**]&#40;embody/overview.md&#41;)
 - [**Motion Library**](motion_library/overview.md)
     - [Start](motion_library/start.md)
     - [Stop](motion_library/stop.md)
