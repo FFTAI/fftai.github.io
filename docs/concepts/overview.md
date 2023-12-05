@@ -1,4 +1,4 @@
-# Welcome to the RoCS Robot Control System!
+# Welcome to the RoCS
 ---
 
 **RoCS, short for Robot Control System, is designed for robot developers, providing robust support and flexible customization for your robotic projects. Whether you are an experienced engineer or a novice enthusiast, RoCS offers comprehensive solutions for your projects.**
