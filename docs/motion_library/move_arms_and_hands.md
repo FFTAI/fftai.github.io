@@ -20,10 +20,6 @@ human.upper_body(arm=ArmAction.LEFT_ARM_WAVE)  # Example: Wave the left arm
 time.sleep(2)  # Wait for 2 seconds between actions
 
 human.upper_body(arm=ArmAction.TWO_ARMS_WAVE)  # Example: Wave both arms
-
-
-
-
 ```
 
 

@@ -19,5 +19,4 @@ time.sleep(10)
 
 # Move head motion
 human.head(roll=15, yaw=30, pitch=20)  # Adjust the roll, yaw and pitch angles as needed
-
 ```

@@ -19,5 +19,4 @@ time.sleep(10)
 
 # Trigger an emergency stop to halt all robot movements
 human.stop()
-
 ```

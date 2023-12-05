@@ -17,5 +17,4 @@ time.sleep(10)
 
 # Stand motion
 human.stand()
-
 ```

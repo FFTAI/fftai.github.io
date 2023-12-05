@@ -16,5 +16,4 @@ human.start()
 
 # Wait for 10 seconds to ensure the robot's control system stabilizes after initiating the remote control command start().
 time.sleep(10)
-
 ```
