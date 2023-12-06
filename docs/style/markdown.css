@@ -1,3 +1,7 @@
+.markdown-section pre {
+    margin:0 !important
+}
+
 .markdown-section pre > code {
     white-space: pre-wrap !important;
  }

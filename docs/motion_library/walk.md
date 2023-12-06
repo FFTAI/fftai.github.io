@@ -1,10 +1,17 @@
+<script>
+const element = document.getElementById('markdown_box');
+const height = window.getComputedStyle(element).height;
+const video_box = document.getElementById('video_box');
+video_box.style.height = height
+</script>
+
 # Walk
 
 The `walk` method in the Motion Library is used to command the robot to perform walking motions. Below is a sample code
 snippet demonstrating the usage of the `walk` method to command the robot to walk forward at a speed of 0.1.
 
 <div style="display:flex;width:100%;overflow:auto;justify-content:space-between">
-  <div style="width:60%" id="markdown_box">
+  <div id="markdown_box">
 
   ```Python
   import time
@@ -24,9 +31,9 @@ snippet demonstrating the usage of the `walk` method to command the robot to wal
   ```
   </div>
 
-  <div style="width:30%; margin:1.2em 0">
+  <div style="margin-left:5%">
     <video controls id="video_box">
-      <source src="../_media/walk.mp4" type="video/mp4">
+      <source src="_media/walk.mp4" type="video/mp4">
     </video>
   </div>
 </div>
