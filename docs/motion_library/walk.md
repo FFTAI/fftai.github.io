@@ -27,3 +27,8 @@ After calling `start` and waiting for stabilization, you can issue the `walk` co
 Following the `walk` call, you can proceed with additional control commands or motion instructions.
 
 It's crucial to call the `stand` method when finished with remote control to ensure a safe exit from the control mode.
+
+<video controls>
+  <source src="../_media/walk.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>

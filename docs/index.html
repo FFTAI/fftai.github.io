@@ -14,13 +14,6 @@
             padding: 0;
         }
 
-        /* 设置默认字体 */
-        body,
-        button, input, select, textarea { /* for ie */
-            /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
-            font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
-        }
-
         h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
         h2 { font-size: 16px; }
         h3 { font-size: 14px; }
@@ -58,52 +51,45 @@
         html,body {
             width: 100%;
             height: 100%;
-            font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Medium-GBpc-EUC-H*';
         }
        
     </style>
     <style type="text/css">
         .cover-main{
-            width:  calc(100% - 200px);
-            height: calc(100% - 100px);
-            background: #0c0c0c  url(./_media/bg.png) no-repeat top right ;
-            padding:100px 0 0 200px;
-            background-size: auto 100%;
+            width: 100%;
+            height: 100%;
+            background: #0c0c0c  url(./_media/bg.png) no-repeat top left ;
+            overflow: auto;
+        }
+        .main-logo{
+            position: fixed;
+            top: 60px;
+            left: 75px;
         }
         .main-control {
-            margin-top: 60px;
+            margin-top: 230px;
+            text-align: center;
+            font-size: 48px;
+            color:#000;
         }
-        .anchor{
-            font-size: 40px;
-            color: #fff;
-            line-height: 46px;
+       
+        .main-button  {
+            text-align: center;
         }
-        blockquote{
-            font-size: 24px; 
-            color: #fff;
-        }
-
-        .main-list{
-            margin-top: 30px;
-            color:#fff;
-        }
-
-        .main-list li {
-            font-size: 16px; 
-            line-height: 30px;
-        }
-
         .main-button a {
             display: inline-block;
-            padding: 10px 30px;
+            width: 178px;
+            height: 46px;
             border-radius: 50px;
             margin-top: 50px;
-            font-size: 16px;
+            font-size: 20px;
+            line-height: 46px;
         }
         .main-button a:first-child  {
             border: 2px solid #0086d1;
             color:#0086d1;
-            margin-right: 50px;
+            margin-right: 45px;
         }
 
         .main-button a:last-child  {
@@ -117,43 +103,17 @@
 <body>
     <div class="cover-main">
         <div class="main-logo">
-            <img src="./_media/icon.svg" data-origin="_media/icon.svg" alt="logo" width="160">
+            <!-- <img src="./_media/icon.svg" data-origin="_media/icon.svg" alt="logo" width="160"> -->
+            <img src="./_media/logo.png" data-origin="_media/logo.png" alt="logo" width="160">
         </div>
-        <h1 class="main-control">
-            <a href="#/?id=robot-control-system11" data-id="robot-control-system11" class="anchor">
-                <span>
-                    <strong>Robot Control System</strong>
-                    <small><strong>1.1</strong></small>
-                </span>
-            </a>
-        </h1>
-        <blockquote >
-            <p><strong>Where Precision Fuses with Robotic Mastery</strong>.</p>
-        </blockquote>
-        <ul class="main-list">
-            <li>
-                <code>High Precision Control</code> 
-            </li>
-            <li>
-                <code>Layered Architecture</code>
-            </li>
-            <li>
-                <code>User-Friendly Graphical Interface</code>
-            </li>
-            <li>
-                <code>Open Source</code>
-            </li>
-            <li>
-                <code>Efficient Data Transmissions</code>
-            </li>
-            <li>
-                <code>Integrati</code>
-            </li>
-        </ul>
+        <p class="main-control">
+            共创机器人生态  &nbsp &nbsp 定制人形无限未来
+        </p>
         <div class="main-button">
-            <a href="https://github.com/FFTAI/fftai.github.io"><strong>github</strong></a>
-            <!-- <a href="#/concepts/about_gr1"><strong>Getting Started</strong></a> -->
-            <a href="./homePage.html"><strong>Getting Started</strong></a>
+            <a href="https://github.com/FFTAI/fftai.github.io"><strong>开放资源</strong></a>
+            <a href="./homePage.html"><strong>文档中心</strong></a>
+            <!-- <a href="https://github.com/FFTAI/fftai.github.io"><strong>github</strong></a>
+            <a href="./homePage.html"><strong>Getting Started</strong></a> -->
         </div>
     </div>
 </body>
