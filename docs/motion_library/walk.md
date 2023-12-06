@@ -3,8 +3,8 @@
 The `walk` method in the Motion Library is used to command the robot to perform walking motions. Below is a sample code
 snippet demonstrating the usage of the `walk` method to command the robot to walk forward at a speed of 0.1.
 
-<div style="display:flex">
-  <div style="flex:1">
+<div style="display:flex;width:100%;overflow:auto">
+  <div style="flex:1;width:50%">
 
   ```Python
   import time
@@ -24,8 +24,8 @@ snippet demonstrating the usage of the `walk` method to command the robot to wal
   ```
   </div>
 
-  <div style="flex:1">
-    <video controls>
+  <div style="flex:1;width:50%">
+    <video controls style="width:100%">
       <source src="../_media/walk.mp4" type="video/mp4">
     </video>
   </div>
