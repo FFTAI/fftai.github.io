@@ -4,7 +4,7 @@ The `walk` method in the Motion Library is used to command the robot to perform 
 snippet demonstrating the usage of the `walk` method to command the robot to walk forward at a speed of 0.1.
 
 <div style="display:flex;width:100%;overflow:auto;justify-content:space-between">
-  <div style="width:60%">
+  <div style="width:60%" id="markdown_box">
 
   ```Python
   import time
@@ -25,7 +25,7 @@ snippet demonstrating the usage of the `walk` method to command the robot to wal
   </div>
 
   <div style="width:30%; margin:1.2em 0">
-    <video controls style="width:100%">
+    <video controls id="video_box">
       <source src="../_media/walk.mp4" type="video/mp4">
     </video>
   </div>
@@ -38,3 +38,13 @@ After calling `start` and waiting for stabilization, you can issue the `walk` co
 Following the `walk` call, you can proceed with additional control commands or motion instructions.
 
 It's crucial to call the `stand` method when finished with remote control to ensure a safe exit from the control mode.
+
+
+
+```javascript
+const element = document.getElementById('markdown_box');
+const height = window.getComputedStyle(element ).height;
+const video_box = document.getElementById('video_box');
+video_box.style.height = height + 'px'
+
+
