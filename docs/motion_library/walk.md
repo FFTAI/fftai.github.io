@@ -39,12 +39,3 @@ Following the `walk` call, you can proceed with additional control commands or m
 
 It's crucial to call the `stand` method when finished with remote control to ensure a safe exit from the control mode.
 
-
-
-```javascript
-const element = document.getElementById('markdown_box');
-const height = window.getComputedStyle(element ).height;
-const video_box = document.getElementById('video_box');
-video_box.style.height = height + 'px'
-
-
