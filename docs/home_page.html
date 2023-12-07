@@ -10,12 +10,15 @@
     <link rel="icon" href="_media/favicon.ico"/>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css"/>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
+    <link rel="stylesheet" href="//vox.cab/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" /> -->
+
     <link rel="stylesheet" href="./style/markdown.css" />
 </head>
 
 <body>
 <div id='app'>Loading ...</div>
-
 <script>
     const lang = location.hash.match(/#\/(de-de|es|ru-ru|zh-cn)\//);
     if (lang) {
@@ -23,7 +26,7 @@
     }
 
     window.$docsify = {
-        name: 'RoCS',
+        name: '', // RoCS
         repo: 'https://github.com/FFTAI',
         homepage: 'README.md',
         auto2top: true,
@@ -31,7 +34,7 @@
         executeScript: true,
         loadSidebar: true,
         // loadNavbar: true,
-        subMaxLevel: 2,
+        subMaxLevel: 1,
         nameLink: {
             '/es/': '#/es/',
             '/de-de/': '#/de-de/',
@@ -82,11 +85,18 @@
                     );
                 });
             }
-        ]
+        ],
+        toc: {    
+            scope: '.markdown-section',   
+            headings: 'h2, h3, h4, h5, h6',   
+            title: '',  
+        }
     };
 </script>
 <script src='//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js'></script>
 <script src='//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js'></script>
+<script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+<script src="//vox.cab/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 
 </body>
 

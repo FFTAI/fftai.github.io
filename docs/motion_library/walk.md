@@ -32,7 +32,7 @@ snippet demonstrating the usage of the `walk` method to command the robot to wal
   </div>
 
   <div style="margin-left:5%">
-    <video controls id="video_box">
+    <video controls autoplay muted loop id="video_box">
       <source src="_media/walk.mp4" type="video/mp4">
     </video>
   </div>

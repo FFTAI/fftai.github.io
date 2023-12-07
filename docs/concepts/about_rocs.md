@@ -4,7 +4,7 @@ The Robot Control System, known as RoCS, is an advanced software framework desig
 
 See the [Quick start](quick_start/overview.md) guide for more details.
 
-# Features
+## Features
 
 * **High Precision Control:** RoCS is designed for achieving highly precise control of robotic systems, making robots excel in various tasks, be it in industrial automation, medical surgery, or other domains.
 * **Layered Architecture:** RoCS employs a layered architecture, modularizing functionalities for ease of maintenance and scalability. This simplifies development and integration of various components, enhancing system maintainability.
@@ -14,15 +14,15 @@ See the [Quick start](quick_start/overview.md) guide for more details.
 * **Comprehensive Functionality:** RoCS offers a wide range of functionalities, including sound and video processing, motion algorithms, hardware control, and more, making it suitable for diverse robotic application domains.
 * **Integration:** RoCS effectively integrates various components within its layered structure, making it a comprehensive robotic control system capable of meeting diverse application needs.
 
-# Lower Computer
+## Lower Computer
 
 The lower computer, functioning as the analog of the cerebellum in human physiology, specializes in tasks related to motion control. It is responsible for motor control, motion algorithms, hardware driver management, and other critical functions essential for the robot's movement and stability.
 
-# Upper Computer
+## Upper Computer
 
 Conversely, the upper computer is primarily dedicated to seamless data exchange and executing specific logic applications. Its role encompasses tasks such as receiving and playing audio, real-time transmission of video streams, dispatching precise instructions to the robot's hardware components, and continuous monitoring of the robot's operational status.
 
-# Layers of RoCS
+## Layers of RoCS
 
 The RoCS is structured into three distinct layers, each serving a unique and pivotal role:
 
@@ -37,7 +37,7 @@ The RoCS is structured into three distinct layers, each serving a unique and piv
   Operating within the confines of the robot, the Server API assumes the role of a lightweight data forwarding layer. It leverages HTTP and WebSocket protocols to facilitate the seamless transmission of external commands to the lower computer and the transmission of essential robot data to external entities. Despite its location within the robot, the Server API is considered an integral part of the upper computer. However, due to efficiency and security concerns, it is not available as open-source software.
   The Server API essentially serves as the crucial conduit between the core functions of the lower computer and the external world, ensuring the efficient and secure exchange of data.
 
-# RoCS Architecture
+## RoCS Architecture
 
 The RoCS architecture is designed to offer precise control and management of robotic systems through a network-based communication system, facilitating seamless interaction with the robot and enabling operators to issue commands and receive real-time feedback. Node.js and Python serve as the communication interfaces, connecting the terminal (joystick) with the three layers of the system.
 
