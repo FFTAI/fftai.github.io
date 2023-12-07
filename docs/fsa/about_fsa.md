@@ -4,7 +4,7 @@ The Fourier Smart Actuator (FSA) is an advanced mechanical component seamlessly 
 
 The actuator's integration of power elements contributes to its adaptability and performance, making it an innovative and efficient solution for a range of robotic applications.
 
-![1701841084190](image/about_fsa/1701841084190.png)![](static/about_gr1.png ":size=25%")
+![](static/fsa.png ":size=25%")
 
 ## Motor Output
 
@@ -43,7 +43,7 @@ The actuator's integration of power elements contributes to its adaptability and
 
 ## Diagram
 
-![1701845500795](image/about_fsa/1701845500795.png)
+![](static/fsa_diagram.png ":size=25%")
 
 # Connecting FSA to Robot System
 
@@ -53,7 +53,7 @@ Connecting the FSA to a robot is a simple process requiring only a power cable a
 
 In the process of connecting the power cable, it's essential to note that the cable is equipped with a specialized aviation connector, featuring both positive (+) and negative (-) terminals. Refer to the following image for a visual guide on properly attaching the aviation connector to the corresponding ports.
 
-![1701846291953](image/about_fsa/1701846291953.png)
+![](static/fsa_powerconnection.png ":size=25%")
 
 ## Connecting FSA to Network
 
