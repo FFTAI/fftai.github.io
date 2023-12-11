@@ -33,3 +33,47 @@ video::-webkit-media-controls-enclosure{
     display: none;
 }
 
+
+.sidebar-nav ul {
+    margin:0
+}
+
+.sidebar-nav li {
+    text-indent: 15px;
+}
+.sidebar ul li a{
+    display: block;
+    text-indent: 30px
+}
+
+.sidebar ul li.active > a{
+    background-color: var(--theme-color, #42b983);
+    color:#fff;
+    
+}
+
+
+.sidebar ul li.active:has( > ul) ~ p{
+    color: var(--theme-color, #42b983);
+}
+
+.page_toc ul a :hover {
+    color: var(--theme-color, #42b983);
+}
+
+.page_toc ul a:hover span {
+    color: var(--text-color-tertiary, #0086d1);
+    border-bottom: none !important;
+    text-decoration:none !important;
+  }
+
+
+
+.markdown-section h1, .markdown-section h2{
+   border-left: 5px solid var(--theme-color, #42b983);
+   padding-left: 10px;
+}  
+.sidebar-nav  .level-1{
+    cursor: pointer;
+}
+

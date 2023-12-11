@@ -59,9 +59,10 @@
         .cover-main{
             width: 100%;
             height: 100%;
-            background: #bfc4ca  url(./_media/bg.png) no-repeat center top ;
+            background: #bfc4ca  url(./_media/bg.png) no-repeat center top;
             overflow: auto;
-            background-size: auto 100%;
+            background-size:auto 100%;
+            position: relative;
         }
         .main-logo{
             position: fixed;
@@ -70,17 +71,24 @@
         }
         .main-control {
             margin-top: 230px;
-            text-align: center;
-            font-size: 48px;
-            color:#000;
         }
-       
+        .main-control p:first-child{
+            text-align: center;
+            color:#000;
+            font-size: 48px;
+        }
+        .main-control p:last-child{
+            text-align: center;
+            color:#000;
+            font-size: 26px;
+            margin-top: 15px;
+        }
         .main-button  {
             text-align: center;
         }
         .main-button a {
             display: inline-block;
-            width: 178px;
+            padding: 0 45px;
             height: 46px;
             border-radius: 50px;
             margin-top: 50px;
@@ -171,14 +179,16 @@
             </ul>
         </div>
 
-        <p class="main-control">
-            共创机器人生态  &nbsp &nbsp 定制人形无限未来
-        </p>
+        <div class="main-control">
+            <!-- <p> 共创机器人生态  &nbsp &nbsp 定制人形无限未来 </p> -->
+            <p>TOGETHER, WE SHAPE</p> 
+            <p>———— THE FUTURE OF HUMANOID ————</p> 
+        </div>
         <div class="main-button">
-            <a href="https://github.com/FFTAI/fftai.github.io"><strong>开放资源</strong></a>
-            <a href="./home_page.html"><strong>文档中心</strong></a>
-            <!-- <a href="https://github.com/FFTAI/fftai.github.io"><strong>github</strong></a>
-            <a href="./homePage.html"><strong>Getting Started</strong></a> -->
+            <!-- <a href="https://github.com/FFTAI/fftai.github.io"><strong>开放资源</strong></a>
+            <a href="./home_page.html"><strong>文档中心</strong></a> -->
+            <a href="https://github.com/FFTAI/fftai.github.io">github</a>
+            <a href="./home_page.html">Getting Started</a>
         </div>
     </div>
 </body>
