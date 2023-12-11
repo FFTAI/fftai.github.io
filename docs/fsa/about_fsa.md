@@ -45,7 +45,7 @@ The actuator's integration of power elements contributes to its adaptability and
 
 ![](static/fsa_diagram.png ":size=25%")
 
-# Connecting FSA to Robot System
+## Connecting FSA to Robot System
 
 Connecting the FSA to a robot is a simple process requiring only a power cable and a network cable.
 
