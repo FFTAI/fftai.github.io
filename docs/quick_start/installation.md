@@ -38,8 +38,9 @@ sudo dpkg -i webots_2023b_amd64.deb
 2. `file` -> `open world` -> `～/RoCS/webots/worlds/SonnyV4.wbt`
 
 ### III. Control model 
-1. Install Client SDK for corresponding language : [Python](https://pypi.org/project/rocs-client/)或[JavaScript/TypeScript]().
+1. Install Client SDK for corresponding language: [Python](https://pypi.org/project/rocs-client/)或[JavaScript/TypeScript](https://www.npmjs.com/package/rocs-client).
 2. You can see the corresponding sample code on the introduction page of SDK, and manipulate it through the SDK sample code 
+
 
 ## Running on real machines 
 
