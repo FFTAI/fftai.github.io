@@ -45,7 +45,6 @@ sudo dpkg -i webots_2023b_amd64.deb
 ## Running on real machines 
 
 ### I. Modifying Configuration Information 
-Firstly, we suggest that you carefully read the sbin readme file and modify the corresponding configuration information (which needs to be modified according to the actual situation)
 ```markdown
 /usr/local/bin/rocs-svr/
 ├── config/                                     Configuration files
