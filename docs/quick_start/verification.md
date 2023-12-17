@@ -1,62 +1,58 @@
 # Verifying and Manual Control of RoCS Services after Installation
 
-## Verifying Services Effectiveness
-After completing the installation, verify whether the automatic startup of the three services is working properly. If all three are actively running, everything is functioning as expected.
+---
 
-### Verifying `rocs_enable_wifi` Service
+## Whether the installation is successful or not.
 ```shell
-sudo systemctl status rocs_enable_wifi.service
+dpkg -l | grep rocs
 ```
 
-### Verifying `rocs_svr` Service
+## Effectiveness
+After completing the installation, verify whether the automatic startup of the five services is working properly. If all five are actively running, everything is functioning as expected.
+
+1. rocs-wifi
 ```shell
-sudo systemctl status rocs_svr.service
+sudo systemctl status rocs-wifi.service
 ```
 
-### Verifying `rocs_model` Service
+2. rocs-svr
 ```shell
-sudo systemctl status rocs_model.service
+sudo systemctl status rocs-svr.service
 ```
 
 ## Manual Start
 Manually initiate the RoCS services if needed:
 
-### Manual Start `rocs_enable_wifi` Service
+1. Manual Start `rocs-wifi` Service
 ```shell
 sudo systemctl start rocs_enable_wifi.service
 ```
 
-### Manual Start `rocs_svr` Service
+2. Manual Start `rocs-svr` Service
 ```shell
 sudo systemctl start rocs_svr.service
-```
-
-### Manual Start `rocs_model` Service
-```shell
-sudo systemctl start rocs_model.service
 ```
 
 ## Manual Stop
 Manually stop the RoCS services if necessary:
 
-### Manual Stop `rocs_enable_wifi` Service
+1. Manual Stop `rocs-wifi` Service
 ```shell
-sudo systemctl stop rocs_enable_wifi.service
+sudo systemctl stop rocs-wifi.service
 ```
 
-### Manual Stop `rocs_svr` Service
+2. Manual Stop `rocs-svr` Service
 ```shell
-sudo systemctl stop rocs_svr.service
-```
-
-### Manual Stop `rocs_model` Service
-```shell
-sudo systemctl stop rocs_model.service
+sudo systemctl stop rocs-svr.service
 ```
 
 ## View Logs
-Monitor the system logs for RoCS-related entries:
-
+1. Monitor the log of `rocs-svr`:
 ```shell
 sudo tail -f /var/log/syslog | grep rocs
+```
+
+2. Monitor the log of `rocs-control`:
+```shell
+sudo tail -f ~/RoCS/server.log
 ```
