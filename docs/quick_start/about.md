@@ -1,47 +1,24 @@
 # About RoCS Server Introduction
 
-## rocs_svr
+The rocs_server covers the entire communication process and capabilities of robot control. For ease of use and installation, we provide 5 .deb packages based on the Ubuntu AMD64 operating system, which will allow you to quickly and efficiently complete the installation and use of the rocs_server, so that you can focus more on manipulating the robot.
 
+## rocs-lib
 
-The `rocs_svr` essentially serves as the bridge between the upper computer and the lower computer. It handles commands originating from the upper computer, which can be a Control APP user interface or SDK control programs. Its primary function is to process these commands and transmit control instructions to the lower computer using underlying communication protocols. This intricate communication mechanism enables the achievement of precise control over the robot's movements.
+`rocs-libs` are the library files that our entire robot operating system relies on. We have packaged them to avoid the tedious process of you needing to download, decompress, and compile them.
 
+## rocs-svr
 
-**Startup Configuration**: By executing the `install_env.sh` script during the initial setup, you can configure the system for the first time. After running this script in a network-connected state, the system will establish three startup items: `rocs_svr`, `rocs_model`, and `rocs_enable_wifi`.
+The `rocs-svr` essentially serves as the bridge between the upper computer and the lower computer. It handles commands originating from the upper computer, which can be a Control APP user interface or SDK control programs. Its primary function is to process these commands and transmit control instructions to the lower computer using underlying communication protocols. This intricate communication mechanism enables the achievement of precise control over the robot's movements.
 
+## rocs-wifi
 
-**Manual Operations**: Several manual operation commands are provided, such as starting, stopping, and restarting the `rocs_svr` service. These commands can be executed using the corresponding `systemctl` commands to manually manage the status of `rocs_svr`.
+`rocs-wifi` is a crucial component in the RoCS system, responsible for managing and configuring the robot's Wi-Fi connection, including configuring and activating Wi-Fi functions. Through this component, it ensures that you can seamlessly connect to the Wi-Fi network where the robot is located.
 
+## rocs-webots
 
-## rocs_model
+`rocs-webots` is a simulation environment provided by us based on Webots! Perhaps before you access the robot, in order to better familiarize yourself with the operation and use of the robot, we strongly recommend that you first experience it in the Webots simulation environment. The simulation environment accurately reproduces the motion characteristics and structure of the robot, which will be a very important step.
 
+## rocs-control
 
-The `rocs_model` serves as a crucial component within the RoCS system, specializing in the external synchronization of 3D robot model information. Its primary function is to meticulously replicate the robot's coordinates and position, delivering a visually appealing user interface through the HTTP service.
-
-
-Within the `rocs_model`, real-time position coordinate data is continuously monitored via remote monitoring. This information is then utilized to render the model through a websocket, a high-performance real-time communication method. This dynamic interaction serves as a valuable resource for developers, offering an intuitive insight into the current state of the robot and significantly enhancing control and monitoring efficiency.
-
-
-Throughout the development process, `rocs_model` assumes a pivotal role by facilitating the implementation of the robot's visual representation. This includes external features and structural aspects, providing developers with a comprehensive understanding of the robot's status, movement, and task execution.
-
-
-The `RoCS_model` is a vital tool for developers in robotics, offering profound insights into the robot's appearance and structure. This enhances the development process by providing a valuable visual representation for monitoring and understanding the robot's behavior and functionality.
-
-
-## rocs_enable_wifi
-
-
-`rocs_enable_wifi` is a crucial component within the RoCS system, tasked with managing and configuring the robot's Wi-Fi connection. Here's a detailed overview of its functionalities:
-
-
-**Wi-Fi Connection Management:** The primary role of `rocs_enable_wifi` is to oversee the robot's Wi-Fi connection, encompassing the configuration and activation of Wi-Fi functionality. Through this component, users can set wireless network parameters, ensuring the robot can seamlessly connect to the specified Wi-Fi network.
-
-
-**Hotspot Functionality Activation:** In addition to connecting to external Wi-Fi networks, `rocs_enable_wifi` also supports activating hotspot functionality. This means the robot can establish an independent Wi-Fi hotspot, allowing other devices to connect to the robot, facilitating local data transfer and control.
-
-
-**Flexibility and Customization:** Through the configuration file `wifi.conf`, users can flexibly adjust Wi-Fi information based on the robot's serial number, adapting to different usage scenarios and network environments. This provides a level of customization, allowing users to fine-tune Wi-Fi settings according to specific requirements.
-
-
-`rocs_enable_wifi` plays a pivotal role in the RoCS system, ensuring the robot can effectively connect to the network and achieve functionalities such as remote control and data transmission.
-
+`rocs-control` is the core part of our robot control program, and we provide a binary file that runs in the '～/RoCS' directory of the robot host. If you need to adjust and modify configuration items, including but not limited to the PID, mass, filtering and other parameters of the robot, you can achieve this by manually modifying the configuration file. This can help you control the robot more accurately.
 
