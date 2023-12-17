@@ -6,7 +6,7 @@
 * A PC  with at least a 2 GHz dual core CPU clock speed and 2 GB of RAM is a minimum requirement.
 * Operating system: Ubuntu Long Term Support (LTS) releases, including versions 22.04 and 20.04.
 * An NVIDIA or AMD OpenGL (minimum version 3.3) capable graphics adapter with at least 512 MB of RAM is required.
-
+---
 
 ## Quick installation 
 
@@ -19,6 +19,7 @@ wget -qO- https://raw.githubusercontent.com/FFTAI/rocs_server/main/install.sh | 
 ```shell
 curl -o- https://raw.githubusercontent.com/FFTAI/rocs_server/main/install.sh | bash
 ```
+---
 
 ## Running in a simulation environment (Webots)
 
@@ -27,7 +28,6 @@ curl -o- https://raw.githubusercontent.com/FFTAI/rocs_server/main/install.sh | b
 1. Execute script for quick installation 
 ```shell
 wget https://github.com/cyberbotics/webots/releases/download/R2023b/webots_2023b_amd64.deb
-
 sudo dpkg -i webots_2023b_amd64.deb
 ```
 
@@ -38,10 +38,10 @@ sudo dpkg -i webots_2023b_amd64.deb
 2. `file` -> `open world` -> `～/RoCS/webots/worlds/SonnyV4.wbt`
 
 ### III. Control model 
-1. Install Client SDK for corresponding language: [Python](https://pypi.org/project/rocs-client/)或[JavaScript/TypeScript](https://www.npmjs.com/package/rocs-client).
+1. Install Client SDK for corresponding language: [Python](https://pypi.org/project/rocs-client) 或 [JavaScript/TypeScript](https://www.npmjs.com/package/rocs-client).
 2. You can see the corresponding sample code on the introduction page of SDK, and manipulate it through the SDK sample code 
 
-
+---
 ## Running on real machines 
 
 ### I. Modifying Configuration Information 
