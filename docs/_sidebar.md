@@ -11,19 +11,24 @@
   - [Installation](quick_start/installation.md)
   - [Verification](quick_start/verification.md)
   - [About](quick_start/about.md)
-
 - [**Client_SDK**](client_sdk/overview.md)
 
   - [Python](https://fftai.github.io/rocs_client_py/index.html)
   - [Nodejs](https://fftai.github.io/rocs_client_js/index.html)
+- [**Remote Control App Developer Guide**](demo_app/overview.md)
 
-- [**Remote Control App**](demo_app/overview.md)
+  - [Connecting to Robot](demo_app\connnecting_to_robot.md)
+  - [Control App Features](demo_app\overview_of_control_features.md)
+
+    - [Controlling Robot Movements](demo_app\control_robot_movements.md)
+    - [Accessing and Modifying Settings](demo_app\settings.md)
   - [Build Your Own Remote Control App](demo_app/app_project_setup.md)
-  - [Logic Flow](demo_app/logic_flow.md)
-  - [Login](demo_app/login.md)
-
-- [<li class='folder level-1'><p><strong>Autonomy</strong></p></li>](autonomy/overview.md)
-
+  - Build and deploy
+  - APP Architecture
+  - [Data Flow](demo_app/logic_flow.md)
+  - API Integration
+  - 
+- [**Autonomy**](autonomy/overview.md)
 - [**Motion Library**](motion_library/overview.md)
 
   - [Start](motion_library/start.md)
@@ -33,14 +38,11 @@
   - [Move Head](motion_library/move_head.md)
   - [Move Arms and Hands](motion_library/move_arms_and_hands.md)
   - [Tremble Fingers](motion_library/tremble_fingers.md)
-
-- [<li class='folder level-1'><p><strong>Server API</strong></p></li>](server_api/ServerAPI.md)
-
-- [<li class='folder level-1'><p><strong>FSA</strong></p></li>](fsa/about_fsa.md)
-
+- [**Server API**](server_api/ServerAPI.md)
+- [**FSA**](fsa/about_fsa.md)
 - [**Release Notes**](release/overview.md)
+
   - [Release V0.1](release/v0.1.md)
   - [Release V0.2](release/v0.2.md)
   - [Release V1.1](release/v1.1.md)
-  
-- [<li class='folder level-1'><p><strong>Feedback</strong></p></li>](feedback/overview.md)
+- [**Feedback**](feedback/overview.md)
