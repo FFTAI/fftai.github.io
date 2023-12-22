@@ -1,64 +1,81 @@
 # Verifying and Manual Control of RoCS Services after Installation
 
-## Successful or not.
+## Confirming Successful Installation
+
+To confirm the successful installation of RoCS server packages, open a terminal and run the following command to check if RoCS-related packages are installed:
 
 ```shell
 dpkg -l | grep rocs
 ```
 
-## Effectiveness
-After completing the installation, verify whether the automatic startup of the five services is working properly. If all five are actively running, everything is functioning as expected.
+Following output signifies a successful installation:
 
-**1. rocs-wifi**
+```shell
+fftai@fftai-rocs-machine:~$ dpkg -l | grep rocs
+ii  rocs-control   1.3    all          Provides support and functionality for control algorithms relevant to robotics
+ii  rocs-lib          1.0    all          Installs the libraries required by RoCS
+ii  rocs-svr          1.3   all          Provides export call services for robot algorithm programs
+ii  rocs-webots   1.3   all          Provides a Webots simulation environment model
+ii  rocs-wifi        1.0   all          Opens a hotspot for clients to connect to the same network segment as the robot
+fftai@fftai-rocs-machine:~$
+
+```
+
+## Verifying Service Effectiveness
+
+After completing the installation, it is essential to verify whether the automatic startup of the following services is functioning correctly. 
+
+1. Verify the Status of `rocs-wifi` Service:
 
 ```shell
 sudo systemctl status rocs-wifi.service
 ```
 
-**2. rocs-svr**
+2. Verify the Status of `rocs-svr` Service:
 
 ```shell
 sudo systemctl status rocs-svr.service
 ```
 
-## Manual Start
-Manually initiate the RoCS services if needed:
+## Manual Service Control
 
-**1. Manual Start `rocs-wifi` Service**
+In certain situations, you may need to manually start or stop RoCS services. Follow the instructions below to perform these actions:
+
+* Manual start the `rocs-wifi` service:
 
 ```shell
 sudo systemctl start rocs-wifi.service
 ```
 
-**2. Manual Start `rocs-svr` Service**
+* Manual start the `rocs-svr` service:
 
 ```shell
 sudo systemctl start rocs_svr.service
 ```
 
-## Manual Stop
-Manually stop the RoCS services if necessary:
-
-**1. Manual Stop `rocs-wifi` Service**
+* Manual stop `rocs-wifi` service:
 
 ```shell
 sudo systemctl stop rocs-wifi.service
 ```
 
-**2. Manual Stop `rocs-svr` Service**
+* Manual stop `rocs-svr` service:
 
 ```shell
 sudo systemctl stop rocs-svr.service
 ```
 
-## View Logs
-**1. Monitor the log of `rocs-svr`:**
+## View Service Logs
+
+To monitor the logs of RoCS services for troubleshooting or debugging purposes, follow these steps:
+
+* Monitor the log of `rocs-svr`:
 
 ```shell
 tail -f /var/log/syslog | grep rocs
 ```
 
-**2. Monitor the log of `rocs-control`:**
+* Monitor the log of `rocs-control`:
 
 ```shell
 tail -f ~/RoCS/server.log

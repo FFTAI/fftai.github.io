@@ -39,6 +39,8 @@ To engage the robot in Stand Mode:
    ![1702624935410](image/control_robot_movements/1702624935410.png)
 3. The robot will maintain a static standing position until instructed otherwise.
 
+!> Avoid keeping robot in the stand position for an extended period, as it can cause damage to ankle actuators due to overloading.
+
 ## End Effector Motion
 
 End Effector Motion Mode introduces a specialized mode for controlling the robot's end effector grasping actions. This mode is designed for tasks involving object manipulation, adding a unique capability to the robot.

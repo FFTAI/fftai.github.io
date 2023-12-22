@@ -1,18 +1,46 @@
 # Operation Instruction
 
-## Before power-on
+This section is to guide you through the process of setting up and operating the Fourier Robot. Since the robot is delivered fully assembled, we will focus on the initial setup and basic operation.
 
-Do the following steps before powering on the robot:
+## Initial Setup and Powering on
 
-### Inspecting robot
+### Unpacking the Robot
 
-1. Ensure that the robot is fastened to the support stand.
-2. Ensure that the batteries of robot and the support stand are fully chareged.
+!> Due to the substantial weight and intricate design of the robot, it is crucial to engage at least two individuals in the unboxing process. This collaborative effort ensures safe and secure handling, minimizing the risk of potential damage caused by pinching or accidental dropping.
+
+To begin, carefully follow these steps:
+
+1. Begin by extracting the robot from its packaging box.
+2. Verify the items against the provided packing list.
+
+| Items              | Quantity | Comments                                   |
+| :----------------- | :------- | ------------------------------------------ |
+| **Standard Items** |          |                                            |
+| Robot              | 1        |                                            |
+| Power Adapter      | 1        |                                            |
+| Remote Controller  | 1        |                                            |
+| User Manual        | 1        |                                            |
+| Certification      | 1        |                                            |
+| Calibration Tools  | 15       |                                            |
+| Extension Dock     | 1        |                                            |
+| **Optional Items** |          |                                            |
+| Protective Lift    | 1        | If required, kindly purchase it separately |
+
+3. Remove protective coverings to prepare the robot for use.
+
+### Charging
+
+Before the initial use, it's essential to ensure that the robot, Remote Controller, and protective lift (if purchased) are fully charged using the provided chargers.
+
+### Inspecting Robot before Power-on
+
+1. Ensure that the robot is fastened to the protective lift.
+2. Ensure that the batteries of robot and the protective lift are fully charged.
 3. Ensure that the robot components moves smoothly.
 
 ![](static/1698657344119.png ":size=80%")
 
-### Inspecting environment
+### Inspecting Environment before Power-on
 
 1. Ensure that there is a 4-meter clearance around the robot.
 2. Ensure that the ground is level and dry.
@@ -26,44 +54,26 @@ Do the following steps before powering on the robot:
 
 ![](static/1698657743472.png ":size=80%")
 
-### Preparing arms for calibration
+### Preparingfor Startup
 
-1. Align shoulder grooves.
+1. Align shoulder slots.
 2. Keep the arms hanging straight down with the palms facing inward.
 3. Ensure a 10 cm interval between palms and hips.
 4. Ensure that the robot stands upright.
 
 ![](static/1698658681237.png ":size=80%")
 
-## Powering on Robot
+## Starting up Robot
 
 1. Press actuator power-on button.
-2. Press robot host power-on button.
-3. Release e-stop switch.
+2. Press embedded computer power-on button.
+3. Release Emergence Stop switch.
 
-![](static/1698659185945.png ":size=80%")
+![](static/poweron.png ":size=80%")
 
-4. Initialize robot arms and legs through desktop terminal.
+!>The robot has started successfullly if the indicator lights of actuators and embedded robot computer flash regularly.
 
-   Enter the following command to calibrate arms.
-
-   ```
-
-   $sh arm .sh
-
-   ```
-
-   Enter the following command to calibrate legs.
-
-   ```
-
-   $sh leg.sh
-
-   ```
-
-!>The robot has started successfullly if the indicator lights of actuators and robot host flash regularly.
-
-![](static/1698661268810.png ":size=80%")
+![](static/1698661268810.png ":size=30%")
 
 ## Connecting Remote Controller to Robot
 
@@ -78,13 +88,12 @@ Do the following steps before powering on the robot:
 
 ## Landing Robot
 
-1. Ensure that the robot is fastened to the support stand.
+1. Ensure that the robot is fastened to the protective lift.
 2. Click **Initial** to make the robot to initial state.
 
 ![](static/1698744141867.png ":size=80%")
 
-3. Lower the robot with the lift of the support stand and ensure the robot's feet stably contact with the ground.
-
+3. Lower the robot with the lift of the protective lift and ensure the robot's feet stably contact with the ground.
 4. Click **Stand** in the remote controller.
 
 ![](static/1698744210172.png ":size=80%")
@@ -94,11 +103,7 @@ Do the following steps before powering on the robot:
 1. Power on the remote controller and connect to the robot's Wi-Fi.
 2. Operate the remote controller to control the motion of the robot.
 
-   Use left handler to move the robot.
-
-   Use right handler to control the vision field.
-
-![](static/1698744913325.png ":size=80%")
+   ![1703237619698](image/operation_instruction/1703237619698.png)
 
 ## Halting Robot Motion
 
@@ -111,7 +116,7 @@ Following two approaches are used to halt the motion of the robot:
 
 ## Powering off Robot
 
-1. Fasten the robot to the supoort stand.
+1. Fasten the robot to the protective lift.
 2. Press the E-stop button.
 3. Press the actuator power button to power off the actuator.
 4. Connect the robot to the monitor.

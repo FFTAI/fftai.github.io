@@ -14,12 +14,11 @@ If you are using the Remote Controller, follow these steps:
 
 1. Power on the Remote Controller and the RoCS Control App is launched automatically.
 2. On the app interface, click on the `Connect` button in the right corner (if not connected). You will be guided to the Start Robot process.
-
-   ![1702459267834](image/connnecting_to_robot/1702459267834.png)
+   ![](static/login-notconnected.png ":size=25%")
 3. Finish the powering on step according to the on-screen instructions.
-   The robot's Wi-Fi hotspot functionality is enabled automatically during the booting of the robot's inside computer.
+   The robot's Wi-Fi hotspot functionality is enabled automatically during the booting of the embedded computer.
 
-   ![1702459156201](image/connnecting_to_robot/1702459156201.png)
+   ![](static/startup-calibration.png)
 4. Click on `Device Connection` (Step 2) of the Start Robot workflow. This will lead you to the `System Setting` -> `Networking Setting` of your mobile device, where you can choose the robot's Wi-Fi hotspot (Default account: gr1-XXXXXX, Default password: 66668888).
 
    ![1702460687314](image/connnecting_to_robot/1702460687314.png)
@@ -31,6 +30,9 @@ To establish a general Wi-Fi connection, it's necessary to manually assign the I
 1. **Determine the IP Address of the Embedded Robot Computer** :
 
 * Connect a monitor to the embedded robot computer.
+
+![1703226801105](image/connnecting_to_robot/1703226801105.png)
+
 * Open a terminal and execute the command `ifconfig`. This will display the IP address of the embedded robot computer.
 
 2. **Configure the Control APP** :
@@ -58,9 +60,9 @@ After establishing the connection, it's essential to verify that the RoCS Contro
 1. Return to Control App.
 2. Check connection Status:
 
-   * Check that the "Device connected" step is shown in the Start Robot workflow, indicating that the APP is successfully connected to robot.
+   * Check that the "Connected" step is shown in the Start Robot workflow, indicating that the APP is successfully connected to robot.
 
-     ![1702457545190](image/connnecting_to_robot/1702457545190.png)
+     ![img](static/connected.png)
 
 ## Troubleshooting
 

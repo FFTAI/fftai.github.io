@@ -1,12 +1,12 @@
 # Accessing and Modifying Robot Settings
 
-The RoCS Control App settings offer essential functionalities to tailor the robot's behavior and gather critical system information. Let's explore the key features available in the `Connect` and `System Info` tabs:
+The RoCS Control App settings offer essential functionalities to tailor the robot's behavior and gather critical system information. Let's explore the key features available in the `Connection` and `System Info` tabs:
 
-## Connect Tab
+## Connection Tab
 
 ### Connection Status
 
-The `Connect` tab provides insights into the connection status between the RoCS Control App and the robot. It displays the current status, indicating whether the app is connected or not. If the status is `Not connected`, clicking on it navigates you to the Robot Startup workflow. Here, you can efficiently configure the network connection and establish a seamless link between the app and the robot.
+The `Connection` tab provides insights into the connection status between the RoCS Control App and the robot. It displays the current status, indicating whether the app is connected or not. If the status is `Not connected`, clicking on it navigates you to the `Startup Robot` workflow where you can efficiently configure the network connection and establish a seamless link between the app and the robot.
 
 ## System Info Tab
 
