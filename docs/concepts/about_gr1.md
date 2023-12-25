@@ -2,7 +2,7 @@
 
 The Fourier GR-1 represents a versatile humanoid robot, boasting a configuration of up to 40 FSA joints capable of delivering peak joint torque of 230 N.m. Its advanced whole-body control algorithm empowers the robot with an impressive 44 degrees of freedom.
 
-![](static/about_gr1.png ":size=25%")
+![](static/about_gr1.png ":size=80%")
 
 This robotic marvel exhibits remarkable human-like agility and motion kinematics, including the ability to perform tasks such as:
 
@@ -16,7 +16,6 @@ This robotic marvel exhibits remarkable human-like agility and motion kinematics
 These capabilities position the Fourier GR-1 as a promising platform for the future of "Embodied AI", which is widely believed to be the next wave of artificial intelligence. As a carrier for artificial intelligence to interact with the physical world, embodied intelligence combines artificial intelligence technology with robot entities, so that the "brain" has a disposable, perceivable, interactive, and actionable "body", which brings great convenience and benefits as an important partner and assistant of human beings.
 
 The Fourier GR-1's scalability lends itself to the validation of various AI models and algorithms, opening up exciting possibilities for applications in industries, rehabilitation, household, and research.
-
 
 <h1>GR-1 Specifications</h1>
 

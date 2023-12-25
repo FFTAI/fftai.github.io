@@ -1,10 +1,12 @@
-# Operation Instruction
+# Overview
 
 This section is to guide you through the process of setting up and operating the Fourier Robot. Since the robot is delivered fully assembled, we will focus on the initial setup and basic operation.
 
-## Initial Setup and Powering on
+[Inspecting Robot before Power-on](#Inspecting-Robot-before-Power-on)
 
-### Unpacking the Robot
+# Initial Setup and Powering on
+
+## Unpacking the Robot
 
 !> Due to the substantial weight and intricate design of the robot, it is crucial to engage at least two individuals in the unboxing process. This collaborative effort ensures safe and secure handling, minimizing the risk of potential damage caused by pinching or accidental dropping.
 
@@ -28,61 +30,78 @@ To begin, carefully follow these steps:
 
 3. Remove protective coverings to prepare the robot for use.
 
-### Charging
+## Charging
 
 Before the initial use, it's essential to ensure that the robot, Remote Controller, and protective lift (if purchased) are fully charged using the provided chargers.
 
-### Inspecting Robot before Power-on
+`<a id="Inspecting-Robot-before-Power-on"></a>`
 
-1. Ensure that the robot is fastened to the protective lift.
-2. Ensure that the batteries of robot and the protective lift are fully charged.
-3. Ensure that the robot components moves smoothly.
+## Preparation Before Power on
 
-![](static/1698657344119.png ":size=80%")
+### Environmental Inspection
 
-### Inspecting Environment before Power-on
+The environment should meet the following criteria:
 
-1. Ensure that there is a 4-meter clearance around the robot.
-2. Ensure that the ground is level and dry.
+* The ground must be level and non-slippery to prevent accidental movements or falls.
+* Avoid operating the robot on uneven, steep, muddy, loose, or slippery surfaces to prevent malfunctions or accidents.
+* A minimum of 4 meters of free space around the robot is recommended to ensure a safe operating area and to accommodate the robot's range of motion.
 
 ![](static/1698656074242.png ":size=80%")
 
-### Preparingfor Startup
+### Robot Inspection
+
+Prior to use, perform a comprehensive check of the robot:
+
+* Ensure the robot is properly fastened to the protective lift.
+* Inspect for any loose or damaged parts that could hinder the robot's smooth and unobstructed movement.
+* Check that the robot's battery and the battery of any connected mobile devices have sufficient power for the operation.
+* Remove the calibration pin, if present, to allow for proper movement.
+
+![](static/1698657344119.png ":size=80%")
+
+### Initial Positioning
+
+Before activating the robot, it's critical to set it to its initial pose. This includes:
 
 1. Align shoulder slots.
 2. Keep the arms hanging straight down with the palms facing inward.
 3. Ensure a 10 cm interval between palms and hips.
-4. Ensure that the robot stands upright.
+4. Ensure that the robot stands pright.
+5. The robot should bow down while keeping the waist upright, which facilitates a stable startup.
 
-![](static/1698658681237.png)
+![](static/1698658681237.png ":size=80%")
 
 ## Powering on Robot
 
-1. Press actuator power-on button.
+1. Long press actuator power-on button.
 2. Press embedded computer power-on button.
 3. Release Emergence Stop switch.
 
+!> The Emergency Stop switch should be released only after the initial pose has been set. Once released, maintain the pose for at least 5 seconds to ensure stability.
+
 ![](static/poweron.png ":size=80%")
 
-!>The robot has started successfullly if the indicator lights of actuators and embedded robot computer flash regularly.
+!>Observe the robot's indicator light; a steady breathing blink pattern indicates that the robot is starting up normally.
 
 ![](static/1698661268810.png ":size=30%")
 
-## Connecting Remote Controller to Robot
+## Connecting Control APP to Robot
 
-See [Connecting to Robot](demo_app/connnecting_to_robot) for details.
+The robot creates a Wi-Fi hotspot that the Control APP needs to connect to. Once the connection is successful, the Control APP will indicate a "Connected" status.
+
+For details, see [Connecting to Robot](demo_app/connnecting_to_robot).
+
+## **Initiating Control Software**
+
+To start the motion control, you need to click `Startup` in the Control APP interface.
+
 
 ## Landing Robot
 
 1. Ensure that the robot is fastened to the protective lift.
 2. Click **Initial** to make the robot to initial state.
-
-![](static/1698744141867.png ":size=80%")
-
 3. Lower the robot with the lift of the protective lift and ensure the robot's feet stably contact with the ground.
 4. Click **Stand** in the remote controller.
-
-![](static/1698744210172.png ":size=80%")
 
 ## Controlling Robot
 

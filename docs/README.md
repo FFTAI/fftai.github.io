@@ -1,8 +1,3 @@
-<p align="center">
-    <a href="https://fftai.github.io" target="_blank" rel="noopener noreferrer">
-        <img width="200" src="https://raw.githubusercontent.com/FFTAI/rocs_server/main/assets/ico.jpg" alt="logo">
-    </a>
-</p>
 
 # Robot Control System
 
@@ -12,7 +7,7 @@
 
 The GR-1 robot software is a sophisticated system that includes an advanced framework designed for precise management and control of robotic systems. It comprises two core components: the upper computer and the lower computer.
 
-The collective elements of the upper computer, encompassing the Control App, Client SDK, and Server API, comprise the Robot Control System, or RoCS. 
+The collective elements of the upper computer, encompassing the Control App, Client SDK, and Server API, comprise the Robot Control System, or RoCS.
 
 This comprehensive framework, along with its robust architectural design, provides developers and operators with the tools necessary for efficient and precise monitoring and remote control of robotic systems, thereby ensuring their seamless and optimal operation.
 

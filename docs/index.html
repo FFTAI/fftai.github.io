@@ -1,155 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>RoCS</title>
     <style type="text/css">
         /* 清除内外边距 */
-        body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
-        dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
-        pre, /* text formatting elements 文本格式元素 */
-        fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
-        th, td { /* table elements 表格元素 */
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        p,
+        blockquote,
+        /* structural elements 结构元素 */
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        /* list elements 列表元素 */
+        pre,
+        /* text formatting elements 文本格式元素 */
+        fieldset,
+        lengend,
+        button,
+        input,
+        textarea,
+        /* form elements 表单元素 */
+        th,
+        td {
+            /* table elements 表格元素 */
             margin: 0;
             padding: 0;
         }
 
-        h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
-        h2 { font-size: 16px; }
-        h3 { font-size: 14px; }
-        h4, h5, h6 { font-size: 100%; }
+        h1 {
+            font-size: 18px;
+            /* 18px / 12px = 1.5 */
+        }
 
-        address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
-        code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
-        small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+        h2 {
+            font-size: 16px;
+        }
+
+        h3 {
+            font-size: 14px;
+        }
+
+        h4,
+        h5,
+        h6 {
+            font-size: 100%;
+        }
+
+        address,
+        cite,
+        dfn,
+        em,
+        var {
+            font-style: normal;
+        }
+
+        /* 将斜体扶正 */
+        code,
+        kbd,
+        pre,
+        samp,
+        tt {
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        /* 统一等宽字体 */
+        small {
+            font-size: 12px;
+        }
+
+        /* 小于 12px 的中文很难阅读，让 small 正常化 */
 
         /* 重置列表元素 */
-        ul, ol { list-style: none; }
+        ul,
+        ol {
+            list-style: none;
+        }
 
         /* 重置文本格式元素 */
-        a { text-decoration: none; }
-        a:hover { text-decoration: none; }
+        a {
+            text-decoration: none;
+        }
 
-        abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+        a:hover {
+            text-decoration: none;
+        }
+
+        abbr[title],
+        acronym[title] {
+            /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
             border-bottom: 1px dotted;
             cursor: help;
         }
-        q:before, q:after { content: ''; }
+
+        q:before,
+        q:after {
+            content: '';
+        }
 
         /* 清除浮动 */
-        .clearfix:after{
-            content: "020"; 
-            display: block; 
-            height: 0; 
-            clear: both; 
-            visibility: hidden;  
-        }
-        .clearfix {
-            zoom: 1; 
+        .clearfix:after {
+            content: "020";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
         }
 
-        html,body {
+        .clearfix {
+            zoom: 1;
+        }
+
+        html,
+        body {
             width: 100%;
             height: 100%;
             font-family: 'Medium-GBpc-EUC-H*';
         }
-       
     </style>
     <style type="text/css">
-        .cover-main{
+        .cover-main {
             width: 100%;
             height: 100%;
-            background: #bfc4ca  url(./_media/bg.png) no-repeat center top;
+            background: #bfc4ca url(./_media/bg.png) no-repeat center top;
             overflow: auto;
-            background-size:auto 100%;
+            background-size: auto 100%;
             position: relative;
         }
-        .main-logo{
+
+        .main-logo {
             position: fixed;
             top: 60px;
             left: 75px;
         }
+
         .main-control {
-            margin-top: 230px;
+            margin-top: 120px;
         }
-        .main-control p:first-child{
+
+        .main-control p:first-child {
             text-align: center;
-            color:#000;
+            color: #000;
             font-size: 48px;
         }
-        .main-control p:last-child{
+
+        .main-control p:last-child {
             text-align: center;
-            color:#000;
+            color: #000;
             font-size: 26px;
             margin-top: 15px;
         }
-        .main-button  {
+
+        .main-button {
             text-align: center;
         }
+
         .main-button a {
             display: inline-block;
             padding: 0 45px;
             height: 46px;
             border-radius: 50px;
-            margin-top: 50px;
+            margin-top: 30px;
             font-size: 20px;
             line-height: 46px;
         }
-        .main-button a:first-child  {
+
+        .main-button a:first-child {
             border: 2px solid #0086d1;
-            color:#0086d1;
+            color: #0086d1;
             margin-right: 45px;
         }
 
-        .main-button a:last-child  {
+        .main-button a:last-child {
             background-color: #0086d1;
-            color:#fff;
+            color: #fff;
         }
-        .language_select{
+
+        .language_select {
             position: fixed;
             right: 50px;
             top: 40px;
             display: none;
         }
-       
-        .languageBox{
+
+        .languageBox {
             cursor: pointer;
             overflow: auto;
             height: 30px;
         }
+
         .languageBox span {
             margin-right: 20px;
         }
 
-        .language_list{
+        .language_list {
             display: none;
             cursor: pointer;
             border: 1px solid #0086d1;
             border-radius: 5px;
             padding: 5px;
         }
+
         .language_list li {
             height: 30px;
             line-height: 30px;
             text-indent: 10px;
         }
-        .language_list li:hover{
+
+        .language_list li:hover {
             color: #0086d1;
         }
-        
     </style>
     <script>
-        window.onload = function() {
+        window.onload = function () {
             const element = document.getElementsByClassName("language_select")[0];
             const languageListEl = document.getElementsByClassName("language_list")[0];
-            element.addEventListener('mouseover',function(){
+            element.addEventListener('mouseover', function () {
                 languageListEl.style.display = "block"
             })
-            element.addEventListener('mouseout',function(){
+            element.addEventListener('mouseout', function () {
                 languageListEl.style.display = "none"
             })
-        
-            languageListEl.addEventListener('click', function(event) {
+
+            languageListEl.addEventListener('click', function (event) {
                 const target = event.target;
                 if (target.tagName === 'LI') {
                     selectOption(target.textContent);
@@ -161,8 +245,9 @@
             }
         };
     </script>
-   
+
 </head>
+
 <body>
     <div class="cover-main">
         <div class="main-logo">
@@ -171,7 +256,7 @@
         </div>
         <div class="language_select">
             <div class="languageBox">
-                <span class="language_span" >Language</span>
+                <span class="language_span">Language</span>
                 <img src="_media/drop-down.svg" alt="" style="float: right;" width="21px">
             </div>
             <ul class="language_list">
@@ -182,13 +267,13 @@
 
         <div class="main-control">
             <!-- <p> 共创机器人生态  &nbsp &nbsp 定制人形无限未来 </p> -->
-            <p>TOGETHER, WE SHAPE</p> 
-            <p>———— THE FUTURE OF HUMANOID ————</p> 
+            <p>TOGETHER, WE SHAPE</p>
+            <p>— THE FUTURE OF HUMANOID —</p>
         </div>
         <div class="main-button">
             <!-- <a href="https://github.com/FFTAI/fftai.github.io"><strong>开放资源</strong></a>
             <a href="./home_page.html"><strong>文档中心</strong></a> -->
-            <a href="https://github.com/FFTAI/fftai.github.io">github</a>
+            <a href="https://github.com/FFTAI/fftai.github.io">GitHub</a>
             <a href="./home_page.html">Getting Started</a>
         </div>
     </div>
