@@ -47,13 +47,6 @@ Before the initial use, it's essential to ensure that the robot, Remote Controll
 
 ![](static/1698656074242.png ":size=80%")
 
-### Connecting robot to monitor
-
-1. Power on the router.
-2. Connect monitor to Type-C interface through the extension dock.
-
-![](static/1698657743472.png ":size=80%")
-
 ### Preparingfor Startup
 
 1. Align shoulder slots.
@@ -61,9 +54,9 @@ Before the initial use, it's essential to ensure that the robot, Remote Controll
 3. Ensure a 10 cm interval between palms and hips.
 4. Ensure that the robot stands upright.
 
-![](static/1698658681237.png ":size=80%")
+![](static/1698658681237.png)
 
-## Starting up Robot
+## Powering on Robot
 
 1. Press actuator power-on button.
 2. Press embedded computer power-on button.
@@ -77,7 +70,7 @@ Before the initial use, it's essential to ensure that the robot, Remote Controll
 
 ## Connecting Remote Controller to Robot
 
-1. Switch on the remote controller and open the **System Settings** interface.
+1. Switch on the Remote Controller and open the **System Settings** interface.
 2. Input the Wi-Fi account and password specified on the back of the robot.
 
 ![](static/1698736555432.png ":size=80%")
@@ -121,3 +114,10 @@ Following two approaches are used to halt the motion of the robot:
 3. Press the actuator power button to power off the actuator.
 4. Connect the robot to the monitor.
 5. Kill the processes of the control software and then power off the robot host through the desktop terminal.
+
+### Connecting robot to monitor
+
+1. Power on the router.
+2. Connect monitor to Type-C interface through the extension dock.
+
+![](static/1698657743472.png)
