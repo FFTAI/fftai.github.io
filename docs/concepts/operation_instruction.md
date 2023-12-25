@@ -70,14 +70,7 @@ Before the initial use, it's essential to ensure that the robot, Remote Controll
 
 ## Connecting Remote Controller to Robot
 
-1. Switch on the Remote Controller and open the **System Settings** interface.
-2. Input the Wi-Fi account and password specified on the back of the robot.
-
-![](static/1698736555432.png ":size=80%")
-
-3. Click **Connect** .
-
-!> A success prompt will be given when the connection succeeds.
+See [Connecting to Robot](demo_app/connnecting_to_robot) for details.
 
 ## Landing Robot
 
