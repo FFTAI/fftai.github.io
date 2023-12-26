@@ -4,7 +4,7 @@ The Fourier Smart Actuator (FSA) is an advanced mechanical component seamlessly 
 
 The actuator's integration of power elements contributes to its adaptability and performance, making it an innovative and efficient solution for a range of robotic applications.
 
-![](static/fsa.png ":size=25%")
+![1703572771302](image/about_fsa/1703572771302.png ":size=80%")
 
 ## Motor Output
 

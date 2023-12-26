@@ -14,12 +14,14 @@ If you are using the Remote Controller, follow these steps:
 
 1. Power on the Remote Controller and the RoCS Control App is launched automatically.
 2. On the app interface, click on the `Connect` button in the right corner (if not connected). You will be guided to the Start Robot process.
-   ![](static/login-notconnected.png ":size=25%")
-3. Finish the powering on step according to the on-screen instructions.
+
+  ![img](static/login-notconnected.png)
+
+1. Finish the powering on step according to the on-screen instructions.
    The robot's Wi-Fi hotspot functionality is enabled automatically during the booting of the embedded computer.
 
    ![](static/startup-calibration.png)
-4. Click on `Device Connection` (Step 2) of the Start Robot workflow. This will lead you to the `System Setting` -> `Networking Setting` of your mobile device, where you can choose the robot's Wi-Fi hotspot (Default account: gr1-XXXXXX, Default password: 66668888).
+2. Click on `Device Connection` (Step 2) of the Start Robot workflow. This will lead you to the `System Setting` -> `Networking Setting` of your mobile device, where you can choose the robot's Wi-Fi hotspot (Default account: gr1-XXXXXX, Default password: 66668888).
 
    ![1702460687314](image/connnecting_to_robot/1702460687314.png)
 

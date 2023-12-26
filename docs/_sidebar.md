@@ -23,11 +23,6 @@
     - [Controlling Robot Movements](demo_app/control_robot_movements.md)
     - [Accessing and Modifying Settings](demo_app/settings.md)
   - [Build Your Own Remote Control App](demo_app/app_project_setup.md)
-  - Build and deploy
-  - APP Architecture
-  - [Data Flow](demo_app/logic_flow.md)
-  - API Integration
-  -
 - [**Autonomy**](autonomy/overview.md)
 - [**Motion Library**](motion_library/overview.md)
 

@@ -2,12 +2,11 @@
 
 The RoCS architecture presents a multi-layered, integrated framework for humanoid robot control. It combines intuitive user interfaces with powerful communication protocols and development tools, backed by a robust backend that translates human intentions into robotic actions. Through this architecture, the RoCS enables seamless human-robot interaction, fostering advancements in robotics and expanding the scope of what these incredible machines can achieve.
 
-
 ![img](static/software_architecture.png "size:40%")
 
 # Control App (User Interface) Layer
 
-The UI layer is the user's gateway to the robot, consisting of various interfaces tailored to different control paradigms.
+The Control APP layer is the user's gateway to the robot, consisting of various interfaces tailored to different control paradigms.
 
 The Control App offers a graphical interface for direct manipulation and command input. It is designed with a focus on ease-of-use, providing a dashboard through which users can monitor robot status and issue commands with simple touch gestures.
 

@@ -2,6 +2,14 @@
 
 The RoCS Control App provides users with intuitive controls to command various movements of the robot, allowing for a dynamic and interactive experience.
 
+Following topics are covered:
+
+- [Controlling Robot Movements](#controlling-robot-movements)
+  - [Gait Motion](#gait-motion)
+  - [Stationary Motion](#stationary-motion)
+  - [Stand Motion](#stand-motion)
+  - [End Effector Motion](#end-effector-motion)
+
 ## Gait Motion
 
 In Gait Motion Mode, users can command the robot to move in different directions, including forward, backward, left, and right. This mode offers a dynamic and directional approach, enabling users to navigate the robot seamlessly.

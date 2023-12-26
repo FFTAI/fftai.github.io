@@ -13,7 +13,7 @@ The `upper_body` method in the Motion Library is used to command the robot's upp
   <div id="markdown_box">
 
 ```Python
-port time
+import time
 from rocs_client import Human, ArmAction, HandAction
 
 # Connect to your robot using its IP address
@@ -34,7 +34,7 @@ human.upper_body(arm=ArmAction.TWO_ARMS_WAVE)  # Example: Wave both arms
 
 </div>
 
-  <div style="margin-left:5%">
+<div style="margin-left:5%">
     <video controls autoplay muted id="video_box">
       <source src="_media/move Arms and Hands.mp4" type="video/mp4">
     </video>
@@ -43,6 +43,6 @@ human.upper_body(arm=ArmAction.TWO_ARMS_WAVE)  # Example: Wave both arms
 
 The `upper_body` method is called to execute preset commands for the upper limbs. The `ArmAction` and `HandAction` enumerations provide specific arm and hand preset commands, respectively. You can choose from various arm and hand actions, such as waving and trembling, by specifying the appropriate action in the `upper_body` method.
 
-After calling `start` and waiting for stabilization, you can issue the `upper_body` commands to control the robot's upper limbs. Following the `upper_body` calls, you can proceed with additional control commands or motion instructions. 
+After calling `start` and waiting for stabilization, you can issue the `upper_body` commands to control the robot's upper limbs. Following the `upper_body` calls, you can proceed with additional control commands or motion instructions.
 
 It's crucial to call the `stand` method when finished with remote control to ensure a safe exit from the control mode.
