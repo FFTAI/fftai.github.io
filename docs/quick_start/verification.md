@@ -12,18 +12,18 @@ Following output signifies a successful installation:
 
 ```shell
 fftai@fftai-rocs-machine:~$ dpkg -l | grep rocs
-ii  rocs-control   1.3    all          Provides support and functionality for control algorithms relevant to robotics
-ii  rocs-lib          1.0    all          Installs the libraries required by RoCS
-ii  rocs-svr          1.3   all          Provides export call services for robot algorithm programs
-ii  rocs-webots   1.3   all          Provides a Webots simulation environment model
-ii  rocs-wifi        1.0   all          Opens a hotspot for clients to connect to the same network segment as the robot
+ii  rocs-control   1.3   all     Provides support and functionality for control algorithms relevant to robotics
+ii  rocs-lib          1.0   all     Installs the libraries required by RoCS
+ii  rocs-svr         1.3   all     Provides export call services for robot algorithm programs
+ii  rocs-webots  1.3   all     Provides a Webots simulation environment model
+ii  rocs-wifi        1.0   all      Opens a hotspot for clients to connect to the same network segment as the robot
 fftai@fftai-rocs-machine:~$
 
 ```
 
 ## Verifying Service Effectiveness
 
-After completing the installation, it is essential to verify whether the automatic startup of the following services is functioning correctly. 
+After completing the installation, it is essential to verify whether the automatic startup of the following services is functioning correctly.
 
 1. Verify the Status of `rocs-wifi` Service:
 

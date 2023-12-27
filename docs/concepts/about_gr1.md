@@ -1,6 +1,6 @@
-# About GR-1
+# About GR Series Robots
 
-The Fourier GR-1 represents a versatile humanoid robot, boasting a configuration of up to 40 FSA joints capable of delivering peak joint torque of 230 N.m. Its advanced whole-body control algorithm empowers the robot with an impressive 44 degrees of freedom.
+The Fourier GR (General Robot) series stands as a testament to the versatility of humanoid robots. These robots feature a configuration that includes up to 40 FSA (Fourier Smart Actuator) joints, capable of delivering a peak joint torque of 230 N.m. What sets them apart is their advanced whole-body control algorithm, which empowers the robot with an impressive total of 44 degrees of freedom.
 
 ![](static/about_gr1.png ":size=80%")
 
@@ -13,11 +13,11 @@ This robotic marvel exhibits remarkable human-like agility and motion kinematics
 * Robust response to impacts
 * Seamless human-robot collaboration in task execution.
 
-These capabilities position the Fourier GR-1 as a promising platform for the future of "Embodied AI", which is widely believed to be the next wave of artificial intelligence. As a carrier for artificial intelligence to interact with the physical world, embodied intelligence combines artificial intelligence technology with robot entities, so that the "brain" has a disposable, perceivable, interactive, and actionable "body", which brings great convenience and benefits as an important partner and assistant of human beings.
+These capabilities position it as a promising platform for the future of "Embodied AI", which is widely believed to be the next wave of artificial intelligence. As a carrier for artificial intelligence to interact with the physical world, embodied intelligence combines artificial intelligence technology with robot entities, so that the "brain" has a disposable, perceivable, interactive, and actionable "body", which brings great convenience and benefits as an important partner and assistant of human beings.
 
-The Fourier GR-1's scalability lends itself to the validation of various AI models and algorithms, opening up exciting possibilities for applications in industries, rehabilitation, household, and research.
+Furthermore, the Fourier GR robot's inherent scalability positions it as an ideal platform for testing and validating various AI models and algorithms. This versatility paves the way for an array of exciting applications across industries, including healthcare, rehabilitation, household assistance, and cutting-edge research.
 
-<h1>GR-1 Specifications</h1>
+# GR Robot Specifications
 
 ## Mechanical
 
@@ -84,7 +84,7 @@ The Fourier GR-1's scalability lends itself to the validation of various AI mode
 | OS                  | Ubuntu20.04+ROS 2                                                     |
 | External interfaces | HDMIx1，Type-C x 3(fast charge，USB，peripheral extension ports)      |
 | Wireless connection | Wi-Fi，EEE 80211a/b/g/n/ac, bluetooth 4.2                             |
-| Host                | ASUS 13th Generation - Dawn X MINI Commercial and Home Office Desktop |
+| Embedded computer   | ASUS 13th Generation - Dawn X MINI Commercial and Home Office Desktop |
 | Model               | PN64171RZ                                                             |
 | CPU                 | I7 13700H                                                             |
 | Memory              | 16 G                                                                  |

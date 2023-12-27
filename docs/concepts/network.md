@@ -1,12 +1,12 @@
 # Network Communication
 
-To initiate communication with the GR-1 robot, all applications leverage a network connection employing WebSocket and HTTP protocols. A comprehensive understanding of these protocols is imperative for effective troubleshooting and ensuring the robust functionality of applications.
+To initiate communication with the GR robot, all applications leverage a network connection employing WebSocket and HTTP protocols. A comprehensive understanding of these protocols is imperative for effective troubleshooting and ensuring the robust functionality of applications.
 
 RoCS APIs manage two categories of instructions: continuous and instantaneous, exchanged with the GR-1 robot. Continuous instructions utilize WebSocket for real-time communication, ensuring immediate feedback and reliability. Conversely, instantaneous instructions use HTTP for simpler communication when real-time feedback is not essential. The SDK provides tools for actively monitoring pushed messages and handling different instruction types accordingly.
 
 ## WebSocket Connection
 
-The primary mode of communication for GR-1 is WebSocket, a real-time, bidirectional protocol facilitating near real-time data exchange between applications and the robot. This approach is particularly suitable for scenarios requiring low latency and high responsiveness, such as those involving continuous instructions.
+The primary mode of communication for GR robot is WebSocket, a real-time, bidirectional protocol facilitating near real-time data exchange between applications and the robot. This approach is particularly suitable for scenarios requiring low latency and high responsiveness, such as those involving continuous instructions.
 
 **Continuous Instructions:**
 

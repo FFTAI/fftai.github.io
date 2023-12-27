@@ -1,6 +1,6 @@
 - [**Concepts**](concepts/overview.md)
 
-  - [About GR-1](concepts/about_gr1.md)
+  - [About GR Robot](concepts/about_gr1.md)
   - [Operation Instruction](concepts/operation_instruction.md)
   - [About RoCS](concepts/about_rocs.md)
   - [Networking](concepts/network.md)

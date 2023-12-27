@@ -100,7 +100,7 @@ Before activating the robot, it's critical to set it to its calibration pose. Th
 
 ## Connecting Control APP to Robot
 
-The robot creates a Wi-Fi hotspot that the Control APP needs to connect to for motion control. Once the connection is successful, the Control APP will indicate a `Connected` status.
+The robot automatically creates a Wi-Fi hotspot during booting. The Control APP needs to connect to the hotspot Wi-Fi for motion control. Once the connection is successful, the Control APP will indicate a `Connected` status.
 
 For details, see [Connecting to Robot](demo_app/connnecting_to_robot).
 
@@ -122,7 +122,7 @@ The initial state, which is a prerequisite for starting the motion control, ensu
 To set the robot to initial state:
 
 1. Ensure that the robot is fastened to the protective lift.
-2. Click `Initial` to make the robot to initial state in the Control APP interface.
+2. Click `Initial` button on the Control App interface to set the robot to initial state. In this state, the robot's legs will be slightly bent, as depicted in the following figure.
 
    ![1703562695596](image/operation_instruction/1703562695596.png)
 
@@ -134,9 +134,13 @@ This involves a series of actions to ensure the robot transitions safely from an
 
 1. **Set Robot to Initial State** : As outlined in the preceding section.
 2. **Control the Descent** : Use the protective lift descent button to control the robot's descent to the ground. This should be done slowly to prevent any impact or damage.
+
+   ![1703650838701](image/operation_instruction/1703650838701.png)
 3. **Confirm Stability** : Once the robot has landed, gently shake it to confirm that it is stable and there are no issues with its balance or the surface it is on.
-4. **Initiate Standing** : Click `Stand` to bring the robot to a standing position. During this process, you may need to assist the robot by adjusting its front-to-back center of gravity to achieve a stable upright position.
-5. **Standing Assistance** : While the robot is standing, continue to assist by maintaining the correct balance until it can stand stably on its own. The blue area in the guidance indicates the location of the handrail to be used for this purpose.
+4. **Initiate Standing** : Click `Stand` to bring the robot to a standing position. During this process, you may need to assist the robot to adjust its front-to-back center of gravity to achieve stability.
+
+   ![1703654341082](image/operation_instruction/1703654341082.png)
+5. **Standing Assistance** : While the robot is standing, continue to hold the lifting handle to assist it by maintaining the correct balance until it can stand stably on its own.
 
 # Operations
 
@@ -159,12 +163,12 @@ There are two primary methods for stopping the robot's motion. Both are crucial 
 
 ### Manual Interruption via Controller
 
-- To momentarily pause the robot's activities, the `Stand` button on the Control APP interface should be pressed.
+- To momentarily pause the robot's activities, press the `Stand` button on the Control APP interface.
 - Activating this button causes the robot to cease its current operation and, if it was standing, to maintain that posture. This approach offers a controlled means to momentarily halt the robot's actions without powering down the entire system.
 
 ### Emergency Shutdown
 
-The Emergency Stop switch is employed under urgent conditions to immediately halt all robot operations, primarily for safety purposes. Such situations might include:
+Press the Emergency Stop switch under urgent conditions to immediately halt all robot operations, primarily for safety purposes. Such situations might include:
 
 - Unusual or unexpected robot movements, like incorrect velocities or trajectories.
 - When disassembly or maintenance is underway, necessitating a cessation of movement for safety.
@@ -178,8 +182,16 @@ The Emergency Stop switch is employed under urgent conditions to immediately hal
 To ensure the safe shutdown of the robot, follow these steps:
 
 1. **Securing the Robot**: Before initiating the shutdown process, make sure the robot is secured to the protective lift. Ensure the robot is in a stable position and not in the middle of a task that requires completion.
+
+   ![1703654861483](image/operation_instruction/1703654861483.png)
 2. **Return to Initial State**: Bring the robot back to its initial state. This step is crucial for ensuring that the robot is in a safe and neutral position, which prevents any issues when it is powered back on.
+
+   ![1703655016299](image/operation_instruction/1703655016299.png)
 3. **Press Emergency Stop Switch**: Press the Emergency Stop switch as part of the shutdown process. This action ensures an immediate cessation of all operations and is a safety measure to prevent any unintended movements during the shutdown.
+
+   ![1703655237533](image/operation_instruction/1703655237533.png)
 4. **Engage Power-Off Sequence** : Finally, activate the power-off sequence through the power off button on the right corner of the Control APP main interface.
+
+   ![1703655946412](image/operation_instruction/1703655946412.png)
 
 !> Caution: Long pressing the embedded computer's power button for 15 seconds will forcibly shut down the robot. This function should primarily be used when the robot cannot be powered off normally. Please be aware that forcing a shutdown may potentially lead to robot file corruption, so perform this action with care.
