@@ -1,6 +1,6 @@
 # Overview
 
-The server is already installed in the embedded robot computer before delivery. To set up RoCS environment for physical robot, you only need to:
+The server is already installed in the embedded robot computer before delivery. To configure RoCS environment for physical robot, you only need to:
 
 * [Modifying Configuration File](#modifying-configuration-file)
 * [Setting Up Python Client SDK](quick_start/setup_for_physical_robot?id=setting-up-python-client-sdk) or [Setting Up Javascript/TypeScript SDK](quick_start/setup_for_physical_robot?id=setting-up-javascripttypescript-client-sdk)
@@ -112,7 +112,7 @@ human = Human(host='192.168.12.1')  # Replace the IP with actual IP of your devi
 
 Here's an example code snippet showcasing the utilization of the Python Client SDK for robot control:
 
-### **Code for Controlling Whole Robot (rocs_client>=1.0)**
+### Code for Controlling Whole Robot (rocs_client>=1.0)
 
 !> The version of the RoCS Client should be version 1.0 or higher for this example. Run command `pip show rocs_client` in a terminal to check the version of the installed package.
 
@@ -367,7 +367,9 @@ motor.exit()
 
 ```
 
-* **[More test cases are in the Test folder](https://github.com/FFTAI/rocs_client_py/tree/main/test)**
+### Additional Test Cases
+
+Addtional test cases can be found in [Test Cases](https://github.com/FFTAI/rocs_client_py/tree/main/test).
 
 # Setting Up JavaScript/TypeScript Client SDK
 
