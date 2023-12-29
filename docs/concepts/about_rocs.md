@@ -16,7 +16,7 @@ RoCS empowers robots with exceptional control and functionality. Here's a brief 
 
 ## Lower Computer
 
-The lower computer, functioning as the analog of the cerebellum in human physiology, specializes in motion control, handling motor control, motion algorithms, hardware driver management, and other critical functions essential for the robot's movement and stability.
+The lower computer, acting as the equivalent of the cerebellum in human physiology, specializes in motion control, handling motor control, motion algorithms, hardware driver management, and other critical functions essential for the robot's movement and stability.
 
 ## Upper Computer
 
@@ -55,4 +55,4 @@ The RoCS architecture offers precise control and management of robotic systems t
   * The uppermost layer is versatile and dynamic, incorporating advanced functionalities such as graphical programming, cluster control, avatar control, and embodied intelligence.
   * This layer enables higher-level tasks, including human-robot interaction, decision-making, and intelligent behaviors.
 
-RoCS is a versatile tool in various robotic applications. For more details, see the [Quick Start](https://chat.openai.com/c/quick_start/overview.md) guide.
+RoCS is a versatile tool in various robotic applications. For more details, see the [Quick Start](quick_start/overview.md).
