@@ -11,10 +11,10 @@ The server is already installed in the embedded robot computer before delivery. 
 
 Prior to the initial use of the robot, you need to modify the configuration file `application.conf` according to your actual situation.
 
-To modify it,
+To do this:
 
 1. Connect a monitor to the embedded robot computer via the robot Type C interface.
-2. Access to directory `/user/local/bin/rocs-svr` to make the modification.
+2. Navigate to the directory `/user/local/bin/rocs-svr` to access and make the necessary modifications.
 
 ```markdown
 /usr/local/bin/rocs-svr/
@@ -23,7 +23,7 @@ To modify it,
 │ ├── human_motor_limit_list.json                    ***** Robot joint limit information
 ```
 
-3. Restart the embedded robot computer to make the modification take effect.
+3. Restart the embedded robot computer to make the modifications take effect.
 
 # Setting Up Python Client SDK
 

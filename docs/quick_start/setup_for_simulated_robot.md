@@ -1,10 +1,10 @@
 # Overview
 
-The setup of RoCS for simulation environment involves:
+The configuration of RoCS for simulation environment involves:
 
 * [Setting Up RoCS Server](quick_start/setup_for_simulated_robot?id=setting-up-rocs-server)
 * [Loading Webots Model](quick_start/setup_for_simulated_robot?id=loading-webots-model)
-* [Controlling Robot using Client SDK](quick_start/setup_for_simulated_robot?id=controlling-robot-using-client-sdk)
+* [Controlling Robot Using Client SDK](quick_start/setup_for_simulated_robot?id=controlling-robot-using-client-sdk)
 
 # Setting Up RoCS Server
 
@@ -55,7 +55,7 @@ fftai@fftai-rocs-machine:~$
 
 ```
 
-## Introduciton to Instsalled Server Packages
+## Introduciton to Installed Server Packages
 
 ### rocs-control
 
@@ -83,7 +83,7 @@ The `rocs-svr` essentially serves as the bridge between the upper computer and t
 
 ## Verifying Service Effectiveness
 
-After completing the installation, it is essential to verify whether the automatic startup of the following services is functioning correctly.
+Following two services have been configured for automatic startup during the boot process. After the installation is finished, it's crucial to confirm that these services indeed start automatically as intended.
 
 1. Verify the Status of `rocs-wifi` Service:
 
@@ -141,6 +141,7 @@ tail -f /var/log/syslog | grep rocs
 tail -f ~/RoCS/server.log
 ```
 
+!> Userful Tip: Open a terminal and run the command `tail -f /var/log/syslog | grep rocs` to monitor the server log in real time. Keeping the terminal window always on top can provide a convenient way to stay updated.
 
 # Loading Webots Model
 
@@ -151,6 +152,6 @@ tail -f ~/RoCS/server.log
 !> If the model cannot be shown, attempt to restore the layout by navigating to Tools -> Restore Layout.
 
 
-# Controlling Robot using Client SDK
+# Controlling Robot Using Client SDK
 
 Use either [Python SDK](quick_start/setup_for_physical_robot?id=setting-up-python-client-sdk) or [JavaScript/TypeScript SDK](quick_start/setup_for_physical_robot?id=setting-up-javascripttypescript-client-sdk) to control the robot.
