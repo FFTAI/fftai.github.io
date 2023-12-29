@@ -1,86 +1,70 @@
-.markdown-section pre {
-    margin:0 !important
+.sidebar-nav li.active>a {
+    color: #0086d1;
+    /* The preferred blue color */
 }
 
-.markdown-section pre > code {
-    white-space: pre-wrap !important;
+
+.sidebar-nav>ul {
+    margin-left: 20px;
 }
+
+.sidebar-nav ul:not(.app-sub-sidebar)>li {
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+.sidebar-nav ul:not(.app-sub-sidebar)>li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: -16px;
+    height: 14px;
+    width: 14px;
+}
+
+.sidebar-nav ul:not(.app-sub-sidebar)>li.folder::before {
+    background: center/contain no-repeat url();
+}
+
+.sidebar-nav ul:not(.app-sub-sidebar)>li.file::before {
+    background: center/contain no-repeat url();
+}
+
 video::-webkit-media-controls-fullscreen-button {
     display: none;
 }
+
 video::-webkit-media-controls-play-button {
     display: none;
 }
+
 video::-webkit-media-controls-timeline {
     display: none;
 }
-video::-webkit-media-controls-current-time-display{
-    display: none;            
-}
-video::-webkit-media-controls-time-remaining-display {
-    display: none;            
-}
-video::-webkit-media-controls-mute-button {
-    display: none;            
-}
-video::-webkit-media-controls-toggle-closed-captions-button {
-    display: none;            
-}
-video::-webkit-media-controls-volume-slider {
-    display: none;            
-}
-video::-webkit-media-controls-enclosure{ 
+
+video::-webkit-media-controls-current-time-display {
     display: none;
 }
 
-
-.sidebar-nav ul {
-    margin:0
+video::-webkit-media-controls-time-remaining-display {
+    display: none;
 }
 
-.sidebar-nav li {
-    text-indent: 15px;
-}
-.sidebar ul li a{
-    display: block;
-    text-indent: 30px
+video::-webkit-media-controls-mute-button {
+    display: none;
 }
 
-.sidebar ul li.level-1 > p >a{
-    text-indent: 15px
+video::-webkit-media-controls-toggle-closed-captions-button {
+    display: none;
 }
 
-.sidebar ul li.active > a{
-    background-color: var(--theme-color, #42b983);
-    color:#fff;
-    
+video::-webkit-media-controls-volume-slider {
+    display: none;
 }
 
-
-
-
-
-.sidebar ul li.active:has( > ul) ~ p{
-    color: var(--theme-color, #42b983);
+video::-webkit-media-controls-enclosure {
+    display: none;
 }
-
-.page_toc ul a :hover {
-    color: var(--theme-color, #42b983);
-}
-
-.page_toc ul a:hover span {
-    color: var(--text-color-tertiary, #0086d1);
-    border-bottom: none !important;
-    text-decoration:none !important;
-  }
-
-
-
-.markdown-section h1, .markdown-section h2{
-   border-left: 5px solid var(--theme-color, #42b983);
-   padding-left: 10px;
-}  
-.sidebar-nav  .level-1{
-    cursor: pointer;
-}
-

@@ -8,9 +8,8 @@
   - [Faults](concepts/faults.md)
 - [**Quick Start**](quick_start/overview.md)
 
-  - [Installation](quick_start/installation.md)
-  - [Verification](quick_start/verification.md)
-  - [About](quick_start/about.md)
+  - [Set Up RoCS Environment  for Simulated Robot](quick_start/setup_for_simulated_robot.md)
+  - [Set Up RoCS Environment  for Physical Robot](quick_start/setup_for_physical_robot.md)
 - [**Client_SDK**](client_sdk/overview.md)
 
   - [Python](https://fftai.github.io/rocs_client_py/index.html)

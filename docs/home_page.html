@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="icon" href="_media/favicon.ico" />
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css" />
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css" disabled />
 
-    <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css" />
+    <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css" disabled />
     <!-- <link rel="stylesheet" href="//unpkg.com./docsify-sidebar-collapse/dist/sidebar.min.css" /> -->
 
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" /> -->
@@ -37,9 +37,9 @@
             executeScript: true,
             loadSidebar: true,
             // loadNavbar: true,
-            subMaxLevel: 1,
+            subMaxLevel: 4,
             themeColor: '#0086d1',
-            sidebarDisplayLevel: 0,
+            sidebarDisplayLevel: -1,
             routerMode: 'hash', // hash ,history
             nameLink: {
                 '/es/': '#/es/',
@@ -105,7 +105,20 @@
     <script src="//unpkg.com/docsify-router@latest"></script>
 
     <script src="//unpkg.com/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.js"></script>
+    <script>
+        document.querySelectorAll('.sidebar-nav a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                // Remove 'active' class from all sibling <li> elements
+                this.closest('.sidebar-nav').querySelectorAll('li.active').forEach(function (activeLi) {
+                    activeLi.classList.remove('active');
+                });
 
+                // Add 'active' class to this link's parent <li>
+                this.parentElement.classList.add('active');
+            });
+        });
+
+    </script>
 </body>
 
 </html>
