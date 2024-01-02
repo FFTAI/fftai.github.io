@@ -1,8 +1,7 @@
 # Overview
 
+The SDK operates based on the concept of encapsulation, neatly organizing essential robot functions into separate classes, each equipped with specialized methods. Developers can make use of these encapsulated capabilities through provided interfaces, making it easy to create customized applications seamlessly. Whether you need to fine-tune low-level motor operations, coordinate complex high-level motion sequences, manage audio/video transmission, implement SLAM for mapping, or monitor odometry, the SDK's modular structure ensures flexibility and simplicity for developers to customize their solutions.
 
-The SDK plays a vital role in applications seeking to command the GR-1, acquire sensor data, establish payload services, etc.
+This reference guide is designed to assist you in navigating the various modules and classes, demonstrating how they can be effectively employed in application development. It serves as a fundamental resource for developers.
 
-Operating on the principle of encapsulation, the SDK neatly packages fundamental robot functions into distinct classes, each armed with specialized methods. Developers can harness these encapsulated capabilities through provided interfaces, facilitating the seamless creation of customized applications. Whether fine-tuning low-level motor operations, orchestrating high-level motion sequences, handling audio/video transmission, implementing SLAM for mapping, or monitoring odometry, the SDK's modular structure ensures flexibility and simplicity in customization for developers.
-
-This quickstart guide provides a step-by-step walkthrough to help you install the necessary SDK libraries (both in Python and JavaScript/TypeScript) and run basic programs for GR-1 control.
+!> Please note that we assume you have already installed your preferred SDK packages. If you haven't done so yet, please refer to [Setting Up Python Client SDK](quick_start/setup_for_physical_robot?id=setting-up-python-client-sdk) or [Setting Up JavaScript/TypeScript Client SDK](quick_start/setup_for_physical_robot?id=setting-up-javascripttypescript-client-sdk) section for installation instructions.

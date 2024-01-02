@@ -547,7 +547,7 @@ This API is utilized to control the movement of the robot's head via a long-live
 
 GET /127.0.0.1:8001/ws/states
 
-This API is called to get the real-time state data via function `SonnieGetStates`after the debugging mode is enabled.
+This API is called to get the real-time state data via function `SonnieGetStates` after the debugging mode is enabled.
 
 > Response Examples
 
@@ -558,31 +558,16 @@ This API is called to get the real-time state data via function `SonnieGetStates
   "data": {
     "states": {
       "basestate": {
-        "a": -0.00008816774229518624,
-        "b": -0.0031777816310660225,
+        "a": -0.000088,
+        "b": -0.003177,
         "c": 0,
-        "va": -3.2955695877132928e-9,
-        "vb": -6.542262024864478e-7,
-        "vc": 2.0403557796187137e-8,
-        "vx": 0,
-        "vy": 0,
-        "vz": 0,
-        "x": 0,
-        "y": 0,
+        // ... additional parameters omitted ...
         "z": 0
       },
       "contactforce": {
         "fxL": 0,
         "fxR": 6,
-        "fyL": 1,
-        "fyR": 7,
-        "fzL": 2,
-        "fzR": 8,
-        "mxL": 3,
-        "mxR": 9,
-        "myL": 4,
-        "myR": 10,
-        "mzL": 5,
+        // ... additional forces omitted ...
         "mzR": 11
       },
       "fsmstatename": {
@@ -591,166 +576,11 @@ This API is called to get the real-time state data via function `SonnieGetStates
       "jointStates": [
         {
           "name": "left_hip_roll",
-          "qa": -0.000002967348844382189,
-          "qc": -4.195799309522971e-9,
-          "qdota": -1.2811068419807387e-8,
-          "qdotc": -2.5650460977039418e-9,
-          "taua": 0.00000421397498061693,
-          "tauc": 0.00000421397498061693
+          "qa": -0.0000029,
+          // ... additional parameters omitted ...
+          "tauc": 0.0000042
         },
-        {
-          "name": "left_hip_yaw",
-          "qa": 1.1561011056000388e-7,
-          "qc": 5.763118985802831e-10,
-          "qdota": 5.413053331490085e-10,
-          "qdotc": -1.998095673038479e-9,
-          "taua": -5.607576848879348e-7,
-          "tauc": -5.607576848879348e-7
-        },
-        {
-          "name": "left_hip_pitch",
-          "qa": 0.00004391517501779261,
-          "qc": 1.515751869369811e-8,
-          "qdota": 1.9014878092501132e-7,
-          "qdotc": -4.227869290635517e-8,
-          "taua": -0.000007239519592483131,
-          "tauc": -0.000007239519592483131
-        },
-        {
-          "name": "left_knee_pitch",
-          "qa": 0.00004577103623661791,
-          "qc": 1.825644254205245e-8,
-          "qdota": 1.9871683938840232e-7,
-          "qdotc": -1.3400628221563268e-7,
-          "taua": -0.000004188456587918816,
-          "tauc": -0.000004188456587918816
-        },
-        {
-          "name": "left_ankle_pitch",
-          "qa": 0.0000515945298803933,
-          "qc": 2.2981673142499233e-8,
-          "qdota": 2.242746827673787e-7,
-          "qdotc": -2.258893072672217e-7,
-          "taua": -7.153918887352573e-8,
-          "tauc": -7.153918887352573e-8
-        },
-        {
-          "name": "left_ankle_roll",
-          "qa": 6.419495520105573e-7,
-          "qc": 3.706374175342285e-11,
-          "qdota": 2.794181899265958e-9,
-          "qdotc": -5.949285977052194e-9,
-          "taua": 1.093729550329863e-10,
-          "tauc": 1.093729550329863e-10
-        },
-        {
-          "name": "right_hip_roll",
-          "qa": 0.0000028389355052439438,
-          "qc": 4.865708590789946e-9,
-          "qdota": 1.2246925191446977e-8,
-          "qdotc": -3.962174546204988e-9,
-          "taua": -0.000004837825973754749,
-          "tauc": -0.000004837825973754749
-        },
-        {
-          "name": "right_hip_yaw",
-          "qa": -4.364693140246345e-7,
-          "qc": 6.000702384094449e-10,
-          "qdota": -1.8497568931031923e-9,
-          "qdotc": -1.7781221204499439e-9,
-          "taua": -5.867529228984824e-7,
-          "tauc": -5.867529228984824e-7
-        },
-        {
-          "name": "right_hip_pitch",
-          "qa": 0.000045113585488131827,
-          "qc": 2.367752787246051e-8,
-          "qdota": 1.950714297088208e-7,
-          "qdotc": -6.520824184784889e-8,
-          "taua": -0.000011320537478692172,
-          "tauc": -0.000011320537478692172
-        },
-        {
-          "name": "right_knee_pitch",
-          "qa": 0.0000479437468878189,
-          "qc": 2.324249646390596e-8,
-          "qdota": 2.0757655546078694e-7,
-          "qdotc": -1.4486023522267124e-7,
-          "taua": -0.00000557281564261239,
-          "tauc": -0.00000557281564261239
-        },
-        {
-          "name": "right_ankle_pitch",
-          "qa": 0.00005468652781599774,
-          "qc": 2.4630029782206444e-8,
-          "qdota": 2.3684484798495585e-7,
-          "qdotc": -2.2533190930925486e-7,
-          "taua": -7.817536142908408e-8,
-          "tauc": -7.817536142908408e-8
-        },
-        {
-          "name": "right_ankle_roll",
-          "qa": -1.4411157156501986e-7,
-          "qc": 8.786951464767337e-11,
-          "qdota": -6.347293532005193e-10,
-          "qdotc": -6.275949957243541e-9,
-          "taua": 5.977234519649814e-11,
-          "tauc": 5.977234519649814e-11
-        },
-        {
-          "name": "waist_yaw",
-          "qa": 2.7287197903010756e-10,
-          "qc": -1.9509172839224988e-10,
-          "qdota": 2.182983232727597e-7,
-          "qdotc": -1.5630533392766102e-7,
-          "taua": -0.000003249343357926737,
-          "tauc": -0.0000017639729379187397
-        },
-        {
-          "name": "waist_pitch",
-          "qa": -1.1411541437762108e-8,
-          "qc": -5.783273072262379e-9,
-          "qdota": -5.121972652033971e-13,
-          "qdotc": 3.810219915783962e-8,
-          "taua": 0.000011505459672511686,
-          "tauc": 0.000005496170595926694
-        },
-        {
-          "name": "waist_roll",
-          "qa": -1.302909426086466e-8,
-          "qc": -6.480917136286735e-9,
-          "qdota": -3.6044103175709823e-13,
-          "qdotc": -4.3982596326637837e-10,
-          "taua": 0.000013027709577777855,
-          "tauc": 0.000006483935166648911
-        },
-        {
-          "name": "head_yaw",
-          "qa": 0,
-          "qc": 0,
-          "qdota": 0,
-          "qdotc": 0,
-          "taua": 0,
-          "tauc": 0
-        },
-        {
-          "name": "head_pitch",
-          "qa": 0,
-          "qc": 0,
-          "qdota": 0,
-          "qdotc": 0,
-          "taua": 0,
-          "tauc": 0
-        },
-        {
-          "name": "head_roll",
-          "qa": 0,
-          "qc": 0,
-          "qdota": 0,
-          "qdotc": 0,
-          "taua": 0,
-          "tauc": 0
-        }
+        // ... additional joint states omitted ...
       ],
       "stanceindex": {}
     },
@@ -761,6 +591,7 @@ This API is called to get the real-time state data via function `SonnieGetStates
   },
   "function": "SonnieGetStates"
 }
+
 ```
 
 ### Responses

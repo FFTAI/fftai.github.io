@@ -1,6 +1,6 @@
 # Overview
 
-This section is to guide you through the process of setting up and operating the Fourier Robot. Since the robot is delivered fully assembled, we will focus on the initial setup and basic operation.
+This section is to guide you through the process of setting up and operating the Fourier Robot. Since the robot is delivered fully assembled, our focus will be on the initial setup and basic operation steps.
 
 Following topics are covered:
 
