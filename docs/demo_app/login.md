@@ -1,6 +1,6 @@
 # Login Interface
 
-The login interface is a Vue.js component with interactive elements, including a header, an image of GR-1 robot, a `Start Exploring` button, and a prompt box appearing based on certain user interactions.
+The login interface is a Vue.js component with interactive elements, including a header, an image of GR robot, a `Start Exploring` button, and a prompt box appearing based on certain user interactions.
 
 It communicates with a Vuex store to retrieve and manage data related to the connection status and robot information. Users can initiate exploration and interact with the application through the provided UI elements.
 
@@ -34,7 +34,7 @@ The interaction between the `startExplore()` method, the `control_svr_status` me
 
 ### 3. Network Icon
 
-Indicates the connection to the GR-1 is sucessful.
+Indicates the connection to the GR is sucessful.
 
 ### 4. System Setting Icon
 

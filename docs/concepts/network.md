@@ -32,9 +32,9 @@ async def connect_to_gr1():
 
     async with websockets.connect(uri) as websocket:
         # Perform WebSocket operations here
-        await websocket.send("Hello, GR-1!")
+        await websocket.send("Hello, GR!")
         response = await websocket.recv()
-        print(f"GR-1 says: {response}")
+        print(f"GR says: {response}")
 
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(connect_to_gr1())

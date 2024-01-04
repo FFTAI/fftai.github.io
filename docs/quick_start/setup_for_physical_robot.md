@@ -83,11 +83,10 @@ human = Human(host='192.168.12.1')  # Replace the IP with actual IP of your devi
 
    You can use the following methods of the `human` class to control the robot:
 
-   * `_control_svr_start()`: Turn on the robot control program
-   * `_control_svr_status()`: View the running status of the robot
-   * `_control_svr_log_view()`: View robot run logs
-   * `_control_svr_close()`: Turn off the robot control program
-   * `start()`: initiates or resets control.
+   * `_control_svr_start()`: turns on the robot.
+   * `_control_svr_status()`: checks the current operational status of the robot.
+   * `_control_svr_log_view()`: checks logs related to the robot's operations. It provides insights into the robot's runtime activities and events.
+   * `_control_svr_close()`: initiates the process of shutting down the robot.
    * `stop()`: triggers an emergency stop (halts with power off).
    * `exit()`: ends robot control session.
    * `stand()`: commands the robot to stand in place.
@@ -95,7 +94,7 @@ human = Human(host='192.168.12.1')  # Replace the IP with actual IP of your devi
 
      * `angle(float)`: controls direction with a range of plus or minus 45 degrees. Positive for left, negative for right. The value is an 8-digit floating-point number.
      * `speed(float)`: manages forward and backward movement with a range of plus or minus 0.8. Positive for forward, negative for backward. The value is an 8-digit floating-point number.
-   * `head(roll, pitch, yaw)`:  directs the GR-1 robot's head movements.
+   * `head(roll, pitch, yaw)`:  directs the GR robot's head movements.
 
      * `roll(float)`: controls the roll angle (rotation around the x-axis). Negative for left, positive for right, within the range of (-17.1887-17.1887).
      * `pitch(float)`: adjusts the pitch angle (rotation around the y-axis). Positive for nodding forward, negative for nodding backward, within the range of (-17.1887-17.1887).
@@ -432,7 +431,7 @@ let human = new Human({host: '192.168.9.17'}); // Please replace host with the i
 
      * `angle(float)`: controls direction with a range of plus or minus 45 degrees. Positive for left, negative for right. The value is an 8-digit floating-point number.
      * `speed(float)`: manages forward and backward movement with a range of plus or minus 0.8. Positive for forward, negative for backward. The value is an 8-digit floating-point number.
-   * `head(roll, pitch, yaw)`: directs the GR-1 robot's head movements.
+   * `head(roll, pitch, yaw)`: directs the GR robot's head movements.
 
      * `roll(float)`: controls the roll angle (rotation around the x-axis). Negative for left, positive for right, within the range of (-17.1887-17.1887).
      * `pitch(float)`: adjusts the pitch angle (rotation around the y-axis). Positive for nodding forward, negative for nodding backward, within the range of (-17.1887-17.1887).

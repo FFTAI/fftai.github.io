@@ -48,6 +48,12 @@
                 '/zh-cn/': '#/zh-cn/',
                 '/': '#/'
             },
+            pagination: {
+                previousText: 'Previous',
+                nextText: 'Next',
+                crossChapter: false,
+                crossChapterText: false,
+            },
             search: {
                 noData: {
                     '/es/': '¡No hay resultados!',
@@ -105,6 +111,8 @@
     <script src="//unpkg.com/docsify-router@latest"></script>
 
     <script src="//unpkg.com/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.js"></script>
+    <script src="./style/pagination.js"></script>
+
     <script>
         document.querySelectorAll('.sidebar-nav a').forEach(function (link) {
             link.addEventListener('click', function () {

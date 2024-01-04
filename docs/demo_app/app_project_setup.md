@@ -20,16 +20,16 @@ Following topics are covered:
 
 To ensure a smooth development process, the following libraries and frameworks are essential:
 
-1. **Vue.js** : The core framework. Ensure you have the latest stable version.
-2. **Vuex** : For state management within Vue.js.
-3. **Vue Router** : For managing navigation within the application.
-4. **Axios** : For making HTTP requests to the API.
-5. **Node.js** : The runtime environment for executing JavaScript code server-side.
-6. **Webpack** : For module bundling.
-7. **Babel** : For JavaScript compilation.
-8. **ESLint** : For code linting and maintaining coding standards.
-9. **Jest** : For unit testing.
-10. **Sass** : For advanced styling capabilities.
+- **Vue.js** : The core framework. Ensure you have the latest stable version.
+- **Vuex** : For state management within Vue.js.
+- **Vue Router** : For managing navigation within the application.
+- **Axios** : For making HTTP requests to the API.
+- **Node.js** : The runtime environment for executing JavaScript code server-side.
+- **Webpack** : For module bundling.
+- **Babel** : For JavaScript compilation.
+- **ESLint** : For code linting and maintaining coding standards.
+- **Jest** : For unit testing.
+- **Sass** : For advanced styling capabilities.
 
 ### Environment Setup
 
@@ -90,19 +90,19 @@ To run the application locally:
 - Execute `npm run serve` in the terminal. This command starts a local development server.
 - The application will be hosted at `http://localhost:8080` by default. You can access it using a web browser.
 
-1. **Live Reloading** :
+2. **Live Reloading** :
 
 - The local server comes with hot-reloading. Any changes made to the source code will automatically refresh the application in the browser.
 
-1. **Accessing Application Features** :
+3. **Accessing Application Features** :
 
 - Test different features like robot control and system settings as they would function in the production environment.
 
-1. **Running Unit Tests** :
+4. **Running Unit Tests** :
 
 - Execute `npm run test` to run unit tests. This ensures your local changes haven't broken existing functionalities.
 
-1. **Linting Code** :
+5. **Linting Code** :
 
 - Run `npm run lint` to identify and fix linting issues, ensuring code consistency.
 
@@ -214,19 +214,19 @@ Vuex plays a pivotal role in maintaining the state of the application. The centr
 - Method: GET
 - Data Flow: Triggered in `RobotStartup.vue`, this API call starts the robot. The response is monitored to update the UI accordingly.
 
-1. **System Settings** :
+2. **System Settings** :
 
 - Endpoint: `/robot/control_svr_status`
 - Purpose: Checks the status of the robot server.
 - Method: GET
 - Usage: In `Login.vue`, this endpoint determines if the robot server is active before proceeding.
 
-1. **Shut Down Robot** :
+3. **Shut Down Robot** :
 
 - Endpoint: `/robot/control_svr_close`
 - Purpose: To shut down the robot server.
 - Method: GET
-- Implementation: Used in `RobotStartup.vue` to turn off the robot.
+- Implementation: Used in `RobotStartup.vue` and `Login.vue` to turn off the robot.
 
 # Data Flow
 
@@ -235,12 +235,12 @@ Vuex plays a pivotal role in maintaining the state of the application. The centr
 - The application starts with `Startup.vue`, displaying the initial logo and then navigating to `Login.vue`.
 - `Login.vue` checks the robot server status before allowing users to proceed.
 
-1. **Robot Operation Flow** :
+2. **Robot Operation Flow** :
 
 - `Controller.vue` takes user inputs for robot control. These inputs are sent to the robot through API calls.
 - Responses from the robot are received and processed to update the UI or handle errors.
 
-1. **Settings and Information** :
+3. **Settings and Information** :
 
 - `Setting.vue` fetches and displays system information and settings.
 - Users can update settings, and changes are sent to the server via API calls.

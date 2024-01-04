@@ -1,6 +1,6 @@
 # Start
 
-To activate the GR-1 robot and establish a connection, you can use the `start()` function from the `rocs_client` library.
+To activate the GR robot and establish a connection, you can use the `start()` function from the `rocs_client` library.
 
 The `start` method in the Motion Library initiates the remote control mode for the robot, allowing external systems or programs to send control commands to the robot. After calling `start`, it's advisable to wait for a brief period (e.g., 10 seconds) to allow the robot's control system to stabilize. Following the `start` call, you can issue various motion commands or control instructions to the robot.
 

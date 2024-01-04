@@ -15,8 +15,8 @@ The fundamental movements are categorized into four modes:
 * **Gait Motion Mode:** In this mode, users can control the robot's forward, backward, left, and right movements, offering a dynamic and directional approach.
 * **Stationary Motion Mode:** Offering control over the robot's movements while stationed, this mode facilitates dynamic action demonstrations in a fixed position.
 * **Standing Mode:** The robot maintains a static standing posture in this mode, suitable for scenarios requiring a stationary robot presence.
-* **End Effector Motion Mode:** Introducing a specialized mode, users can engage the robot in end effector grasping actions, providing a unique capability for tasks involving object manipulation.
+* **Grasping Mode:** Introducing a specialized mode, users can engage the robot in end effector grasping actions, providing a unique capability for tasks involving object manipulation.
 
-Each mode serves distinct purposes, providing flexibility for various applications. The Gait Motion Mode facilitates directional movements, the Stationary Motion Mode allows for on-the-spot actions, and the Standing Mode maintains a static standing position. the End Effector MotionMode **e**xpands the robot's capabilities by allowing users to control additional end effector movements.
+Each mode serves distinct purposes, providing flexibility for various applications. The Gait Motion Mode facilitates directional movements, the Stationary Motion Mode allows for on-the-spot actions, and the Standing Mode maintains a static standing position. the Grasping  Motion Mode **e**xpands the robot's capabilities by allowing users to control additional end effector movements.
 
 These features enhance the user experience by offering a versatile range of control options, catering to both standard and advanced users' preferences.

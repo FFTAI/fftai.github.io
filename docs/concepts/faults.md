@@ -20,21 +20,27 @@ If the upper limb posture appears abnormal or if the motors have been replaced, 
    ![1703213432655](image/operation_instruction/1703213432655.png)![1703213495926](image/operation_instruction/1703213495926.png)
 3. Connect the embedded robot computer to a monitor through the extension dock. Plug in a keyboard and a mouse into the extension dock as well.
 4. Release the Emergency Stop switch and power on the embedded robot computer. The login password is `fftai2015`.
-5. Open a terminal and input the following command:
 
-   ```powershell
-   cd ~/Documents/server_app/bin/pythonscripts/
-   python3 abs_run.py
+5. Open a terminal and do the following:
 
-   ```
-   If prompted with `get abs angle complete!`, it indicates successful completion.
-   6.Run the following commands:
+   Run the following command:
 
-   ```powershell
-   python3 checkabsjson.py
-   python3 setmotorzeropos.py
-   ```
-   If prompted with `Set Motor Zero Position Success`, it signifies successful zero-point setting.
-6. Shut down the embedded robot computer.
-7. Press down the Emergency Stop switch.
-8. Remove the calibration tools. Ensure that all calibration tools have been removed before proceeding with other operations.
+      ```powershell
+      cd ~/Documents/server_app/bin/pythonscripts/
+      python3 abs_run.py
+
+      ```
+
+      If prompted with `get abs angle complete!`, it indicates  getting absolute angle successfully.
+
+   Run the following commands:
+
+      ```powershell
+      python3 checkabsjson.py
+      python3 setmotorzeropos.py
+      ```
+
+      If prompted with `Set Motor Zero Position Success`, it signifies successful zero-point setting.
+5. Shut down the embedded robot computer.
+6. Press down the Emergency Stop switch.
+7. Remove the calibration tools. Ensure that all calibration tools have been removed before proceeding with other operations.

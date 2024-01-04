@@ -8,7 +8,7 @@ Following topics are covered:
   - [Gait Motion](#gait-motion)
   - [Stationary Motion](#stationary-motion)
   - [Stand Motion](#stand-motion)
-  - [End Effector Motion](#end-effector-motion)
+  - [Grasping Motion](#end-effector-motion)
 
 ## Gait Motion
 
@@ -49,14 +49,14 @@ To engage the robot in Stand Mode:
 
 !> Avoid keeping robot in the stand position for an extended period, as it can cause damage to ankle actuators due to overloading.
 
-## End Effector Motion
+## Grasping Motion
 
-End Effector Motion Mode introduces a specialized mode for controlling the robot's end effector grasping actions. This mode is designed for tasks involving object manipulation, adding a unique capability to the robot.
+Grasping motion mode introduces a specialized mode for controlling the robot's end effector grasping actions. This mode is designed for tasks involving object manipulation, adding a unique capability to the robot.
 
-To control the robot in End Effector Motion Mode:
+To control the robot in Grasping motion mode:
 
 1. Click `Start Exploring` in the Remote Control APP.
-2. Select End Effector Motion Mode.
+2. Select Grasping motion mode.
 
    ![1702625405510](image/control_robot_movements/1702625405510.png)
 3. Use the controls to command the robot's end effector, allowing for precise grasping actions.
