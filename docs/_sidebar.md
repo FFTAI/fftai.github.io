@@ -35,7 +35,7 @@
   - [Tremble Fingers](motion_library/tremble_fingers.md)
 - [**Release Notes**](release/overview.md)
 
-  - [Release V1.4](release/V1.4.md)
+  - [Release V1.4](release/v1.4.md)
   - [Release V1.3](release/v1.3.md)
   - [Release V1.2](release/v1.2.md)
   - [Release V1.1](release/v1.1.md)
