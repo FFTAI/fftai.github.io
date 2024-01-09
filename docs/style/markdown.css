@@ -32,39 +32,3 @@
 .sidebar-nav ul:not(.app-sub-sidebar)>li.file::before {
     background: center/contain no-repeat url();
 }
-
-video::-webkit-media-controls-fullscreen-button {
-    display: none;
-}
-
-video::-webkit-media-controls-play-button {
-    display: none;
-}
-
-video::-webkit-media-controls-timeline {
-    display: none;
-}
-
-video::-webkit-media-controls-current-time-display {
-    display: none;
-}
-
-video::-webkit-media-controls-time-remaining-display {
-    display: none;
-}
-
-video::-webkit-media-controls-mute-button {
-    display: none;
-}
-
-video::-webkit-media-controls-toggle-closed-captions-button {
-    display: none;
-}
-
-video::-webkit-media-controls-volume-slider {
-    display: none;
-}
-
-video::-webkit-media-controls-enclosure {
-    display: none;
-}

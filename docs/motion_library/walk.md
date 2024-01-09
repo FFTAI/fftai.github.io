@@ -1,17 +1,8 @@
-<script>
-const element = document.getElementById('markdown_box');
-const height = window.getComputedStyle(element).height;
-const video_box = document.getElementById('video_box');
-video_box.style.height = height
-</script>
 
 # Walk
 
 The `walk` method in the Motion Library is used to command the robot to perform walking motions. Below is a sample code
 snippet demonstrating the usage of the `walk` method to command the robot to walk forward at a speed of 0.1.
-
-<div style="display:flex;width:100%;overflow:auto;justify-content:space-between">
-  <div id="markdown_box">
 
   ```Python
   import time
@@ -29,14 +20,6 @@ snippet demonstrating the usage of the `walk` method to command the robot to wal
   # Walk motion
   human.walk(0, 0.1)
   ```
-  </div>
-
-  <div style="margin-left:5%">
-    <video controls autoplay muted loop id="video_box">
-      <source src="_media/walk.mp4" type="video/mp4">
-    </video>
-  </div>
-</div>
 
 The `walk` method is called to command the robot to perform walking motions. The `angle` parameter represents the angle
 or direction of the walk, and the `speed` parameter controls the walking speed.
@@ -45,4 +28,3 @@ After calling `start` and waiting for stabilization, you can issue the `walk` co
 Following the `walk` call, you can proceed with additional control commands or motion instructions.
 
 It's crucial to call the `stand` method when finished with remote control to ensure a safe exit from the control mode.
-
