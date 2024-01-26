@@ -33,7 +33,7 @@
   - [Move Head](motion_library/move_head.md)
   - [Move Arms and Hands](motion_library/move_arms_and_hands.md)
   - [Tremble Fingers](motion_library/tremble_fingers.md)
-- [FSA](https://fftai.github.io/fsa/index.html)
+- [**FSA**](https://fftai.github.io/fsa/index.html)
 - [**Release Notes**](release/overview.md)
 
   - [Release V1.4](release/v1.4.md)
