@@ -1,0 +1,19 @@
+examples.clear\_fault package
+=============================
+
+
+examples.clear\_fault.clear\_fault module
+-----------------------------------------
+
+.. automodule:: examples.clear_fault.clear_fault
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: examples.clear_fault
+   :members:
+   :undoc-members:
+   :show-inheritance:

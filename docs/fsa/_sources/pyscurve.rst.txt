@@ -1,0 +1,35 @@
+Pyscurve
+================
+
+pyscurve.constant\_time\_optimizer module
+-----------------------------------------
+
+.. automodule:: pyscurve.constant_time_optimizer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyscurve.planner module
+-----------------------
+
+.. automodule:: pyscurve.planner
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyscurve.scurve module
+----------------------
+
+.. automodule:: pyscurve.scurve
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyscurve.trajectory module
+--------------------------
+
+.. automodule:: pyscurve.trajectory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

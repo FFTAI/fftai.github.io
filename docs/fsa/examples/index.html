@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example Codes &mdash; Fourier Smart Actuator 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/my_theme.css?v=f474f2d8" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=94e0f085"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="Reference Guide" href="../fsa/" />
+    <link rel="prev" title="Quick Start" href="../quickstart/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Fourier Smart Actuator
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Example Codes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#clear-fault">Clear Fault</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#clear-fault">Clear Fault</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#code-description">Code Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#common-issues">Common Issues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#about-fsa">About FSA</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#current-control-mode">Current Control Mode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#control-currrent-mode">Control Currrent Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-operations">Example Operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-script">Running the Script</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#position-feedforward-control-mode">Position Feedforward Control Mode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#position-ff-control-mode">Position FF Control Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-operations">Example Operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-script">Running the Script</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#position-control-mode">Position Control Mode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#position-control-mode">Position Control Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-operations">Example Operations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-script">Running the Script</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#velocity-control-mode">Velocity Control Mode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#velocity-control-mode">Velocity Control Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-description">Code Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#common-issues">Common Issues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#about-fsa">About FSA</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.control_position_ff_mode">examples.control_position_ff_mode module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.control_position_mode">examples.control_position_mode module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.control_velocity_mode">examples.control_velocity_mode module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.get_abs_encoder_value">examples.get_abs_encoder_value module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.get_comm_config">examples.get_comm_config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.get_ctrl_config">examples.get_ctrl_config module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.get_ctrl_config.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.get_flag_of_operation">examples.get_flag_of_operation module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.get_flag_of_operation.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.get_home_offset">examples.get_home_offset module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.get_home_offset.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.get_measured">examples.get_measured module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.get_measured.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.get_pid_param">examples.get_pid_param module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.get_pid_param.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.get_pvc">examples.get_pvc module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.get_pvc.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.get_pvcc">examples.get_pvcc module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.get_pvcc.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.get_pvcccc">examples.get_pvcccc module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.get_pvcccc.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.get_state">examples.get_state module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.get_state.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.lookup">examples.lookup module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.lookup.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.lookup_abs_encoder">examples.lookup_abs_encoder module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.lookup_abs_encoder.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.lookup_actuator">examples.lookup_actuator module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.lookup_actuator.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.lookup_ctrlbox">examples.lookup_ctrlbox module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.lookup_ctrlbox.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.new_motor_test">examples.new_motor_test module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.new_motor_test.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.ota">examples.ota module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.ota.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.ota_cloud">examples.ota_cloud module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.ota_cloud.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.ota_driver">examples.ota_driver module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.ota_driver.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.ota_driver_cloud">examples.ota_driver_cloud module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.ota_driver_cloud.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.ota_driver_test">examples.ota_driver_test module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.ota_driver_test.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.ota_test">examples.ota_test module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.ota_test.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.reboot">examples.reboot module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.reboot.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.reboot_actuator">examples.reboot_actuator module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.reboot_actuator.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.save_ctrl_config">examples.save_ctrl_config module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.save_ctrl_config.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.set_calibrate_encoder">examples.set_calibrate_encoder module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.set_calibrate_encoder.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.set_comm_config">examples.set_comm_config module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.set_comm_config.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.set_control_param">examples.set_control_param module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.set_control_param.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.set_control_param_imm">examples.set_control_param_imm module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.set_control_param_imm.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.set_ctrl_config">examples.set_ctrl_config module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.set_ctrl_config.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.set_disable">examples.set_disable module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.set_disable.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.set_enable">examples.set_enable module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.set_enable.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.set_encrypt">examples.set_encrypt module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.set_encrypt.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.set_flag_of_operation">examples.set_flag_of_operation module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.set_flag_of_operation.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.set_home_offset">examples.set_home_offset module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.set_home_offset.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.set_home_position">examples.set_home_position module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.set_home_position.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.set_pid_param">examples.set_pid_param module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.set_pid_param.SpeedParamList"><code class="docutils literal notranslate"><span class="pre">SpeedParamList</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param.SpeedParamList.FSA10015V0"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.FSA10015V0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param.SpeedParamList.FSA13020V0"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.FSA13020V0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param.SpeedParamList.FSA2508V0"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.FSA2508V0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param.SpeedParamList.FSA3608V0"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.FSA3608V0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param.SpeedParamList.FSA3610V0"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.FSA3610V0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param.SpeedParamList.FSA6008V0"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.FSA6008V0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param.SpeedParamList.FSA8010V0"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.FSA8010V0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param.SpeedParamList.JioaLong"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.JioaLong</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param.SpeedParamList.MOTOR_NULL"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.MOTOR_NULL</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#examples.set_pid_param.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples.set_pid_param_imm">examples.set_pid_param_imm module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#examples.set_pid_param_imm.SpeedParamList"><code class="docutils literal notranslate"><span class="pre">SpeedParamList</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param_imm.SpeedParamList.FSA10015V0"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.FSA10015V0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param_imm.SpeedParamList.FSA13020V0"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.FSA13020V0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param_imm.SpeedParamList.FSA2508V0"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.FSA2508V0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param_imm.SpeedParamList.FSA3608V0"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.FSA3608V0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param_imm.SpeedParamList.FSA3610V0"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.FSA3610V0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param_imm.SpeedParamList.FSA6008V0"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.FSA6008V0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param_imm.SpeedParamList.FSA8010V0"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.FSA8010V0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param_imm.SpeedParamList.JioaLong"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.JioaLong</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples.set_pid_param_imm.SpeedParamList.MOTOR_NULL"><code class="docutils literal notranslate"><span class="pre">SpeedParamList.MOTOR_NULL</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#examples.set_pid_param_imm.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-examples">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fsa/">Reference Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pyscurve/">Pyscurve</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Fourier Smart Actuator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Example Codes</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="example-codes">
+<h1>Example Codes<a class="headerlink" href="#example-codes" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="clear-fault">
+<h2>Clear Fault<a class="headerlink" href="#clear-fault" title="Link to this heading"></a></h2>
+<section id="clear-fault">
+<h3>Clear Fault<a class="headerlink" href="#clear-fault" title="Link to this heading"></a></h3>
+<p>This example code demonstrates how to use the FSA (Fourier Smart Actuator) SDK to clear faults in FSA actuators. It is a part of the FSA SDK’s collection of example scripts.</p>
+<section id="code-description">
+<h4>Code Description<a class="headerlink" href="#code-description" title="Link to this heading"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">clear_fault.py</span></code> script does the following:</p>
+<ol class="arabic simple">
+<li><p>Discovers FSA actuators on the network.</p></li>
+<li><p>Retrieves the error code for each detected actuator.</p></li>
+<li><p>Clears any faults present in the actuators, if any.</p></li>
+</ol>
+</section>
+<section id="dependencies">
+<h4>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading"></a></h4>
+<p>This script requires the FSA SDK and its dependencies to be installed. You can install the required dependencies using pip by running the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h4>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h4>
+<p>To run the <code class="docutils literal notranslate"><span class="pre">clear_fault.py</span></code> script, follow these steps:</p>
+<ol class="arabic">
+<li><p>Ensure that you have set up your Python environment and installed the FSA SDK as mentioned in the Quickstart Guide.</p></li>
+<li><p>Open a terminal and navigate to the directory containing <code class="docutils literal notranslate"><span class="pre">clear_fault.py</span></code>.</p></li>
+<li><p>Run the script using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>clear_fault.py
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="common-issues">
+<h4>Common Issues<a class="headerlink" href="#common-issues" title="Link to this heading"></a></h4>
+<p>If you encounter any issues while running this script, consider the following:</p>
+<ol class="arabic simple">
+<li><p>Ensure that you are using a compatible version of Python as recommended in the Quickstart Guide.</p></li>
+<li><p>Verify that your network is properly configured, and the FSA actuators are accessible.</p></li>
+<li><p>Check if the actuators have any existing faults that need to be cleared.</p></li>
+</ol>
+</section>
+<section id="about-fsa">
+<h4>About FSA<a class="headerlink" href="#about-fsa" title="Link to this heading"></a></h4>
+<p>The Fourier Smart Actuator (FSA) is a cutting-edge actuator technology developed for robotics and automation applications. The FSA SDK provides developers with the tools and resources to interact with FSA actuators and leverage their capabilities.</p>
+<p>For more information about FSA and additional example scripts, refer to the <a class="reference internal" href="#"><span class="xref myst">FSA SDK Documentation</span></a>.</p>
+</section>
+</section>
+</section>
+<section id="current-control-mode">
+<h2>Current Control Mode<a class="headerlink" href="#current-control-mode" title="Link to this heading"></a></h2>
+<section id="control-currrent-mode">
+<h3>Control Currrent Mode<a class="headerlink" href="#control-currrent-mode" title="Link to this heading"></a></h3>
+<section id="overview">
+<h4>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h4>
+<p>FSAs support various control modes, each dictating a specific type of control applied to the actuator. These modes include:</p>
+<ul class="simple">
+<li><p>Current Close-Loop Control</p></li>
+<li><p>Velocity Control</p></li>
+<li><p>Position Control</p></li>
+<li><p>Trapezoidal Control</p></li>
+</ul>
+<p>The script allows users to seamlessly switch between these control modes based on their application requirements.</p>
+<section id="current-control">
+<h5>Current Control<a class="headerlink" href="#current-control" title="Link to this heading"></a></h5>
+<p>The <code class="docutils literal notranslate"><span class="pre">set_current_control</span></code> function is a key feature of the script, enabling users to command the FSA device to perform a current control operation. This operation involves setting a desired current before initiating the control process. Upon completion, the script provides a detailed response, including the current position, velocity, and current values. This functionality enhances precision and flexibility when interacting with FSAs in real-world applications.</p>
+</section>
+</section>
+<section id="dependencies">
+<h4>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading"></a></h4>
+<ul>
+<li><p>Ensure that the <code class="docutils literal notranslate"><span class="pre">fsa.fi_fsa</span></code> module is properly imported.</p></li>
+<li><p>The script requires Python 3.</p></li>
+<li><p>Install dependencies using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="usage">
+<h4>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>Specify the IP addresses of FSAs in the <code class="docutils literal notranslate"><span class="pre">server_ip_list</span></code>.</p></li>
+<li><p>Run the script to perform control operations on the FSAs.</p></li>
+</ol>
+</section>
+<section id="example-operations">
+<h4>Example Operations<a class="headerlink" href="#example-operations" title="Link to this heading"></a></h4>
+<p>The script demonstrates the following operations on each Actuator:</p>
+<ol class="arabic simple">
+<li><p><strong>Check State:</strong></p>
+<ul class="simple">
+<li><p>Obtain and print the state of each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Retrieve Configuration:</strong></p>
+<ul class="simple">
+<li><p>Fetch configuration details from each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Get Position, Velocity, and Current:</strong></p>
+<ul class="simple">
+<li><p>Retrieve and print Position, Velocity, and Current values from each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Set Current Control:</strong></p>
+<ul class="simple">
+<li><p>Set the current control current to 0.0 for each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Set Mode of Operation:</strong></p>
+<ul class="simple">
+<li><p>Set work at current control mode for each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Enable Motors:</strong></p>
+<ul class="simple">
+<li><p>Enable all the motors for each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Additional Control Operations:</strong></p>
+<ul class="simple">
+<li><p>Perform additional control operations (modify script accordingly).</p></li>
+</ul>
+</li>
+<li><p><strong>Disable Motors:</strong></p>
+<ul class="simple">
+<li><p>Disable the motors for each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Set Mode of Operation (None Control):</strong></p>
+<ul class="simple">
+<li><p>Set work at none control mode for each Actuator.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="running-the-script">
+<h4>Running the Script<a class="headerlink" href="#running-the-script" title="Link to this heading"></a></h4>
+<p>Run the script using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>control_current_mode.py
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="position-feedforward-control-mode">
+<h2>Position Feedforward Control Mode<a class="headerlink" href="#position-feedforward-control-mode" title="Link to this heading"></a></h2>
+<section id="position-ff-control-mode">
+<h3>Position FF Control Mode<a class="headerlink" href="#position-ff-control-mode" title="Link to this heading"></a></h3>
+<section id="overview">
+<h4>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h4>
+<p>FSAs provide support for various control modes, each specifying a particular type of control applied to the actuator. These modes include:</p>
+<ul class="simple">
+<li><p>Current Close-Loop Control</p></li>
+<li><p>Velocity Control</p></li>
+<li><p>Position Control</p></li>
+<li><p>Trapezoidal Control</p></li>
+</ul>
+<p>This script facilitates seamless switching between these control modes based on specific application requirements.</p>
+<section id="position-feedforward-control">
+<h5>Position Feedforward Control<a class="headerlink" href="#position-feedforward-control" title="Link to this heading"></a></h5>
+<p>The <code class="docutils literal notranslate"><span class="pre">set_position_control</span></code> function is a pivotal feature of the script, allowing users to command the FSA device to perform a position control operation. This operation involves setting a desired position and optional feedforward values before initiating the control process. After completion, the script delivers a detailed response, including the current position, velocity, and current values. This functionality enhances precision and flexibility when interacting with FSAs in real-world applications.</p>
+</section>
+</section>
+<section id="dependencies">
+<h4>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading"></a></h4>
+<ul>
+<li><p>Ensure that the <code class="docutils literal notranslate"><span class="pre">fsa.fi_fsa</span></code> module is properly imported.</p></li>
+<li><p>The script requires Python 3.</p></li>
+<li><p>Install dependencies using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="usage">
+<h4>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>Specify the IP addresses of FSAs in the <code class="docutils literal notranslate"><span class="pre">server_ip_list</span></code>.</p></li>
+<li><p>Run the script to perform control operations on the FSAs.</p></li>
+</ol>
+</section>
+<section id="example-operations">
+<h4>Example Operations<a class="headerlink" href="#example-operations" title="Link to this heading"></a></h4>
+<p>The script demonstrates the following operations on each Actuator:</p>
+<ol class="arabic simple">
+<li><p><strong>Check State:</strong></p>
+<ul class="simple">
+<li><p>Obtain and print the state of each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Retrieve Configuration:</strong></p>
+<ul class="simple">
+<li><p>Fetch configuration details from each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Get Position, Velocity, and Current:</strong></p>
+<ul class="simple">
+<li><p>Retrieve and print Position, Velocity, and Current values from each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Set Position Control:</strong></p>
+<ul class="simple">
+<li><p>Set the desired position for each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Set Mode of Operation:</strong></p>
+<ul class="simple">
+<li><p>Set work at position control mode for each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Additional Control Operations:</strong></p>
+<ul class="simple">
+<li><p>Perform additional control operations (modify script accordingly).</p></li>
+</ul>
+</li>
+<li><p><strong>Disable Motors:</strong></p>
+<ul class="simple">
+<li><p>Disable the motors for each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Set Mode of Operation (None Control):</strong></p>
+<ul class="simple">
+<li><p>Set work at none control mode for each Actuator.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="running-the-script">
+<h4>Running the Script<a class="headerlink" href="#running-the-script" title="Link to this heading"></a></h4>
+<p>Run the script using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">python3</span> <span class="n">control_position_ff_mode</span><span class="o">.</span><span class="n">py</span>
+
+
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="position-control-mode">
+<h2>Position Control Mode<a class="headerlink" href="#position-control-mode" title="Link to this heading"></a></h2>
+<section id="position-control-mode">
+<h3>Position Control Mode<a class="headerlink" href="#position-control-mode" title="Link to this heading"></a></h3>
+<section id="overview">
+<h4>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h4>
+<p>FSAs provide support for various control modes, each specifying a particular type of control applied to the actuator. These modes include:</p>
+<ul class="simple">
+<li><p>Current Close-Loop Control</p></li>
+<li><p>Velocity Control</p></li>
+<li><p>Position Control</p></li>
+<li><p>Trapezoidal Control</p></li>
+</ul>
+<p>This script facilitates seamless switching between these control modes based on specific application requirements.</p>
+<section id="position-control">
+<h5>Position Control<a class="headerlink" href="#position-control" title="Link to this heading"></a></h5>
+<p>The <code class="docutils literal notranslate"><span class="pre">set_position_control</span></code> function is a pivotal feature of the script, allowing users to command the FSA device to perform a position control operation. This operation involves setting a desired position before initiating the control process. After completion, the script delivers a detailed response, including the current position, velocity, and current values. This functionality enhances precision and flexibility when interacting with FSAs in real-world applications.</p>
+</section>
+</section>
+<section id="dependencies">
+<h4>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading"></a></h4>
+<ul>
+<li><p>Ensure that the <code class="docutils literal notranslate"><span class="pre">fsa.fi_fsa</span></code> module is properly imported.</p></li>
+<li><p>The script requires Python 3.</p></li>
+<li><p>Install dependencies using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="usage">
+<h4>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>Specify the IP addresses of FSAs in the <code class="docutils literal notranslate"><span class="pre">server_ip_list</span></code>.</p></li>
+<li><p>Run the script to perform control operations on the FSAs.</p></li>
+</ol>
+</section>
+<section id="example-operations">
+<h4>Example Operations<a class="headerlink" href="#example-operations" title="Link to this heading"></a></h4>
+<p>The script demonstrates the following operations on each Actuator:</p>
+<ol class="arabic simple">
+<li><p><strong>Check State:</strong></p>
+<ul class="simple">
+<li><p>Obtain and print the state of each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Retrieve Configuration:</strong></p>
+<ul class="simple">
+<li><p>Fetch configuration details from each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Get Position, Velocity, and Current:</strong></p>
+<ul class="simple">
+<li><p>Retrieve and print Position, Velocity, and Current values from each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Set Position Control:</strong></p>
+<ul class="simple">
+<li><p>Set the desired position for each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Set Mode of Operation:</strong></p>
+<ul class="simple">
+<li><p>Set work at position control mode for each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Additional Control Operations:</strong></p>
+<ul class="simple">
+<li><p>Perform additional control operations (modify script accordingly).</p></li>
+</ul>
+</li>
+<li><p><strong>Disable Motors:</strong></p>
+<ul class="simple">
+<li><p>Disable the motors for each Actuator.</p></li>
+</ul>
+</li>
+<li><p><strong>Set Mode of Operation (None Control):</strong></p>
+<ul class="simple">
+<li><p>Set work at none control mode for each Actuator.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="running-the-script">
+<h4>Running the Script<a class="headerlink" href="#running-the-script" title="Link to this heading"></a></h4>
+<p>Run the script using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">python3</span> <span class="n">control_position_mode</span><span class="o">.</span><span class="n">py</span>
+
+
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="velocity-control-mode">
+<h2>Velocity Control Mode<a class="headerlink" href="#velocity-control-mode" title="Link to this heading"></a></h2>
+<section id="velocity-control-mode">
+<h3>Velocity Control Mode<a class="headerlink" href="#velocity-control-mode" title="Link to this heading"></a></h3>
+<p>This example code, <code class="docutils literal notranslate"><span class="pre">demo_control_velocity_mode.py</span></code>, showcases the utilization of the FSA (Fourier Smart Actuator) SDK to control actuators in the velocity control mode. It is a part of the FSA SDK’s collection of example scripts.</p>
+<section id="getting-started">
+<h4>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h4>
+<p>Before running this example, ensure that the FSA SDK is installed correctly and configured. Refer to the <a class="reference internal" href="#"><span class="xref myst">FSA SDK Quickstart Guide</span></a> for comprehensive instructions on setting up your Python environment and configuring the SDK.</p>
+</section>
+<section id="code-description">
+<h4>Code Description<a class="headerlink" href="#code-description" title="Link to this heading"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">demo_control_velocity_mode.py</span></code> script performs the following operations:</p>
+<ol class="arabic simple">
+<li><p>Discovers FSA actuators on the network.</p></li>
+<li><p>Retrieves the state, configuration, and position-velocity-current (PVC) information for each detected actuator.</p></li>
+<li><p>Sets the velocity control to 0.0 for all actuators.</p></li>
+<li><p>Enables all motors.</p></li>
+<li><p>Configures actuators to operate in the velocity control mode.</p></li>
+<li><p>Executes a sine wave motion for 10 seconds using velocity control.</p></li>
+<li><p>Disables all motors.</p></li>
+<li><p>Resets actuators to operate in the none control mode.</p></li>
+</ol>
+</section>
+<section id="dependencies">
+<h4>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading"></a></h4>
+<p>This script relies on the FSA SDK and its dependencies. You can install the required dependencies using pip by running the following command:</p>
+<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>bash</span><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></span></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-bash">python3 -m pip install -r requirements.txt
+</code></div></div></pre>
+</section>
+<section id="usage">
+<h4>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h4>
+<p>To run the <code class="docutils literal notranslate"><span class="pre">demo_control_velocity_mode.py</span></code> script, follow these steps:</p>
+<ol class="arabic">
+<li><p>Ensure that you have set up your Python environment and installed the FSA SDK as mentioned in the Quickstart Guide.</p></li>
+<li><p>Open a terminal and navigate to the directory containing <code class="docutils literal notranslate"><span class="pre">demo_control_velocity_mode.py</span></code>.</p></li>
+<li><p>Run the script using the following command:</p>
+<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>bash</span><span class="" data-state="closed"><button class="flex gap-1 items-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-sm"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.8954 4 10 4.89543 10 6H14C14 4.89543 13.1046 4 12 4ZM8.53513 4C9.22675 2.8044 10.5194 2 12 2C13.4806 2 14.7733 2.8044 15.4649 4H17C18.6569 4 20 5.34315 20 7V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V7C4 5.34315 5.34315 4 7 4H8.53513ZM8 6H7C6.44772 6 6 6.44772 6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7C18 6.44772 17.5523 6 17 6H16C16 7.10457 15.1046 8 14 8H10C8.89543 8 8 7.10457 8 6Z" fill="currentColor"></path></svg>Copy code</button></span></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-bash">python demo_control_velocity_mode.py
+</code></div></div></pre>
+</li>
+</ol>
+</section>
+<section id="common-issues">
+<h4>Common Issues<a class="headerlink" href="#common-issues" title="Link to this heading"></a></h4>
+<p>If you encounter any issues while running this script, consider the following:</p>
+<ol class="arabic simple">
+<li><p>Verify that you are using a compatible version of Python as recommended in the Quickstart Guide.</p></li>
+<li><p>Ensure that your network is properly configured, and the FSA actuators are accessible.</p></li>
+<li><p>Check for any existing faults in the actuators that might affect their operation.</p></li>
+</ol>
+</section>
+<section id="about-fsa">
+<h4>About FSA<a class="headerlink" href="#about-fsa" title="Link to this heading"></a></h4>
+<p>The Fourier Smart Actuator (FSA) is an advanced actuator technology designed for robotics and automation applications. The FSA SDK empowers developers with the tools and resources to interact with FSA actuators and harness their capabilities.</p>
+<p>For more details about FSA and additional example scripts, consult the <a class="reference internal" href="#"><span class="xref myst">FSA SDK Documentation</span></a>.</p>
+</section>
+</section>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-examples.control_position_ff_mode">
+<span id="examples-control-position-ff-mode-module"></span><h2>examples.control_position_ff_mode module<a class="headerlink" href="#module-examples.control_position_ff_mode" title="Link to this heading"></a></h2>
+</section>
+<section id="module-examples.control_position_mode">
+<span id="examples-control-position-mode-module"></span><h2>examples.control_position_mode module<a class="headerlink" href="#module-examples.control_position_mode" title="Link to this heading"></a></h2>
+</section>
+<section id="module-examples.control_velocity_mode">
+<span id="examples-control-velocity-mode-module"></span><h2>examples.control_velocity_mode module<a class="headerlink" href="#module-examples.control_velocity_mode" title="Link to this heading"></a></h2>
+</section>
+<section id="module-examples.get_abs_encoder_value">
+<span id="examples-get-abs-encoder-value-module"></span><h2>examples.get_abs_encoder_value module<a class="headerlink" href="#module-examples.get_abs_encoder_value" title="Link to this heading"></a></h2>
+</section>
+<section id="module-examples.get_comm_config">
+<span id="examples-get-comm-config-module"></span><h2>examples.get_comm_config module<a class="headerlink" href="#module-examples.get_comm_config" title="Link to this heading"></a></h2>
+</section>
+<section id="module-examples.get_ctrl_config">
+<span id="examples-get-ctrl-config-module"></span><h2>examples.get_ctrl_config module<a class="headerlink" href="#module-examples.get_ctrl_config" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.get_ctrl_config.main">
+<span class="sig-prename descclassname"><span class="pre">examples.get_ctrl_config.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.get_ctrl_config.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.get_flag_of_operation">
+<span id="examples-get-flag-of-operation-module"></span><h2>examples.get_flag_of_operation module<a class="headerlink" href="#module-examples.get_flag_of_operation" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.get_flag_of_operation.main">
+<span class="sig-prename descclassname"><span class="pre">examples.get_flag_of_operation.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.get_flag_of_operation.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.get_home_offset">
+<span id="examples-get-home-offset-module"></span><h2>examples.get_home_offset module<a class="headerlink" href="#module-examples.get_home_offset" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.get_home_offset.main">
+<span class="sig-prename descclassname"><span class="pre">examples.get_home_offset.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.get_home_offset.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.get_measured">
+<span id="examples-get-measured-module"></span><h2>examples.get_measured module<a class="headerlink" href="#module-examples.get_measured" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.get_measured.main">
+<span class="sig-prename descclassname"><span class="pre">examples.get_measured.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.get_measured.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.get_pid_param">
+<span id="examples-get-pid-param-module"></span><h2>examples.get_pid_param module<a class="headerlink" href="#module-examples.get_pid_param" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.get_pid_param.main">
+<span class="sig-prename descclassname"><span class="pre">examples.get_pid_param.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.get_pid_param.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.get_pvc">
+<span id="examples-get-pvc-module"></span><h2>examples.get_pvc module<a class="headerlink" href="#module-examples.get_pvc" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.get_pvc.main">
+<span class="sig-prename descclassname"><span class="pre">examples.get_pvc.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.get_pvc.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.get_pvcc">
+<span id="examples-get-pvcc-module"></span><h2>examples.get_pvcc module<a class="headerlink" href="#module-examples.get_pvcc" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.get_pvcc.main">
+<span class="sig-prename descclassname"><span class="pre">examples.get_pvcc.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.get_pvcc.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.get_pvcccc">
+<span id="examples-get-pvcccc-module"></span><h2>examples.get_pvcccc module<a class="headerlink" href="#module-examples.get_pvcccc" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.get_pvcccc.main">
+<span class="sig-prename descclassname"><span class="pre">examples.get_pvcccc.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.get_pvcccc.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.get_state">
+<span id="examples-get-state-module"></span><h2>examples.get_state module<a class="headerlink" href="#module-examples.get_state" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.get_state.main">
+<span class="sig-prename descclassname"><span class="pre">examples.get_state.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.get_state.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.lookup">
+<span id="examples-lookup-module"></span><h2>examples.lookup module<a class="headerlink" href="#module-examples.lookup" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.lookup.main">
+<span class="sig-prename descclassname"><span class="pre">examples.lookup.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.lookup.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.lookup_abs_encoder">
+<span id="examples-lookup-abs-encoder-module"></span><h2>examples.lookup_abs_encoder module<a class="headerlink" href="#module-examples.lookup_abs_encoder" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.lookup_abs_encoder.main">
+<span class="sig-prename descclassname"><span class="pre">examples.lookup_abs_encoder.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.lookup_abs_encoder.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.lookup_actuator">
+<span id="examples-lookup-actuator-module"></span><h2>examples.lookup_actuator module<a class="headerlink" href="#module-examples.lookup_actuator" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.lookup_actuator.main">
+<span class="sig-prename descclassname"><span class="pre">examples.lookup_actuator.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.lookup_actuator.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.lookup_ctrlbox">
+<span id="examples-lookup-ctrlbox-module"></span><h2>examples.lookup_ctrlbox module<a class="headerlink" href="#module-examples.lookup_ctrlbox" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.lookup_ctrlbox.main">
+<span class="sig-prename descclassname"><span class="pre">examples.lookup_ctrlbox.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.lookup_ctrlbox.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.new_motor_test">
+<span id="examples-new-motor-test-module"></span><h2>examples.new_motor_test module<a class="headerlink" href="#module-examples.new_motor_test" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.new_motor_test.main">
+<span class="sig-prename descclassname"><span class="pre">examples.new_motor_test.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.new_motor_test.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.ota">
+<span id="examples-ota-module"></span><h2>examples.ota module<a class="headerlink" href="#module-examples.ota" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.ota.main">
+<span class="sig-prename descclassname"><span class="pre">examples.ota.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.ota.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.ota_cloud">
+<span id="examples-ota-cloud-module"></span><h2>examples.ota_cloud module<a class="headerlink" href="#module-examples.ota_cloud" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.ota_cloud.main">
+<span class="sig-prename descclassname"><span class="pre">examples.ota_cloud.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.ota_cloud.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.ota_driver">
+<span id="examples-ota-driver-module"></span><h2>examples.ota_driver module<a class="headerlink" href="#module-examples.ota_driver" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.ota_driver.main">
+<span class="sig-prename descclassname"><span class="pre">examples.ota_driver.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.ota_driver.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.ota_driver_cloud">
+<span id="examples-ota-driver-cloud-module"></span><h2>examples.ota_driver_cloud module<a class="headerlink" href="#module-examples.ota_driver_cloud" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.ota_driver_cloud.main">
+<span class="sig-prename descclassname"><span class="pre">examples.ota_driver_cloud.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.ota_driver_cloud.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.ota_driver_test">
+<span id="examples-ota-driver-test-module"></span><h2>examples.ota_driver_test module<a class="headerlink" href="#module-examples.ota_driver_test" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.ota_driver_test.main">
+<span class="sig-prename descclassname"><span class="pre">examples.ota_driver_test.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.ota_driver_test.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.ota_test">
+<span id="examples-ota-test-module"></span><h2>examples.ota_test module<a class="headerlink" href="#module-examples.ota_test" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.ota_test.main">
+<span class="sig-prename descclassname"><span class="pre">examples.ota_test.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.ota_test.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.reboot">
+<span id="examples-reboot-module"></span><h2>examples.reboot module<a class="headerlink" href="#module-examples.reboot" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.reboot.main">
+<span class="sig-prename descclassname"><span class="pre">examples.reboot.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.reboot.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.reboot_actuator">
+<span id="examples-reboot-actuator-module"></span><h2>examples.reboot_actuator module<a class="headerlink" href="#module-examples.reboot_actuator" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.reboot_actuator.main">
+<span class="sig-prename descclassname"><span class="pre">examples.reboot_actuator.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.reboot_actuator.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.save_ctrl_config">
+<span id="examples-save-ctrl-config-module"></span><h2>examples.save_ctrl_config module<a class="headerlink" href="#module-examples.save_ctrl_config" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.save_ctrl_config.main">
+<span class="sig-prename descclassname"><span class="pre">examples.save_ctrl_config.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.save_ctrl_config.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.set_calibrate_encoder">
+<span id="examples-set-calibrate-encoder-module"></span><h2>examples.set_calibrate_encoder module<a class="headerlink" href="#module-examples.set_calibrate_encoder" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.set_calibrate_encoder.main">
+<span class="sig-prename descclassname"><span class="pre">examples.set_calibrate_encoder.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.set_calibrate_encoder.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.set_comm_config">
+<span id="examples-set-comm-config-module"></span><h2>examples.set_comm_config module<a class="headerlink" href="#module-examples.set_comm_config" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.set_comm_config.main">
+<span class="sig-prename descclassname"><span class="pre">examples.set_comm_config.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.set_comm_config.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.set_control_param">
+<span id="examples-set-control-param-module"></span><h2>examples.set_control_param module<a class="headerlink" href="#module-examples.set_control_param" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.set_control_param.main">
+<span class="sig-prename descclassname"><span class="pre">examples.set_control_param.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.set_control_param.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.set_control_param_imm">
+<span id="examples-set-control-param-imm-module"></span><h2>examples.set_control_param_imm module<a class="headerlink" href="#module-examples.set_control_param_imm" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.set_control_param_imm.main">
+<span class="sig-prename descclassname"><span class="pre">examples.set_control_param_imm.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.set_control_param_imm.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.set_ctrl_config">
+<span id="examples-set-ctrl-config-module"></span><h2>examples.set_ctrl_config module<a class="headerlink" href="#module-examples.set_ctrl_config" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.set_ctrl_config.main">
+<span class="sig-prename descclassname"><span class="pre">examples.set_ctrl_config.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.set_ctrl_config.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.set_disable">
+<span id="examples-set-disable-module"></span><h2>examples.set_disable module<a class="headerlink" href="#module-examples.set_disable" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.set_disable.main">
+<span class="sig-prename descclassname"><span class="pre">examples.set_disable.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.set_disable.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.set_enable">
+<span id="examples-set-enable-module"></span><h2>examples.set_enable module<a class="headerlink" href="#module-examples.set_enable" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.set_enable.main">
+<span class="sig-prename descclassname"><span class="pre">examples.set_enable.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.set_enable.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.set_encrypt">
+<span id="examples-set-encrypt-module"></span><h2>examples.set_encrypt module<a class="headerlink" href="#module-examples.set_encrypt" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.set_encrypt.main">
+<span class="sig-prename descclassname"><span class="pre">examples.set_encrypt.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.set_encrypt.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.set_flag_of_operation">
+<span id="examples-set-flag-of-operation-module"></span><h2>examples.set_flag_of_operation module<a class="headerlink" href="#module-examples.set_flag_of_operation" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.set_flag_of_operation.main">
+<span class="sig-prename descclassname"><span class="pre">examples.set_flag_of_operation.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.set_flag_of_operation.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.set_home_offset">
+<span id="examples-set-home-offset-module"></span><h2>examples.set_home_offset module<a class="headerlink" href="#module-examples.set_home_offset" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.set_home_offset.main">
+<span class="sig-prename descclassname"><span class="pre">examples.set_home_offset.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.set_home_offset.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.set_home_position">
+<span id="examples-set-home-position-module"></span><h2>examples.set_home_position module<a class="headerlink" href="#module-examples.set_home_position" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.set_home_position.main">
+<span class="sig-prename descclassname"><span class="pre">examples.set_home_position.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.set_home_position.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.set_pid_param">
+<span id="examples-set-pid-param-module"></span><h2>examples.set_pid_param module<a class="headerlink" href="#module-examples.set_pid_param" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="examples.set_pid_param.SpeedParamList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">examples.set_pid_param.</span></span><span class="sig-name descname"><span class="pre">SpeedParamList</span></span><a class="headerlink" href="#examples.set_pid_param.SpeedParamList" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param.SpeedParamList.FSA10015V0">
+<span class="sig-name descname"><span class="pre">FSA10015V0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.05,</span> <span class="pre">0.001,</span> <span class="pre">100,</span> <span class="pre">200,</span> <span class="pre">10000,</span> <span class="pre">0,</span> <span class="pre">1000,</span> <span class="pre">600]</span></em><a class="headerlink" href="#examples.set_pid_param.SpeedParamList.FSA10015V0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param.SpeedParamList.FSA13020V0">
+<span class="sig-name descname"><span class="pre">FSA13020V0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.055,</span> <span class="pre">5e-05,</span> <span class="pre">100,</span> <span class="pre">200,</span> <span class="pre">10000,</span> <span class="pre">0,</span> <span class="pre">500,</span> <span class="pre">400]</span></em><a class="headerlink" href="#examples.set_pid_param.SpeedParamList.FSA13020V0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param.SpeedParamList.FSA2508V0">
+<span class="sig-name descname"><span class="pre">FSA2508V0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.05,</span> <span class="pre">0.0001,</span> <span class="pre">200,</span> <span class="pre">800,</span> <span class="pre">5000,</span> <span class="pre">0,</span> <span class="pre">5000,</span> <span class="pre">600]</span></em><a class="headerlink" href="#examples.set_pid_param.SpeedParamList.FSA2508V0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param.SpeedParamList.FSA3608V0">
+<span class="sig-name descname"><span class="pre">FSA3608V0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.0025,</span> <span class="pre">1e-05,</span> <span class="pre">100,</span> <span class="pre">200,</span> <span class="pre">10000,</span> <span class="pre">0,</span> <span class="pre">5000,</span> <span class="pre">600]</span></em><a class="headerlink" href="#examples.set_pid_param.SpeedParamList.FSA3608V0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param.SpeedParamList.FSA3610V0">
+<span class="sig-name descname"><span class="pre">FSA3610V0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.007,</span> <span class="pre">1e-05,</span> <span class="pre">100,</span> <span class="pre">200,</span> <span class="pre">10000,</span> <span class="pre">0,</span> <span class="pre">5000,</span> <span class="pre">600]</span></em><a class="headerlink" href="#examples.set_pid_param.SpeedParamList.FSA3610V0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param.SpeedParamList.FSA6008V0">
+<span class="sig-name descname"><span class="pre">FSA6008V0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.04,</span> <span class="pre">0.0001,</span> <span class="pre">20,</span> <span class="pre">100,</span> <span class="pre">50000,</span> <span class="pre">1,</span> <span class="pre">5000,</span> <span class="pre">600]</span></em><a class="headerlink" href="#examples.set_pid_param.SpeedParamList.FSA6008V0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param.SpeedParamList.FSA8010V0">
+<span class="sig-name descname"><span class="pre">FSA8010V0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.005,</span> <span class="pre">1e-05,</span> <span class="pre">100,</span> <span class="pre">200,</span> <span class="pre">10000,</span> <span class="pre">0,</span> <span class="pre">500,</span> <span class="pre">400]</span></em><a class="headerlink" href="#examples.set_pid_param.SpeedParamList.FSA8010V0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param.SpeedParamList.JioaLong">
+<span class="sig-name descname"><span class="pre">JioaLong</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.005,</span> <span class="pre">0.0001,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">5000,</span> <span class="pre">600]</span></em><a class="headerlink" href="#examples.set_pid_param.SpeedParamList.JioaLong" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param.SpeedParamList.MOTOR_NULL">
+<span class="sig-name descname"><span class="pre">MOTOR_NULL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.1,</span> <span class="pre">0.01,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">5000,</span> <span class="pre">600]</span></em><a class="headerlink" href="#examples.set_pid_param.SpeedParamList.MOTOR_NULL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.set_pid_param.main">
+<span class="sig-prename descclassname"><span class="pre">examples.set_pid_param.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.set_pid_param.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples.set_pid_param_imm">
+<span id="examples-set-pid-param-imm-module"></span><h2>examples.set_pid_param_imm module<a class="headerlink" href="#module-examples.set_pid_param_imm" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="examples.set_pid_param_imm.SpeedParamList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">examples.set_pid_param_imm.</span></span><span class="sig-name descname"><span class="pre">SpeedParamList</span></span><a class="headerlink" href="#examples.set_pid_param_imm.SpeedParamList" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param_imm.SpeedParamList.FSA10015V0">
+<span class="sig-name descname"><span class="pre">FSA10015V0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.05,</span> <span class="pre">0.001,</span> <span class="pre">100,</span> <span class="pre">200,</span> <span class="pre">10000,</span> <span class="pre">0,</span> <span class="pre">1000,</span> <span class="pre">600]</span></em><a class="headerlink" href="#examples.set_pid_param_imm.SpeedParamList.FSA10015V0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param_imm.SpeedParamList.FSA13020V0">
+<span class="sig-name descname"><span class="pre">FSA13020V0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.055,</span> <span class="pre">5e-05,</span> <span class="pre">100,</span> <span class="pre">200,</span> <span class="pre">10000,</span> <span class="pre">0,</span> <span class="pre">500,</span> <span class="pre">400]</span></em><a class="headerlink" href="#examples.set_pid_param_imm.SpeedParamList.FSA13020V0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param_imm.SpeedParamList.FSA2508V0">
+<span class="sig-name descname"><span class="pre">FSA2508V0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.05,</span> <span class="pre">0.0001,</span> <span class="pre">200,</span> <span class="pre">800,</span> <span class="pre">5000,</span> <span class="pre">0,</span> <span class="pre">5000,</span> <span class="pre">600]</span></em><a class="headerlink" href="#examples.set_pid_param_imm.SpeedParamList.FSA2508V0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param_imm.SpeedParamList.FSA3608V0">
+<span class="sig-name descname"><span class="pre">FSA3608V0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.0025,</span> <span class="pre">1e-05,</span> <span class="pre">100,</span> <span class="pre">200,</span> <span class="pre">10000,</span> <span class="pre">0,</span> <span class="pre">5000,</span> <span class="pre">600]</span></em><a class="headerlink" href="#examples.set_pid_param_imm.SpeedParamList.FSA3608V0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param_imm.SpeedParamList.FSA3610V0">
+<span class="sig-name descname"><span class="pre">FSA3610V0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.007,</span> <span class="pre">1e-05,</span> <span class="pre">100,</span> <span class="pre">200,</span> <span class="pre">10000,</span> <span class="pre">0,</span> <span class="pre">5000,</span> <span class="pre">600]</span></em><a class="headerlink" href="#examples.set_pid_param_imm.SpeedParamList.FSA3610V0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param_imm.SpeedParamList.FSA6008V0">
+<span class="sig-name descname"><span class="pre">FSA6008V0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.04,</span> <span class="pre">0.0001,</span> <span class="pre">20,</span> <span class="pre">100,</span> <span class="pre">50000,</span> <span class="pre">1,</span> <span class="pre">5000,</span> <span class="pre">600]</span></em><a class="headerlink" href="#examples.set_pid_param_imm.SpeedParamList.FSA6008V0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param_imm.SpeedParamList.FSA8010V0">
+<span class="sig-name descname"><span class="pre">FSA8010V0</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.005,</span> <span class="pre">1e-05,</span> <span class="pre">100,</span> <span class="pre">200,</span> <span class="pre">10000,</span> <span class="pre">0,</span> <span class="pre">500,</span> <span class="pre">400]</span></em><a class="headerlink" href="#examples.set_pid_param_imm.SpeedParamList.FSA8010V0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param_imm.SpeedParamList.JioaLong">
+<span class="sig-name descname"><span class="pre">JioaLong</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.005,</span> <span class="pre">0.0001,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">5000,</span> <span class="pre">600]</span></em><a class="headerlink" href="#examples.set_pid_param_imm.SpeedParamList.JioaLong" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="examples.set_pid_param_imm.SpeedParamList.MOTOR_NULL">
+<span class="sig-name descname"><span class="pre">MOTOR_NULL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[2,</span> <span class="pre">0.0,</span> <span class="pre">0.1,</span> <span class="pre">0.01,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">5000,</span> <span class="pre">600]</span></em><a class="headerlink" href="#examples.set_pid_param_imm.SpeedParamList.MOTOR_NULL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="examples.set_pid_param_imm.main">
+<span class="sig-prename descclassname"><span class="pre">examples.set_pid_param_imm.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#examples.set_pid_param_imm.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-examples">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-examples" title="Link to this heading"></a></h2>
+<p>FSA (Fourier Smart Actuator) SDK-Python Package</p>
+<p>This package provides an SDK for interacting with FSA (Fourier Smart Actuator) actuator.
+It includes modules for various functionalities such as control, configuration, and demos.</p>
+<p>Package Structure:
+- fi_fsa.py: Main module containing FSA class definitions and core functionality.
+- demo_* files: Demo scripts demonstrating the usage of FSA SDK features.
+- pyscurve: Submodule for trajectory planning using SCurve.</p>
+<p>For detailed information about FSA and usage examples, refer to the documentation.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../quickstart/" class="btn btn-neutral float-left" title="Quick Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../fsa/" class="btn btn-neutral float-right" title="Reference Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Fourier Algorithm Department.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

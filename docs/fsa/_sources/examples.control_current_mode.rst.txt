@@ -1,0 +1,21 @@
+examples.control\_current\_mode package
+=======================================
+
+Submodules
+----------
+
+examples.control\_current\_mode.control\_current\_mode module
+-------------------------------------------------------------
+
+.. automodule:: examples.control_current_mode.control_current_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: examples.control_current_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
