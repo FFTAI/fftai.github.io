@@ -34,341 +34,225 @@ Velocity Control Mode
 .. include:: ../../examples/control_velocity_mode/README.md
    :parser: myst_parser.sphinx_
 
-Submodules
-----------
+Get Absolute Encoder Value
+-----------
 
-examples.control\_position\_ff\_mode module
--------------------------------------------
-
-.. automodule:: examples.control_position_ff_mode
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. include:: ../../examples/get_abs_encoder_value/README.md
+   :parser: myst_parser.sphinx_
 
-examples.control\_position\_mode module
----------------------------------------
-
-.. automodule:: examples.control_position_mode
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Get Communication Configuration
+-----------
 
-examples.control\_velocity\_mode module
----------------------------------------
-
-.. automodule:: examples.control_velocity_mode
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. include:: ../../examples/get_comm_config/README.md
+   :parser: myst_parser.sphinx_
 
-examples.get\_abs\_encoder\_value module
-----------------------------------------
-
-.. automodule:: examples.get_abs_encoder_value
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Get Control Configuration
+-----------
 
-examples.get\_comm\_config module
----------------------------------
-
-.. automodule:: examples.get_comm_config
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. include:: ../../examples/get_ctrl_config/README.md
+   :parser: myst_parser.sphinx_
 
-examples.get\_ctrl\_config module
----------------------------------
-
-.. automodule:: examples.get_ctrl_config
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Get Flag of Operation
+-----------
 
-examples.get\_flag\_of\_operation module
-----------------------------------------
-
-.. automodule:: examples.get_flag_of_operation
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. include:: ../../examples/get_flag_of_operation/README.md
+   :parser: myst_parser.sphinx_
 
-examples.get\_home\_offset module
----------------------------------
-
-.. automodule:: examples.get_home_offset
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Get Home Offset
+-----------
 
-examples.get\_measured module
------------------------------
-
-.. automodule:: examples.get_measured
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. include:: ../../examples/get_home_offset/README.md
+   :parser: myst_parser.sphinx_
 
-examples.get\_pid\_param module
--------------------------------
-
-.. automodule:: examples.get_pid_param
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Get Measured
+-----------
 
-examples.get\_pvc module
-------------------------
-
-.. automodule:: examples.get_pvc
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. include:: ../../examples/get_measured/README.md
+   :parser: myst_parser.sphinx_
 
-examples.get\_pvcc module
--------------------------
-
-.. automodule:: examples.get_pvcc
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Get PID Parameter
+-----------
 
-examples.get\_pvcccc module
----------------------------
-
-.. automodule:: examples.get_pvcccc
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. include:: ../../examples/get_pid_param/README.md
+   :parser: myst_parser.sphinx_
 
-examples.get\_state module
---------------------------
-
-.. automodule:: examples.get_state
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Get PVC
+-----------
 
-examples.lookup module
-----------------------
-
-.. automodule:: examples.lookup
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. include:: ../../examples/get_pvc/README.md
+   :parser: myst_parser.sphinx_
 
-examples.lookup\_abs\_encoder module
-------------------------------------
-
-.. automodule:: examples.lookup_abs_encoder
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Get PVCC
+-----------
 
-examples.lookup\_actuator module
---------------------------------
-
-.. automodule:: examples.lookup_actuator
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. include:: ../../examples/get_pvcc/README.md
+   :parser: myst_parser.sphinx_
 
-examples.lookup\_ctrlbox module
--------------------------------
-
-.. automodule:: examples.lookup_ctrlbox
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Get PVCCC
+-----------
 
-examples.new\_motor\_test module
---------------------------------
-
-.. automodule:: examples.new_motor_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. include:: ../../examples/get_pvccc/README.md
+   :parser: myst_parser.sphinx_
 
-examples.ota module
--------------------
-
-.. automodule:: examples.ota
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Get State
+-----------
 
-examples.ota\_cloud module
---------------------------
-
-.. automodule:: examples.ota_cloud
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. include:: ../../examples/get_state/README.md
+   :parser: myst_parser.sphinx_
 
-examples.ota\_driver module
----------------------------
-
-.. automodule:: examples.ota_driver
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Lookup
+-----------
 
-examples.ota\_driver\_cloud module
-----------------------------------
-
-.. automodule:: examples.ota_driver_cloud
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. include:: ../../examples/lookup/README.md
+   :parser: myst_parser.sphinx_
 
-examples.ota\_driver\_test module
----------------------------------
-
-.. automodule:: examples.ota_driver_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Lookup Absolute Encoder
+-----------
 
-examples.ota\_test module
--------------------------
-
-.. automodule:: examples.ota_test
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. include:: ../../examples/lookup_abs_encoder/README.md
+   :parser: myst_parser.sphinx_
 
-examples.reboot module
-----------------------
-
-.. automodule:: examples.reboot
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Lookup Actuator
+-----------
 
-examples.reboot\_actuator module
---------------------------------
-
-.. automodule:: examples.reboot_actuator
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. include:: ../../examples/lookup_actuator/README.md
+   :parser: myst_parser.sphinx_
 
-examples.save\_ctrl\_config module
-----------------------------------
-
-.. automodule:: examples.save_ctrl_config
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Lookup CtrlBox
+-----------
 
-examples.set\_calibrate\_encoder module
----------------------------------------
-
-.. automodule:: examples.set_calibrate_encoder
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. include:: ../../examples/lookup_ctrlbox/README.md
+   :parser: myst_parser.sphinx_
 
-examples.set\_comm\_config module
----------------------------------
-
-.. automodule:: examples.set_comm_config
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-examples.set\_control\_param module
------------------------------------
-
-.. automodule:: examples.set_control_param
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-examples.set\_control\_param\_imm module
-----------------------------------------
-
-.. automodule:: examples.set_control_param_imm
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-examples.set\_ctrl\_config module
----------------------------------
-
-.. automodule:: examples.set_ctrl_config
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-examples.set\_disable module
-----------------------------
-
-.. automodule:: examples.set_disable
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-examples.set\_enable module
----------------------------
-
-.. automodule:: examples.set_enable
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-examples.set\_encrypt module
-----------------------------
-
-.. automodule:: examples.set_encrypt
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-examples.set\_flag\_of\_operation module
-----------------------------------------
-
-.. automodule:: examples.set_flag_of_operation
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-examples.set\_home\_offset module
----------------------------------
-
-.. automodule:: examples.set_home_offset
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-examples.set\_home\_position module
------------------------------------
-
-.. automodule:: examples.set_home_position
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-examples.set\_pid\_param module
--------------------------------
-
-.. automodule:: examples.set_pid_param
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-examples.set\_pid\_param\_imm module
-------------------------------------
-
-.. automodule:: examples.set_pid_param_imm
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: examples
-   :members:
-   :undoc-members:
-   :show-inheritance:
+OTA
+-----------
+
+.. include:: ../../examples/ota/README.md
+   :parser: myst_parser.sphinx_
+
+OTA Cloud
+-----------
+
+.. include:: ../../examples/ota_cloud/README.md
+   :parser: myst_parser.sphinx_
+
+OTA Driver
+-----------
+
+.. include:: ../../examples/ota_driver/README.md
+   :parser: myst_parser.sphinx_
+
+OTA Driver Cloud
+-----------
+
+.. include:: ../../examples/ota_driver_cloud/README.md
+   :parser: myst_parser.sphinx_
+
+OTA Driver Test
+-----------
+
+.. include:: ../../examples/ota_driver_test/README.md
+   :parser: myst_parser.sphinx_
+
+OTA Test
+-----------
+
+.. include:: ../../examples/ota_test/README.md
+   :parser: myst_parser.sphinx_
+
+Reboot
+-----------
+
+.. include:: ../../examples/reboot/README.md
+   :parser: myst_parser.sphinx_
+
+Reboot Actuator
+-----------
+
+.. include:: ../../examples/reboot_actuator/README.md
+   :parser: myst_parser.sphinx_
+
+Save Control Configuration
+-----------
+
+.. include:: ../../examples/save_ctrl_config/README.md
+   :parser: myst_parser.sphinx_
+
+Set Calibrate Encoder
+-----------
+
+.. include:: ../../examples/set_calibrate_encoder/README.md
+   :parser: myst_parser.sphinx_
+
+Set Communication Configuration
+-----------
+
+.. include:: ../../examples/set_comm_config/README.md
+   :parser: myst_parser.sphinx_
+
+Set Control Parameter
+-----------
+
+.. include:: ../../examples/set_control_param/README.md
+   :parser: myst_parser.sphinx_
+
+Set Immediate Control Parameter
+-----------
+
+.. include:: ../../examples/set_control_param_imm/README.md
+   :parser: myst_parser.sphinx_
+
+Set Control Configuration
+-----------
+
+.. include:: ../../examples/set_control_config/README.md
+   :parser: myst_parser.sphinx_
+
+Set Disable
+-----------
+
+.. include:: ../../examples/set_disable/README.md
+   :parser: myst_parser.sphinx_
+
+Set Enable
+-----------
+
+.. include:: ../../examples/set_enable/README.md
+   :parser: myst_parser.sphinx_
+
+Set Encrypt
+-----------
+
+.. include:: ../../examples/set_encrypt/README.md
+   :parser: myst_parser.sphinx_
+
+Set Flag of Operation
+-----------
+
+.. include:: ../../examples/set_flag_of_operation/README.md
+   :parser: myst_parser.sphinx_
+
+Set Home Offset
+-----------
+
+.. include:: ../../examples/set_home_offset/README.md
+   :parser: myst_parser.sphinx_
+
+Set Home Position
+-----------
+
+.. include:: ../../examples/set_home_position/README.md
+   :parser: myst_parser.sphinx_
+
+Set PID Parameter
+-----------
+
+.. include:: ../../examples/set_pid_param/README.md
+   :parser: myst_parser.sphinx_
+
+Set Immediate PID Parameter
+-----------
+
+.. include:: ../../examples/set_pid_param_imm/README.md
+   :parser: myst_parser.sphinx_
+
