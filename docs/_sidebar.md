@@ -1,29 +1,28 @@
 - [**Concepts**](concepts/overview.md)
-
   - [About GR Robot](concepts/about_gr1.md)
   - [Operation Instruction](concepts/operation_instruction.md)
   - [About RoCS](concepts/about_rocs.md)
   - [Networking](concepts/network.md)
   - [Software Architecture](concepts/software_architecture.md)
   - [Faults](concepts/faults.md)
+  
 - [**Quick Start**](quick_start/overview.md)
-
   - [Configuring RoCS for Simulated Robot](quick_start/setup_for_simulated_robot.md)
   - [Configuring RoCS for Physical Robot](quick_start/setup_for_physical_robot.md)
+  
 - [**SDK Reference Guide**](client_sdk/overview.md)
   - [Client Python](https://fftai.github.io/rocs_client_py/index.html)
   - [Client JavaScript/TypeScript](https://fftai.github.io/rocs_client_js/index.html)
+  
 - [**Remote Control App Developer Guide**](demo_app/overview.md)
-
   - [Connecting to Robot](demo_app/connnecting_to_robot.md)
   - [Control App Features](demo_app/overview_of_control_features.md)
-
     - [Controlling Robot Movements](demo_app/control_robot_movements.md)
     - [Accessing and Modifying Settings](demo_app/settings.md)
   - [Build Your Own Remote Control App](demo_app/app_project_setup.md)
+  - 
 - [**Autonomy**](autonomy/overview.md)
 - [**Motion Library**](motion_library/overview.md)
-
   - [Start](motion_library/start.md)
   - [Stop](motion_library/stop.md)
   - [Stand](motion_library/stand.md)
@@ -31,13 +30,15 @@
   - [Move Head](motion_library/move_head.md)
   - [Move Arms and Hands](motion_library/move_arms_and_hands.md)
   - [Tremble Fingers](motion_library/tremble_fingers.md)
+  
 - [**FSA**](https://fftai.github.io/fsa/index.html)
-- [**Release Notes**](release/overview.md)
 
+- [**Release Notes**](release/overview.md)
   - [Release V1.4](release/v1.4.md)
   - [Release V1.3](release/v1.3.md)
   - [Release V1.2](release/v1.2.md)
   - [Release V1.1](release/v1.1.md)
   - [Release V0.2](release/v0.2.md)
   - [Release V0.1](release/v0.1.md)
+  
 - [**Feedback**](feedback/overview.md)
