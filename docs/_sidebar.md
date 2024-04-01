@@ -10,7 +10,8 @@
 
   - [Configuring RoCS for Simulated Robot](quick_start/setup_for_simulated_robot.md)
   - [Configuring RoCS for Physical Robot](quick_start/setup_for_physical_robot.md)
-- [**SDK Reference Guide**](client_sdk/overview.md)
+
+[//]: # (- [**SDK Reference Guide**]&#40;client_sdk/overview.md&#41;)
 
   - [Client Python](https://fftai.github.io/rocs_client_py/index.html)
   - [Client JavaScript/TypeScript](https://fftai.github.io/rocs_client_js/index.html)
