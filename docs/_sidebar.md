@@ -13,7 +13,6 @@
 - [**SDK Reference Guide**](client_sdk/overview.md)
   - [Client Python](https://fftai.github.io/rocs_client_py/index.html)
   - [Client JavaScript/TypeScript](https://fftai.github.io/rocs_client_js/index.html)
-  - [Server API](https://fftai.github.io/client_sdk/server_api/index.html)
 - [**Remote Control App Developer Guide**](demo_app/overview.md)
 
   - [Connecting to Robot](demo_app/connnecting_to_robot.md)
