@@ -17,21 +17,9 @@ Before proceeding with the RoCS Server installation, ensure that your system mee
 * An NVIDIA or AMD OpenGL-capable graphics adapter with a minimum version of 3.3 and at least 512 MB of RAM.
 
 ## Installing RoCS Server Dependencies and Binaries
-
-Use either of the following commands in your terminal to install the server dependencies and RoCS Server binaries:
-
-**Option 1:**
-
 ```shell
-wget -qO- https://raw.githubusercontent.com/FFTAI/rocs_server/main/install.sh | bash
+curl -o- https://raw.githubusercontent.com/FFTAI/rocs_server/main/install-simulated.sh | bash
 ```
-
-**Option 2:**
-
-```shell
-curl -o- https://raw.githubusercontent.com/FFTAI/rocs_server/main/install.sh | bash
-```
-
 ---
 
 ## Verifying Installation
