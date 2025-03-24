@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pyscurve &mdash; Fourier Smart Actuator 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/my_theme.css?v=f474f2d8" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=94e0f085"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="prev" title="Reference Guide" href="../fsa/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Fourier Smart Actuator
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quickstart/">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/">Example Codes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fsa/">Reference Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Pyscurve</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyscurve.constant_time_optimizer">pyscurve.constant_time_optimizer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyscurve.constant_time_optimizer.optimization_function"><code class="docutils literal notranslate"><span class="pre">optimization_function()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyscurve.constant_time_optimizer.optimize_trajectory"><code class="docutils literal notranslate"><span class="pre">optimize_trajectory()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyscurve.constant_time_optimizer.plan_trajectory"><code class="docutils literal notranslate"><span class="pre">plan_trajectory()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyscurve.planner">pyscurve.planner module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyscurve.planner.TrajectoryPlanner"><code class="docutils literal notranslate"><span class="pre">TrajectoryPlanner</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyscurve.planner.TrajectoryPlanner.plan_trajectory"><code class="docutils literal notranslate"><span class="pre">TrajectoryPlanner.plan_trajectory()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyscurve.scurve">pyscurve.scurve module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyscurve.scurve.ScurvePlanner"><code class="docutils literal notranslate"><span class="pre">ScurvePlanner</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyscurve.scurve.ScurvePlanner.plan_trajectory"><code class="docutils literal notranslate"><span class="pre">ScurvePlanner.plan_trajectory()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyscurve.trajectory">pyscurve.trajectory module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyscurve.trajectory.PlanningError"><code class="docutils literal notranslate"><span class="pre">PlanningError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyscurve.trajectory.Trajectory"><code class="docutils literal notranslate"><span class="pre">Trajectory</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pyscurve.trajectory.Trajectory.debug"><code class="docutils literal notranslate"><span class="pre">Trajectory.debug</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyscurve.trajectory.Trajectory.dof"><code class="docutils literal notranslate"><span class="pre">Trajectory.dof</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyscurve.trajectory.Trajectory.time"><code class="docutils literal notranslate"><span class="pre">Trajectory.time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyscurve.trajectory.Trajectory.trajectory"><code class="docutils literal notranslate"><span class="pre">Trajectory.trajectory</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pyscurve.trajectory.plot_trajectory"><code class="docutils literal notranslate"><span class="pre">plot_trajectory()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Fourier Smart Actuator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Pyscurve</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyscurve">
+<h1>Pyscurve<a class="headerlink" href="#pyscurve" title="Link to this heading"></a></h1>
+<section id="module-pyscurve.constant_time_optimizer">
+<span id="pyscurve-constant-time-optimizer-module"></span><h2>pyscurve.constant_time_optimizer module<a class="headerlink" href="#module-pyscurve.constant_time_optimizer" title="Link to this heading"></a></h2>
+<p>Optimization Functions for Trajectory Planning</p>
+<p>This module defines functions for optimizing trajectory planning based on specified constraints. It utilizes the <cite>scipy.optimize</cite> module for numerical optimization.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Functions:</dt><dd><ul class="simple">
+<li><p><cite>optimization_function</cite>: Returns the cost function and its gradient for trajectory optimization.</p></li>
+<li><p><cite>optimize_trajectory</cite>: Optimizes the trajectory using the Sequential Least Squares Quadratic Programming (SLSQP) method.</p></li>
+<li><p><cite>plan_trajectory</cite>: Plans the trajectory based on the optimized parameters.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscurve.constant_time_optimizer.optimization_function">
+<span class="sig-prename descclassname"><span class="pre">pyscurve.constant_time_optimizer.</span></span><span class="sig-name descname"><span class="pre">optimization_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyscurve.constant_time_optimizer.optimization_function" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscurve.constant_time_optimizer.optimize_trajectory">
+<span class="sig-prename descclassname"><span class="pre">pyscurve.constant_time_optimizer.</span></span><span class="sig-name descname"><span class="pre">optimize_trajectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyscurve.constant_time_optimizer.optimize_trajectory" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscurve.constant_time_optimizer.plan_trajectory">
+<span class="sig-prename descclassname"><span class="pre">pyscurve.constant_time_optimizer.</span></span><span class="sig-name descname"><span class="pre">plan_trajectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyscurve.constant_time_optimizer.plan_trajectory" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pyscurve.planner">
+<span id="pyscurve-planner-module"></span><h2>pyscurve.planner module<a class="headerlink" href="#module-pyscurve.planner" title="Link to this heading"></a></h2>
+<p>Abstract Base Class for Trajectory Planners</p>
+<p>This module defines an abstract base class <cite>TrajectoryPlanner</cite> for trajectory planning algorithms. Any concrete class that implements this base class must provide an implementation for the <cite>plan_trajectory</cite> method.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Classes:</dt><dd><ul class="simple">
+<li><p><cite>TrajectoryPlanner</cite>: Abstract base class for trajectory planners.</p></li>
+</ul>
+</dd>
+<dt>Methods:</dt><dd><ul class="simple">
+<li><p><cite>plan_trajectory</cite>: Abstract method to be implemented by concrete subclasses for trajectory planning.</p></li>
+<li><p><cite>_check_shape</cite>: Internal method to check if all parameters have the same dimension.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyscurve.planner.TrajectoryPlanner">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscurve.planner.</span></span><span class="sig-name descname"><span class="pre">TrajectoryPlanner</span></span><a class="headerlink" href="#pyscurve.planner.TrajectoryPlanner" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstract Base Class for Trajectory Planners.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>__metaclass__ (ABCMeta): Metaclass for abstract base classes.</p></li>
+</ul>
+</dd>
+<dt>Methods:</dt><dd><ul class="simple">
+<li><p>__init__: Initializes the TrajectoryPlanner object.</p></li>
+<li><p>plan_trajectory: Abstract method to be implemented by concrete subclasses for trajectory planning.</p></li>
+<li><p>_check_shape: Internal method to check if all parameters have the same dimension.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyscurve.planner.TrajectoryPlanner.plan_trajectory">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">plan_trajectory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyscurve.planner.TrajectoryPlanner.plan_trajectory" title="Link to this definition"></a></dt>
+<dd><p>Abstract method to be implemented by concrete subclasses for trajectory planning.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Parameters:</dt><dd><ul class="simple">
+<li><p>args: Variable-length argument list.</p></li>
+<li><p>kwargs: Arbitrary keyword arguments.</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><ul class="simple">
+<li><p>result: Result of the trajectory planning algorithm.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyscurve.scurve">
+<span id="pyscurve-scurve-module"></span><h2>pyscurve.scurve module<a class="headerlink" href="#module-pyscurve.scurve" title="Link to this heading"></a></h2>
+<p>S-Curve Trajectory Planner</p>
+<p>This module implements the S-curve trajectory planner for multi-degree-of-freedom (DOF) robotic systems. The planner is capable of generating smooth and feasible trajectories while considering velocity, acceleration, and jerk constraints.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Classes:</dt><dd><ul class="simple">
+<li><p><cite>ScurvePlanner</cite>: S-curve trajectory planner derived from the <cite>TrajectoryPlanner</cite> abstract base class.</p></li>
+</ul>
+</dd>
+<dt>Methods:</dt><dd><ul class="simple">
+<li><p><cite>plan_trajectory</cite>: Plan S-curve trajectory with given constraints.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyscurve.scurve.ScurvePlanner">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscurve.scurve.</span></span><span class="sig-name descname"><span class="pre">ScurvePlanner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyscurve.scurve.ScurvePlanner" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyscurve.planner.TrajectoryPlanner" title="pyscurve.planner.TrajectoryPlanner"><code class="xref py py-class docutils literal notranslate"><span class="pre">TrajectoryPlanner</span></code></a></p>
+<p>S-Curve Trajectory Planner Class</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>planning_logger: Logger for logging planning information.</p></li>
+</ul>
+</dd>
+<dt>Methods:</dt><dd><ul class="simple">
+<li><p>__init__: Initializes the ScurvePlanner object.</p></li>
+<li><p>__scurve_check_possibility: Checks whether the trajectory is feasible.</p></li>
+<li><p>__compute_maximum_speed_reached: Computes parameters for maximum speed reached profile.</p></li>
+<li><p>__compute_maximum_speed_not_reached: Computes parameters for maximum speed not reached profile.</p></li>
+<li><p>__scurve_search_planning: Iteratively tries to achieve requirements with decreasing maximum possible acceleration.</p></li>
+<li><p>__sign_transforms: Performs sign transforms for calculating trajectory with q1 &lt; q0.</p></li>
+<li><p>__point_sign_transform: Transforms a point back to the original sign.</p></li>
+<li><p>__get_trajectory_func: Returns a function of time for the trajectory.</p></li>
+<li><p>__get_trajectory_function: Wraps trajectory function with sign transforms.</p></li>
+<li><p>__scurve_profile_no_opt: Computes S-curve trajectory parameters without optimization.</p></li>
+<li><p>__put_params: Sets parameters in the trajectory list.</p></li>
+<li><p>__get_dof_time: Computes the time for a specific degree of freedom.</p></li>
+<li><p>__get_traj_params_containers: Initializes containers for trajectory parameters.</p></li>
+<li><p>__plan_trajectory_1D: Plans a 1D S-curve trajectory.</p></li>
+<li><p>plan_trajectory: Plans an S-curve trajectory with given constraints.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">planner</span> <span class="o">=</span> <span class="n">ScurvePlanner</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">trajectory</span> <span class="o">=</span> <span class="n">planner</span><span class="o">.</span><span class="n">plan_trajectory</span><span class="p">(</span><span class="n">q0</span><span class="p">,</span> <span class="n">q1</span><span class="p">,</span> <span class="n">v0</span><span class="p">,</span> <span class="n">v1</span><span class="p">,</span> <span class="n">v_max</span><span class="p">,</span> <span class="n">a_max</span><span class="p">,</span> <span class="n">j_max</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyscurve.scurve.ScurvePlanner.plan_trajectory">
+<span class="sig-name descname"><span class="pre">plan_trajectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyscurve.scurve.ScurvePlanner.plan_trajectory" title="Link to this definition"></a></dt>
+<dd><p>Plan S-curve trajectory with given constraints.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Parameters:</dt><dd><ul class="simple">
+<li><p>q0 (numpy.ndarray): Initial positions.</p></li>
+<li><p>q1 (numpy.ndarray): Final positions.</p></li>
+<li><p>v0 (numpy.ndarray): Initial velocities.</p></li>
+<li><p>v1 (numpy.ndarray): Final velocities.</p></li>
+<li><p>v_max (float): Maximum velocity constraint.</p></li>
+<li><p>a_max (float): Maximum acceleration constraint.</p></li>
+<li><p>j_max (float): Maximum jerk constraint.</p></li>
+<li><p>t (float): Optional constant time constraint.</p></li>
+</ul>
+</dd>
+<dt>Returns:</dt><dd><ul class="simple">
+<li><p>Trajectory: Trajectory object containing time, trajectory functions, and degree of freedom information.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyscurve.trajectory">
+<span id="pyscurve-trajectory-module"></span><h2>pyscurve.trajectory module<a class="headerlink" href="#module-pyscurve.trajectory" title="Link to this heading"></a></h2>
+<p>Trajectory Utilities</p>
+<p>This module provides utilities for trajectory planning and visualization.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Classes:</dt><dd><ul class="simple">
+<li><p><cite>PlanningError</cite>: Custom exception for planning errors.</p></li>
+<li><p><cite>Trajectory</cite>: Class representing a trajectory with acceleration, speed, and position profiles.</p></li>
+</ul>
+</dd>
+<dt>Methods:</dt><dd><ul class="simple">
+<li><p><cite>plot_trajectory</cite>: Plot acceleration, speed, and position profiles of a trajectory.</p></li>
+</ul>
+</dd>
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p><cite>ACCELERATION_ID</cite>: Identifier for acceleration in the trajectory profile.</p></li>
+<li><p><cite>SPEED_ID</cite>: Identifier for speed in the trajectory profile.</p></li>
+<li><p><cite>POSITION_ID</cite>: Identifier for position in the trajectory profile.</p></li>
+<li><p><cite>OPTIMIZER_THRESHOLD</cite>: Threshold for trajectory optimizer convergence.</p></li>
+<li><p><cite>EPSILON</cite>: Small value for numerical computations.</p></li>
+<li><p><cite>trajectory_logger</cite>: Logger for logging trajectory information.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyscurve.trajectory.PlanningError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscurve.trajectory.</span></span><span class="sig-name descname"><span class="pre">PlanningError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyscurve.trajectory.PlanningError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Custom exception class for planning errors.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyscurve.trajectory.Trajectory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyscurve.trajectory.</span></span><span class="sig-name descname"><span class="pre">Trajectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyscurve.trajectory.Trajectory" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Trajectory Class</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Attributes:</dt><dd><ul class="simple">
+<li><p>debug (bool): Flag to enable debug logging.</p></li>
+<li><p>time (float): Total time of the trajectory.</p></li>
+<li><p>dof (int): Number of degrees of freedom.</p></li>
+<li><p>trajectory (list): List of trajectory functions for each degree of freedom.</p></li>
+</ul>
+</dd>
+<dt>Methods:</dt><dd><ul class="simple">
+<li><p>__call__: Computes acceleration, speed, and position at a given time.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Instantiate a Trajectory object</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">trajectory</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Access and set attributes</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">trajectory</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">trajectory</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="mf">5.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">trajectory</span><span class="o">.</span><span class="n">dof</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">trajectory</span><span class="o">.</span><span class="n">trajectory</span> <span class="o">=</span> <span class="p">[</span><span class="n">traj_func_1</span><span class="p">,</span> <span class="n">traj_func_2</span><span class="p">,</span> <span class="n">traj_func_3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Call the trajectory at a specific time</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">trajectory</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyscurve.trajectory.Trajectory.debug">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">debug</span></span><a class="headerlink" href="#pyscurve.trajectory.Trajectory.debug" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyscurve.trajectory.Trajectory.dof">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dof</span></span><a class="headerlink" href="#pyscurve.trajectory.Trajectory.dof" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyscurve.trajectory.Trajectory.time">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">time</span></span><a class="headerlink" href="#pyscurve.trajectory.Trajectory.time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyscurve.trajectory.Trajectory.trajectory">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trajectory</span></span><a class="headerlink" href="#pyscurve.trajectory.Trajectory.trajectory" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyscurve.trajectory.plot_trajectory">
+<span class="sig-prename descclassname"><span class="pre">pyscurve.trajectory.</span></span><span class="sig-name descname"><span class="pre">plot_trajectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">traj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyscurve.trajectory.plot_trajectory" title="Link to this definition"></a></dt>
+<dd><p>Plot acceleration, speed, and position profiles of a trajectory.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Parameters:</dt><dd><ul class="simple">
+<li><p>traj (Trajectory): Trajectory object.</p></li>
+<li><p>dt (float): Time step for plotting.</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../fsa/" class="btn btn-neutral float-left" title="Reference Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Fourier Algorithm Department.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
