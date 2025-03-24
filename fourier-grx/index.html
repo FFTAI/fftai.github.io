@@ -10,6 +10,25 @@
     <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094"/>
     <link rel="stylesheet" type="text/css" href="_static/my_theme.css?v=f474f2d8"/>
 
+    <!-- 添加语言切换样式 -->
+    <style>
+        .language-switcher {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 200;
+        }
+        .language-switcher a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 0.9em;
+        }
+        .language-switcher a:hover {
+            text-decoration: underline;
+        }
+    </style>
 
     <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
@@ -31,7 +50,6 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
         <div class="wy-side-scroll">
             <div class="wy-side-nav-search">
-
 
                 <a href="#" class="icon icon-home">
                     Fourier-GRX SDK
@@ -60,6 +78,12 @@
         <nav class="wy-nav-top" aria-label="Mobile navigation menu">
             <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
             <a href="#">Fourier-GRX SDK</a>
+
+            <!-- 在顶部导航栏右侧添加语言切换 -->
+            <div class="language-switcher">
+                <a href="../en/index.html">EN</a> |
+                <a href="../zh/index.html">中文</a>
+            </div>
         </nav>
 
         <div class="wy-nav-content">
@@ -87,13 +111,13 @@
                                 <section id="using-the-fourier-grx-library">
                                     <h3>Using the Fourier-GRX Library<a class="headerlink" href="#using-the-fourier-grx-library" title="Link to this heading"></a></h3>
                                     <p>
-                                        The <a class="reference internal" href="#quickstart.md"><span class="xref myst">QuickStart</span></a>
+                                        The <a class="reference internal" href="#quickstart.md"><span class="xref myst">Quick Start</span></a>
                                         is the recommended way to get started using the Fourier-GRX SDK library.
                                         It is a step-by-step guide that will help you install the libraries you need and run simple programs to control the robot.
                                     </p>
                                     <p>
                                         The <a class="reference internal" href="#../../python/examples/README.md"><span class="xref myst">Example Codes</span></a>
-                                        demonstrate how to use the FSA SDK library, and can be used as reference programs for your own applications.
+                                        demonstrate how to use the SDK library, and can be used as reference programs for your own applications.
                                     </p>
                                     <p>
                                         The <a class="reference internal" href="#../../python/README.md"><span class="xref myst">Reference Guide</span></a>
