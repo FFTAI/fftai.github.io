@@ -85,89 +85,74 @@
                                     easy to use and provides a high-level interface to control the robot's motion and
                                     read sensor data. The SDK is available in Python.</p>
                                 <section id="using-the-fourier-grx-library">
-                                    <h3>Using the FSA Library<a class="headerlink" href="#using-the-fourier-grx-library" title="Link to this heading"></a></h3>
-                                    <p>The <a class="reference internal" href="#quickstart.md"><span class="xref myst">QuickStart</span></a> is the recommended way to get started using the FSA SDK
-                                        library. It is a step-by-step guide that will help you install the libraries you need and run simple programs to control FSA.</p>
-                                    <p>The <a class="reference internal" href="#../../python/examples/README.md"><span class="xref myst">Example Codes</span></a> demonstrate how to use the FSA SDK
-                                        library, and can be used as reference programs for your own applications.</p>
-                                    <p>The <a class="reference internal" href="#../../python/README.md"><span class="xref myst">Reference Guide</span></a> documents all of the SDK modules, classes,
-                                        and interfaces in detail.</p>
+                                    <h3>Using the Fourier-GRX Library<a class="headerlink" href="#using-the-fourier-grx-library" title="Link to this heading"></a></h3>
+                                    <p>
+                                        The <a class="reference internal" href="#quickstart.md"><span class="xref myst">QuickStart</span></a>
+                                        is the recommended way to get started using the Fourier-GRX SDK library.
+                                        It is a step-by-step guide that will help you install the libraries you need and run simple programs to control the robot.
+                                    </p>
+                                    <p>
+                                        The <a class="reference internal" href="#../../python/examples/README.md"><span class="xref myst">Example Codes</span></a>
+                                        demonstrate how to use the FSA SDK library, and can be used as reference programs for your own applications.
+                                    </p>
+                                    <p>
+                                        The <a class="reference internal" href="#../../python/README.md"><span class="xref myst">Reference Guide</span></a>
+                                        documents all of the SDK modules, classes, and interfaces in detail.
+                                    </p>
                                     <section id="supported-platforms-and-versions">
-                                        <h4>Supported Platforms and Versions<a class="headerlink" href="#supported-platforms-and-versions" title="Link to this heading"></a></h4>
-                                        <p>The FSA SDK library is supported on the following platforms:</p>
+                                        <h4>
+                                            Supported Platforms and Versions<a class="headerlink" href="#supported-platforms-and-versions" title="Link to this heading"></a>
+                                        </h4>
+                                        <p>
+                                            The Fourier-GRX SDK library is supported on the following platforms:
+                                        </p>
                                         <ul class="simple">
-                                            <li><p>Ubuntu 18.04 LTS</p></li>
-                                            <li><p>Windows 10</p></li>
-                                            <li><p>MacOS 10.14 (Mojave and Catalina)</p></li>
+                                            <li>
+                                                <p>Ubuntu 22.04 LTS</p>
+                                            </li>
                                         </ul>
-                                        <p>Python 3.8 and above are supported.
-                                            C++ 17 and above are supported.</p>
+                                        <p>
+                                            Python 3.11 is supported.
+                                        </p>
                                     </section>
                                 </section>
                             </section>
+
                             <hr class="docutils"/>
                             <div class="toctree-wrapper compound">
                                 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
                                 <ul>
                                     <li class="toctree-l1"><a class="reference internal" href="quickstart/">Quick Start</a>
                                         <ul>
-                                            <li class="toctree-l2"><a class="reference internal" href="quickstart/#system-setup">System setup</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="quickstart/#install-fourier-grx-python-packages">Install FSA Python packages</a></li>
+                                            <li class="toctree-l2">
+                                                <a class="reference internal" href="quickstart/#system-setup">System setup</a>
+                                            </li>
+                                            <li class="toctree-l2">
+                                                <a class="reference internal" href="quickstart/#install-fourier-grx-python-packages">Install Fourier-GRX Python packages</a>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li class="toctree-l1"><a class="reference internal" href="examples/">Example Codes</a>
                                         <ul>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#clear-fault">Clear Fault</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#current-control-mode">Current Control Mode</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#position-feedforward-control-mode">Position Feedforward Control Mode</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#position-control-mode">Position Control Mode</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#velocity-control-mode">Velocity Control Mode</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#get-absolute-encoder-value">Get Absolute Encoder Value</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#get-communication-configuration">Get Communication Configuration</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#get-control-configuration">Get Control Configuration</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#get-flag-of-operation">Get Flag of Operation</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#get-home-offset">Get Home Offset</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#get-measured">Get Measured</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#get-pid-parameter">Get PID Parameter</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#get-pvc">Get PVC</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#get-pvcc">Get PVCC</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#get-pvccc">Get PVCCC</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#get-state">Get State</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#lookup">Lookup</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#lookup-absolute-encoder">Lookup Absolute Encoder</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#lookup-actuator">Lookup Actuator</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#lookup-ctrlbox">Lookup CtrlBox</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#ota">OTA</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#ota-cloud">OTA Cloud</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#ota-driver">OTA Driver</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#ota-driver-cloud">OTA Driver Cloud</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#ota-driver-test">OTA Driver Test</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#ota-test">OTA Test</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#reboot">Reboot</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#reboot-actuator">Reboot Actuator</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#save-control-configuration">Save Control Configuration</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#set-calibrate-encoder">Set Calibrate Encoder</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#set-communication-configuration">Set Communication Configuration</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#set-control-parameter">Set Control Parameter</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#set-immediate-control-parameter">Set Immediate Control Parameter</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#set-control-configuration">Set Control Configuration</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#set-disable">Set Disable</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#set-enable">Set Enable</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#set-encrypt">Set Encrypt</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#set-flag-of-operation">Set Flag of Operation</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#set-home-offset">Set Home Offset</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#set-home-position">Set Home Position</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#set-pid-parameter">Set PID Parameter</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="examples/#set-immediate-pid-parameter">Set Immediate PID Parameter</a></li>
+                                            <li class="toctree-l2">
+                                                <a class="reference internal" href="examples/#clear-fault">Clear Fault</a>
+                                            </li>
+                                            <li class="toctree-l2">
+                                                <a class="reference internal" href="examples/#ota">OTA</a>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li class="toctree-l1"><a class="reference internal" href="fourier-grx/">Reference Guide</a>
                                         <ul>
-                                            <li class="toctree-l2"><a class="reference internal" href="fourier-grx/#module-fourier-grx.fi_fourier-grx">fourier-grx.fi_fourier-grx module</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="fourier-grx/#module-fourier-grx.fi_fourier-grx_config">fourier-grx.fi_fourier-grx_config
-                                                module</a></li>
-                                            <li class="toctree-l2"><a class="reference internal" href="fourier-grx/#module-fourier-grx.fi_fourier-grx_logger">fourier-grx.fi_fourier-grx_logger
-                                                module</a></li>
+                                            <li class="toctree-l2">
+                                                <a class="reference internal" href="fourier-grx/#module-fourier-grx.fi_fourier-grx">fourier-grx.fi_fourier-grx module</a>
+                                            </li>
+                                            <li class="toctree-l2">
+                                                <a class="reference internal" href="fourier-grx/#module-fourier-grx.fi_fourier-grx_config">fourier-grx.fi_fourier-grx_config module</a>
+                                            </li>
+                                            <li class="toctree-l2">
+                                                <a class="reference internal" href="fourier-grx/#module-fourier-grx.fi_fourier-grx_logger">fourier-grx.fi_fourier-grx_logger module</a>
+                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
