@@ -10,26 +10,6 @@
     <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094"/>
     <link rel="stylesheet" type="text/css" href="_static/my_theme.css?v=f474f2d8"/>
 
-    <!-- 添加语言切换样式 -->
-    <style>
-        .language-switcher {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 200;
-        }
-        .language-switcher a {
-            color: white;
-            text-decoration: none;
-            margin-left: 15px;
-            font-size: 0.9em;
-        }
-        .language-switcher a:hover {
-            text-decoration: underline;
-        }
-    </style>
-
     <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
     <![endif]-->
@@ -69,8 +49,10 @@
                     <li class="toctree-l1"><a class="reference internal" href="examples/">Example Codes</a></li>
                     <li class="toctree-l1"><a class="reference internal" href="fourier-grx/">Reference Guide</a></li>
                 </ul>
-
             </div>
+
+            <!-- 导航栏底部添加跳转中文页面链接 -->
+
         </div>
     </nav>
 
@@ -78,12 +60,6 @@
         <nav class="wy-nav-top" aria-label="Mobile navigation menu">
             <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
             <a href="#">Fourier-GRX SDK</a>
-
-            <!-- 在顶部导航栏右侧添加语言切换 -->
-            <div class="language-switcher">
-                <a href="../en/index.html">EN</a> |
-                <a href="../zh/index.html">中文</a>
-            </div>
         </nav>
 
         <div class="wy-nav-content">
